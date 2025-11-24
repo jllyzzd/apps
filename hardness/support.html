@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术支持 - Hardness</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+        h1 { border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        h2 { margin-top: 30px; color: #007AFF; }
+        h3 { margin-top: 20px; font-weight: bold; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        .footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>技术支持 (Support)</h1>
+    <p>感谢您使用 <strong>Hardness</strong>。我们致力于为您提供最精准的金属硬度换算体验。如果您在使用过程中遇到任何问题，或者有任何建议，请参考以下信息。</p>
+
+    <h2>常见问题 (FAQ)</h2>
+
+    <h3>1. 为什么某些转换结果带有括号？例如 (68.5)</h3>
+    <p>这表示该转换结果<strong>超出了标准定义的有效范围</strong>。为了方便工程参考，App 仍然会基于算法给出外推值，但在正式报告或严谨的工程应用中，请谨慎使用带括号的数值，并查阅相关标准原文。</p>
+
+    <h3>2. 本应用基于什么标准？</h3>
+    <p>我们的核心转换算法严格遵循以下国际标准：</p>
+    <ul>
+        <li><strong>ASTM E140:</strong> 金属标准硬度转换表</li>
+        <li><strong>ISO 18265:</strong> 金属材料硬度值的换算</li>
+    </ul>
+
+    <h3>3. 抗拉强度是如何计算的？</h3>
+    <p>抗拉强度 (MPa) 是基于维氏硬度 (HV) 的经验公式进行估算的，主要适用于非合金钢、低合金钢和铸钢。公式近似为：<code>抗拉强度 (MPa) ≈ HV × 3.3</code>。对于其他特定材料，请参考专门的材料手册。</p>
+
+    <h3>4. 如何切换语言？</h3>
+    <p>Hardness 支持多语言（中文、英语、德语、日语等）。App 会默认跟随您的系统语言设置。您可以在系统“设置”中单独更改 Hardness 的语言。</p>
+
+    <h2>联系我们</h2>
+    <p>如果以上未能解决您的问题，或您发现了 Bug，欢迎随时联系开发者：</p>
+    <ul>
+        <li><strong>电子邮件:</strong> <a href="mailto:support@example.com">support@example.com</a> (请替换为您的实际联系邮箱)</li>
+        <li><strong>GitHub Issues:</strong> <a href="https://github.com/yourusername/hardness/issues" target="_blank">提交 Issue</a> (如有)</li>
+    </ul>
+
+    <div class="footer">
+        &copy; 2025 Hardness Developer. All rights reserved.
+    </div>
+</body>
+</html>

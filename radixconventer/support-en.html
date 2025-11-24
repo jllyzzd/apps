@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radix Converter - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .section h3 {
+            color: #555;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+        }
+
+        .section p, .section li {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .section ul {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .contact-box p {
+            margin: 10px 0;
+        }
+
+        .contact-box strong {
+            color: #667eea;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .feature-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+            color: #999;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Radix Converter</h1>
+            <p>Number Base Converter - Support</p>
+        </div>
+
+        <div class="section">
+            <h2>📱 About the App</h2>
+            <p>Radix Converter is an elegant and powerful number base conversion tool that supports real-time conversion between Binary, Octal, Decimal, Hexadecimal, Base32, and Base36.</p>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h4>⚡ Instant Conversion</h4>
+                    <p>Convert as you type, no button needed</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎨 Beautiful Design</h4>
+                    <p>Dark mode support with unique colors</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🌍 Multilingual</h4>
+                    <p>6 languages: EN, CN, JP, PT, ES, RU</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>❓ Frequently Asked Questions</h2>
+
+            <h3>How do I use the app?</h3>
+            <p>1. Enter a number in the input field<br>
+               2. Select the current base (Binary, Octal, Decimal, etc.)<br>
+               3. The app automatically displays results in all other bases<br>
+               4. Tap any result to copy it to the clipboard</p>
+
+            <h3>Which number systems are supported?</h3>
+            <ul>
+                <li><strong>Binary (Base 2)</strong> - Uses digits 0-1</li>
+                <li><strong>Octal (Base 8)</strong> - Uses digits 0-7</li>
+                <li><strong>Decimal (Base 10)</strong> - Uses digits 0-9</li>
+                <li><strong>Hexadecimal (Base 16)</strong> - Uses digits 0-9, A-F</li>
+                <li><strong>Base32</strong> - Uses digits 0-9, A-V</li>
+                <li><strong>Base36</strong> - Uses digits 0-9, A-Z</li>
+            </ul>
+
+            <h3>How do I copy results?</h3>
+            <p>Tap any conversion result to automatically copy it to the clipboard. You can toggle prefix inclusion (0x, 0b) in settings.</p>
+
+            <h3>How do I change the language?</h3>
+            <p>Tap the settings icon in the top-right corner, select "Language", and choose your preferred language. The app supports English, Chinese, Japanese, Portuguese, Spanish, and Russian.</p>
+
+            <h3>How do I switch between dark and light mode?</h3>
+            <p>Tap the settings icon in the top-right corner, select "Theme", and choose Automatic (follows system), Light, or Dark mode.</p>
+
+            <h3>Does the app collect my data?</h3>
+            <p>No. Radix Converter runs entirely on your device, doesn't collect any personal information, and requires no internet connection. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+        </div>
+
+        <div class="section">
+            <h2>💡 Tips & Tricks</h2>
+            <ul>
+                <li>When switching bases, the app automatically converts your current input to the new base</li>
+                <li>Invalid input is indicated with a red border</li>
+                <li>Long-press the clear button for quick reset</li>
+                <li>Each base has a unique gradient color for easy identification</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📧 Contact Us</h2>
+            <div class="contact-box">
+                <p><strong>Email:</strong> st67891@gmail.com</p>
+                <p><strong>Feedback:</strong> If you have questions, suggestions, or found a bug, feel free to contact us via:</p>
+                <ul>
+                    <li>App Store reviews</li>
+                    <li>Email to the address above</li>
+                    <li>GitHub Issues (if you're a developer)</li>
+                </ul>
+                <p style="margin-top: 15px;">We respond to all emails within 24 hours.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Version Information</h2>
+            <p><strong>Current Version:</strong> 1.0.0</p>
+            <p><strong>Last Updated:</strong> November 2025</p>
+            <p><strong>Compatibility:</strong> iOS 16.0 or later</p>
+            <p><strong>Supported Devices:</strong> iPhone, iPad</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Radix Converter. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy.html" style="color: #667eea; text-decoration: none;">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
