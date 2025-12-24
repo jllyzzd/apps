@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アプリサポート - SatsClock</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background-color: #f5f5f7; }
+        .container { background-color: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { border-bottom: 2px solid #F7931A; padding-bottom: 10px; color: #F7931A; }
+        h2 { margin-top: 30px; color: #007AFF; }
+        h3 { margin-top: 20px; font-weight: bold; color: #555; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        .footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+        .theme-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 15px 0; }
+        .theme-item { background-color: #f9f9f9; padding: 10px; border-radius: 6px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>アプリサポート</h1>
+        <p><strong>SatsClock</strong> をご利用いただきありがとうございます。私たちは美しく、プライバシー優先のビットコインダッシュボード体験の提供に努めています。問題が発生した場合やご提案がある場合は、以下の情報を参照してください。</p>
+
+        <h2>SatsClock について</h2>
+        <p>SatsClock は、iOS システムと深く統合されたリアルタイムビットコインダッシュボードアプリケーションです。美しい SF テーマのインターフェースで、価格、ブロック高さ、メンプール手数料、半減期カウントダウン、モスクワ時間などのリアルタイムブロックチェーンデータを表示します。</p>
+
+        <h2>主な機能</h2>
+
+        <div class="feature">
+            <h3>📊 リアルタイムデータ表示</h3>
+            <ul>
+                <li><strong>ビットコイン価格：</strong> USD でのリアルタイム価格と7日間のトレンドチャート</li>
+                <li><strong>ブロック高さ：</strong> フォーマットされた現在のブロックチェーンブロック番号</li>
+                <li><strong>メンプール手数料：</strong> 最速/30分/エコノミーの手数料レート（sats/vB）</li>
+                <li><strong>モスクワ時間：</strong> 1 USD で購入できる sats の数（1 USD ÷ BTC 価格）</li>
+                <li><strong>半減期進捗：</strong> 次回のビットコイン半減期までの残り日数/ブロック数</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>🎨 6つのプロテーマ</h3>
+            <div class="theme-list">
+                <div class="theme-item"><strong>ビットコインオレンジ</strong> - クラシックプロフェッショナル</div>
+                <div class="theme-item"><strong>マトリックスグリーン</strong> - サイバーパンクハッカー</div>
+                <div class="theme-item"><strong>ピュアホワイト</strong> - ミニマリストエレガンス</div>
+                <div class="theme-item"><strong>ピクセルレトロ</strong> - 8ビットノスタルジー</div>
+                <div class="theme-item"><strong>ネオンテック</strong> - フューチャリスティックサイバーパンク</div>
+                <div class="theme-item"><strong>ターミナルモノ</strong> - 開発者スタイル</div>
+            </div>
+            <p>各テーマには、カスタムフォント、カラースキーム、個別に切り替え可能な視覚効果が含まれています。</p>
+        </div>
+
+        <div class="feature">
+            <h3>🔌 深い iOS 統合</h3>
+            <ul>
+                <li><strong>StandBy モード：</strong> 充電中の iPhone に最適化された横向きレイアウト</li>
+                <li><strong>ホーム画面ウィジェット：</strong> 小、中、大の3サイズ</li>
+                <li><strong>ロック画面ウィジェット：</strong> 円形、長方形、インライン</li>
+                <li><strong>Apple Watch アプリ：</strong> 機能完備の watchOS アプリとコンプリケーション</li>
+                <li><strong>Spotlight 検索：</strong> ビットコインデータへのクイックアクセス</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>🌍 多言語サポート</h3>
+            <p>SatsClock は8つの言語を完全にサポートしています：</p>
+            <p><strong>English、简体中文、繁體中文、日本語、한국어、Deutsch、Español、Français</strong></p>
+        </div>
+
+        <h2>よくある質問（FAQ）</h2>
+
+        <h3>1. 設定を開くには？</h3>
+        <p>画面の任意の場所を<strong>0.6秒間長押し</strong>すると設定が開きます。または、インターフェースセレクター（下部ボタン）→ インターフェースを選択 → 右上の歯車アイコンをタップして設定にアクセスすることもできます。</p>
+
+        <h3>2. 「モスクワ時間」とは何ですか？</h3>
+        <p><strong>モスクワ時間</strong>は、次のように計算されるビットコイン指標です：<code>100,000,000 sats ÷ BTC USD 価格</code>。これは 1 ドルで購入できる satoshis（sats）の数を表します。価格が上がるとモスクワ時間は下がり、その逆も同様です。</p>
+        <p>例：BTC が 100,000 ドルの場合、モスクワ時間 = 1,000 sats/USD となります。</p>
+
+        <h3>3. StandBy モードを有効にするには？</h3>
+        <p>StandBy モードは iOS 17+ を搭載した iPhone 15 Pro 以降で自動的に有効になります。iPhone を<strong>横向き</strong>にして MagSafe または Qi ワイヤレス充電器に置くだけです。アプリが自動的に StandBy レイアウトに切り替わります。</p>
+
+        <h3>4. データはどのくらいの頻度で更新されますか？</h3>
+        <p>デフォルトでは、データは15秒ごとに更新されます。設定（長押し → データ → 更新間隔）で10〜60秒に調整できます。注意：頻繁な更新はバッテリー寿命に若干影響する場合があります。</p>
+
+        <h3>5. データが更新されないのはなぜですか？</h3>
+        <p>以下を確認してください：</p>
+        <ul>
+            <li>インターネット接続（Wi-Fi またはセルラー）がアクティブであることを確認する</li>
+            <li>画面下部の「最終更新」タイムスタンプを確認する</li>
+            <li>Wi-Fi を使用している場合は、セルラーデータに切り替えてみてください</li>
+            <li>ネットワークの問題により一時的な遅延が発生する場合があります - アプリは自動的に再試行します</li>
+        </ul>
+
+        <h3>6. ウィジェットをホーム画面に追加するには？</h3>
+        <ol>
+            <li>ホーム画面の空いているスペースを長押しして、アプリが揺れ始めるまで待ちます</li>
+            <li>左上の<strong>+</strong>ボタンをタップします</li>
+            <li>"SatsClock" を検索するか、スクロールして見つけます</li>
+            <li>希望のウィジェットサイズを選択します</li>
+            <li><strong>ウィジェットを追加</strong>をタップします</li>
+        </ol>
+
+        <h3>7. ウォッチフェイスをカスタマイズするには？</h3>
+        <ol>
+            <li>現在のウォッチフェイスを長押しします</li>
+            <li>一番右までスワイプして<strong>新規</strong>をタップします</li>
+            <li>コンプリケーションをサポートするフェイス（モジュラー、クロノグラフなど）を選択します</li>
+            <li>コンプリケーションスロットをタップして<strong>SatsClock</strong>を選択します</li>
+        </ol>
+
+        <h3>8. 7つの異なる表示モードとは何ですか？</h3>
+        <p>下部のインターフェースボタンをタップして切り替えます：</p>
+        <ul>
+            <li><strong>ダッシュボード：</strong> すべてのビットコインメトリクスの概要</li>
+            <li><strong>価格詳細：</strong> 価格と7日間のトレンドチャート</li>
+            <li><strong>ブロック詳細：</strong> ブロック高さとサイクル進捗</li>
+            <li><strong>半減期詳細：</strong> 完全な半減期進捗の可視化</li>
+            <li><strong>モスクワ時間：</strong> 専用のブロッククロック表示</li>
+            <li><strong>半減期カウントダウン：</strong> 次回の半減期までの日数とブロック数</li>
+            <li><strong>手数料レート：</strong> ネットワーク手数料レートの比較</li>
+        </ul>
+
+        <h3>9. バッテリーを節約するために視覚効果を無効にするには？</h3>
+        <p>可能です。設定（長押し）→ 表示 → <strong>パフォーマンスモード</strong>に移動します。これにより、選択したテーマの色とフォントを保持しながら、すべてのテキストグロー効果と背景アニメーションが無効になります。</p>
+
+        <h3>10. アプリはオフラインで動作しますか？</h3>
+        <p>はい、但し制限があります。アプリはオフライン時に最後のキャッシュデータを表示します。ただし、リアルタイム更新を取得するには、インターネット接続が必要です。ウィジェットとウォッチコンプリケーションもキャッシュデータを表示します。</p>
+
+        <h3>11. 半減期日はどのように計算されますか？</h3>
+        <p>半減期日は以下に基づいて推定されます：</p>
+        <ul>
+            <li>現在のブロック高さ（mempool.space から取得）</li>
+            <li>次の 210,000 ブロックマイルストーンまでの残りブロック数</li>
+            <li>平均10分のブロック時間</li>
+        </ul>
+        <p>これは推定値です。ネットワークハッシュレートの変化により、実際の半減期時間は異なる場合があります。</p>
+
+        <h3>12. アプリがインターネットアクセスを必要とするのはなぜですか？</h3>
+        <p>アプリは以下から公開ブロックチェーンデータを取得するためにインターネットアクセスが必要です：</p>
+        <ul>
+            <li><strong>Mempool.space API：</strong> ブロック高さ、手数料レート、半減期進捗</li>
+            <li><strong>Binance API：</strong> 現在のビットコイン市場価格</li>
+        </ul>
+        <p><strong>すべてのリクエストは匿名で、個人情報は含まれていません。</strong></p>
+
+        <h3>13. 画面常時オンを有効にするには？</h3>
+        <p>設定（長押し）→ 表示 → <strong>画面常時オン</strong>に移動します。これにより、アプリが開いている間、iPhone がスリープするのを防ぎます。専用モニタリングセットアップや StandBy モードに便利です。</p>
+
+        <h3>14. 引用カルーセル機能とは何ですか？</h3>
+        <p>アプリは、サトシ・ナカモト、ハル・フィニーなどのビットコイン著名人からの引用をローテーション表示します。設定（長押し）→ 表示 → <strong>引用を表示</strong>で無効にすることができます。</p>
+
+        <h2>ヒントとベストプラクティス</h2>
+        <ul>
+            <li><strong>StandBy モード：</strong> MagSafe 充電器と組み合わせて使用すると、最高の常時表示エクスペリエンスが得られます</li>
+            <li><strong>省電力モード：</strong> iOS は省電力モード時に視覚効果を自動的に無効にします</li>
+            <li><strong>ウィジェット配置：</strong> 異なるメトリクス（価格、ブロック、モスクワ時間）の複数のウィジェットを追加します</li>
+            <li><strong>ウォッチフェイス：</strong> 最適なコンプリケーションレイアウトにはモジュラーまたはインフォグラフフェイスを使用します</li>
+            <li><strong>パフォーマンス：</strong> 古い iPhone モデルで効果を無効にして、よりスムーズなパフォーマンスを得ます</li>
+        </ul>
+
+        <h2>プライバシーとデータ</h2>
+        <p>SatsClock はプライバシー優先の原則に基づいて設計されています：</p>
+        <ul>
+            <li>✅ アカウントまたは登録不要</li>
+            <li>✅ ユーザートラッキングや分析なし</li>
+            <li>✅ 広告なし</li>
+            <li>✅ すべてのデータはデバイス上にローカル保存</li>
+            <li>✅ 匿名 API リクエストのみ（公開ブロックチェーンデータ）</li>
+        </ul>
+
+        <h2>既知の制限事項</h2>
+        <ul>
+            <li><strong>Apple Watch：</strong> ウォッチアプリには、App Groups を通じてデータを同期するために、iPhone コンパニオンアプリが少なくとも1回実行される必要があります</li>
+            <li><strong>バックグラウンド更新：</strong> ウィジェットは iOS スケジュールで更新されます（通常 15-30 分ごと）、即時的ではありません</li>
+            <li><strong>価格データ：</strong> 価格は USD のみで表示されます（マルチ通貨サポートは将来のバージョンで予定されています）</li>
+        </ul>
+
+        <h2>トラブルシューティング</h2>
+
+        <h3>ウィジェットが更新されない</h3>
+        <p>ウィジェットは iOS スケジュールで更新され、継続的ではありません。ウィジェットを強制更新するには：</p>
+        <ol>
+            <li>SatsClock メインアプリを開く（これにより新しいデータが取得されます）</li>
+            <li>iOS がウィジェットを更新するまで 15-30 秒待ちます</li>
+            <li>ウィジェットを長押しして「ウィジェットを更新」をタップすることもできます</li>
+        </ol>
+
+        <h3>ウォッチアプリに「データなし」と表示される</h3>
+        <p>Apple Watch アプリにデータが表示されない場合：</p>
+        <ol>
+            <li>iPhone が近くにあり、Bluetooth が有効になっていることを確認します</li>
+            <li>iPhone で SatsClock を開いてデータを更新します</li>
+            <li>ウォッチアプリは 1-2 分以内に同期するはずです</li>
+            <li>問題が解決しない場合は、ウォッチアプリのペアリングを解除して再ペアリングします</li>
+        </ol>
+
+        <h3>アプリが起動時にクラッシュする</h3>
+        <p>アプリがクラッシュする場合：</p>
+        <ul>
+            <li>iOS 17.0 以降を実行していることを確認します</li>
+            <li>App Store からアプリを削除して再インストールします（ユーザーデータは保存されないため、データは失われません）</li>
+            <li>iPhone を再起動します</li>
+        </ul>
+
+        <h2>フィードバックとサポート</h2>
+        <p>上記の情報で問題が解決しない場合、バグを見つけた場合、または機能提案がある場合は、お問い合わせください：</p>
+        <ul>
+            <li><strong>メール：</strong> <a href="mailto:support@satsclock.app">support@satsclock.app</a></li>
+            <li><strong>GitHub：</strong> <a href="https://github.com/yourusername/satsclock">https://github.com/yourusername/satsclock</a></li>
+        </ul>
+        <p><strong>問題を報告する際には、以下を含めてください：</strong></p>
+        <ul>
+            <li>デバイスモデル（例：iPhone 15 Pro Max、Apple Watch Series 9）</li>
+            <li>iOS/watchOS バージョン</li>
+            <li>アプリバージョン（設定 → についてで確認）</li>
+            <li>スクリーンショットまたは画面録画（該当する場合）</li>
+            <li>問題の詳細な説明</li>
+        </ul>
+
+        <h2>バージョン履歴</h2>
+        <p>SatsClock を継続的に改善し、定期的に更新をリリースしています。主な更新には以下が含まれます：</p>
+        <ul>
+            <li><strong>v1.0：</strong> 初期リリース、コア機能、6つのテーマ、StandBy モード</li>
+            <li><strong>v1.1：</strong> Apple Watch アプリとコンプリケーション</li>
+            <li><strong>v1.2：</strong> 7つの表示モード、パフォーマンス最適化、バグ修正</li>
+        </ul>
+        <p>App Store → 設定 → アプリ更新で自動更新を有効にして、最新機能を取得してください。</p>
+
+        <h2>謝辞</h2>
+        <p>SatsClock は以下からのデータを使用しています：</p>
+        <ul>
+            <li><strong>Mempool.space</strong> - オープンソースビットコインブロックチェーンエクスプローラー</li>
+            <li><strong>Binance</strong> - 暗号通貨取引所（価格データ）</li>
+        </ul>
+
+        <div class="footer">
+            <p>&copy; 2025 SatsClock. All rights reserved.</p>
+            <p><strong>HODL を続けましょう。</strong> 🚀</p>
+            <p>ビットコインコミュニティのために ❤️ で作成</p>
+        </div>
+    </div>
+</body>
+</html>

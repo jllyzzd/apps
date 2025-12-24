@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App-Support - SatsClock</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "SF Pro Display", sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background-color: #f5f5f7; }
+        .container { background-color: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { border-bottom: 2px solid #F7931A; padding-bottom: 10px; color: #F7931A; }
+        h2 { margin-top: 30px; color: #007AFF; }
+        h3 { margin-top: 20px; font-weight: bold; color: #555; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        .footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+        .theme-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 15px 0; }
+        .theme-item { background-color: #f9f9f9; padding: 10px; border-radius: 6px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>App-Support</h1>
+        <p>Vielen Dank für die Nutzung von <strong>SatsClock</strong>. Wir widmen uns der Bereitstellung eines schönen, datenschutzorientierten Bitcoin-Dashboards. Wenn Sie auf Probleme stoßen oder Vorschläge haben, lesen Sie bitte die folgenden Informationen.</p>
+
+        <h2>Über SatsClock</h2>
+        <p>SatsClock ist ein Echtzeit-Bitcoin-Dashboard mit tiefer iOS-Systemintegration. Es zeigt Live-Blockchain-Daten einschließlich Preis, Blockhöhe, Mempool-Gebühren, Halving-Countdown und Moscow Time - alle in einem wunderschönen Sci-Fi-Theme-Interface.</p>
+
+        <h2>Hauptfunktionen</h2>
+
+        <div class="feature">
+            <h3>📊 Echtzeit-Datenanzeige</h3>
+            <ul>
+                <li><strong>Bitcoin-Preis:</strong> Live-Preis in USD mit 7-Tage-Trendchart</li>
+                <li><strong>Blockhöhe:</strong> Aktuelle Blockchain-Blocknummer mit Formatierung</li>
+                <li><strong>Mempool-Gebühren:</strong> Schnellste/Halbe Stunde/Wirtschaft Gebührenraten in sats/vB</li>
+                <li><strong>Moscow Time:</strong> Wie viele Sats ein USD kaufen kann (1 USD ÷ BTC-Preis)</li>
+                <li><strong>Halving-Fortschritt:</strong> Tage/Blöcke verbleibend bis zum nächsten Bitcoin-Halving</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>🎨 Sechs professionelle Themes</h3>
+            <div class="theme-list">
+                <div class="theme-item"><strong>Bitcoin Orange</strong> - Klassisch professionell</div>
+                <div class="theme-item"><strong>Matrix Grün</strong> - Cyberpunk-Hacker</div>
+                <div class="theme-item"><strong>Rein Weiß</strong> - Minimalistische Eleganz</div>
+                <div class="theme-item"><strong>Pixel Retro</strong> -8-Bit-Nostalgie</div>
+                <div class="theme-item"><strong>Neon Tech</strong> - Futuristischer Cyberpunk</div>
+                <div class="theme-item"><strong>Terminal Mono</strong> - Entwickler-Stil</div>
+            </div>
+            <p>Jedes Theme enthält benutzerdefinierte Schriftarten, Farbschemata und visuelle Effekte, die unabhängig umgeschaltet werden können.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🔌 Tiefe iOS-Integration</h3>
+            <ul>
+                <li><strong>StandBy-Modus:</strong> Optimiertes Querformat-Layout für das Laden des iPhone</li>
+                <li><strong>Startbildschirm-Widgets:</strong> Klein, Mittel, Groß Größen</li>
+                <li><strong>Sperrbildschirm-Widgets:</strong> Kreisförmig, Rechteckig, Inline</li>
+                <li><strong>Apple Watch-App:</strong> Voll funktionsfähige watchOS-App mit Komplikationen</li>
+                <li><strong>Spotlight-Suche:</strong> Schneller Zugriff auf Bitcoin-Daten</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>🌍 Mehrsprachige Unterstützung</h3>
+            <p>SatsClock unterstützt 8 Sprachen mit vollständiger Lokalisierung:</p>
+            <p><strong>English, 简体中文, 繁體中文, 日本語, 한국어, Deutsch, Español, Français</strong></p>
+        </div>
+
+        <h2>Häufig gestellte Fragen (FAQ)</h2>
+
+        <h3>1. Wie öffne ich die Einstellungen?</h3>
+        <p><strong>Lange drücken</strong> Sie irgendwo auf dem Bildschirm für 0,6 Sekunden, um die Einstellungen zu öffnen. Alternativ können Sie über die Schnittstellenauswahl (untere Taste) → Schnittstelle auswählen → Zahnrad-Symbol oben rechts auf die Einstellungen zugreifen.</p>
+
+        <h3>2. Was ist "Moscow Time"?</h3>
+        <p><strong>Moscow Time</strong> ist ein Bitcoin-Indikator, berechnet als: <code>100.000.000 sats ÷ BTC-Preis in USD</code>. Es repräsentiert, wie viele Satoshis (sats) ein US-Dollar kaufen kann. Wenn der Preis steigt, fällt Moscow Time - und umgekehrt.</p>
+        <p>Beispiel: Wenn BTC 100.000 $ beträgt, dann beträgt Moscow Time = 1.000 sats/USD.</p>
+
+        <h3>3. Wie aktiviere ich den StandBy-Modus?</h3>
+        <p>Der StandBy-Modus ist automatisch auf iPhone 15 Pro und neuer mit iOS 17+ aktiviert. Platzieren Sie Ihr iPhone einfach im <strong>Querformat</strong> auf einem MagSafe oder Qi-Wireless-Ladegerät. Die App wechselt automatisch zum StandBy-Layout.</p>
+
+        <h3>4. Wie oft werden Daten aktualisiert?</h3>
+        <p>Standardmäßig werden Daten alle 15 Sekunden aktualisiert. Sie können dies in den Einstellungen (lang drücken → Daten → Aktualisierungsintervall) von 10 bis 60 Sekunden anpassen. Hinweis: Häufigeres Aktualisieren kann die Akkulaufzeit leicht beeinträchtigen.</p>
+
+        <h3>5. Warum werden meine Daten nicht aktualisiert?</h3>
+        <p>Bitte überprüfen Sie Folgendes:</p>
+        <ul>
+            <li>Stellen Sie sicher, dass Sie eine aktive Internetverbindung haben (WLAN oder Mobilfunk)</li>
+            <li>Überprüfen Sie den Zeitstempel "Letzte Aktualisierung" am unteren Bildschirmrand</li>
+            <li>Wenn Sie WLAN verwenden, versuchen Sie, auf Mobilfunkdaten zu wechseln</li>
+            <li>Netzwerkprobleme können vorübergehende Verzögerungen verursachen - die App wird automatisch wiederholen</li>
+        </ul>
+
+        <h3>6. Wie füge ich Widgets zum Startbildschirm hinzu?</h3>
+        <ol>
+            <li>Lange drücken auf einen leeren Bereich Ihres Startbildschirms, bis Apps wackeln</li>
+            <li>Tippen Sie auf die <strong>+</strong>-Taste oben links</li>
+            <li>Suchen Sie nach "SatsClock" oder scrollen Sie, um es zu finden</li>
+            <li>Wählen Sie die gewünschte Widget-Größe</li>
+            <li>Tippen Sie auf <strong>Widget hinzufügen</strong></li>
+        </ol>
+
+        <h3>7. Wie passe ich mein Watch-Zifferblatt an?</h3>
+        <ol>
+            <li>Lange drücken auf Ihr aktuelles Watch-Zifferblatt</li>
+            <li>Ganz nach rechts wischen und <strong>Neu</strong> tippen</li>
+            <li>Wählen Sie ein Zifferblatt, das Komplikationen unterstützt (Modular, Chronograph, etc.)</li>
+            <li>Tippen Sie auf einen Komplikations-Slot und wählen Sie <strong>SatsClock</strong></li>
+        </ol>
+
+        <h3>8. Was sind die 7 verschiedenen Ansichtsmodi?</h3>
+        <p>Tippen Sie auf die untere Schnittstellen-Taste, um zu wechseln zwischen:</p>
+        <ul>
+            <li><strong>Dashboard:</strong> Übersicht über alle Bitcoin-Metriken</li>
+            <li><strong>Preis-Details:</strong> Preis mit 7-Tage-Trendchart</li>
+            <li><strong>Block-Details:</strong> Blockhöhe und Zyklusfortschritt</li>
+            <li><strong>Halving-Details:</strong> Vollständige Halving-Fortschrittsvisualisierung</li>
+            <li><strong>Moscow Time:</strong> Dedizierte Block-Uhr-Ansicht</li>
+            <li><strong>Halving-Countdown:</strong> Tage und Blöcke bis zum nächsten Halving</li>
+            <li><strong>Gebührenraten:</strong> Netzwerk-Gebührenratenvergleich</li>
+        </ul>
+
+        <h3>9. Wie deaktiviere ich visuelle Effekte, um Akku zu sparen?</h3>
+        <p>Ja. Gehen Sie zu Einstellungen (lang drücken) → Anzeige → <strong>Leistungsmodus</strong>. Dies deaktiviert alle Text-Glow-Effekte und Hintergrundanimationen, während die Farben und Schriftarten Ihres gewählten Themes erhalten bleiben.</p>
+
+        <h3>10. Funktioniert die App offline?</h3>
+        <p>Ja, mit Einschränkungen. Die App zeigt die letzten zwischengespeicherten Daten an, wenn sie offline ist. Für Echtzeit-Updates ist jedoch eine Internetverbindung erforderlich. Widgets und Watch-Komplikationen zeigen ebenfalls zwischengespeicherte Daten an.</p>
+
+        <h3>11. Wie wird das Halving-Datum berechnet?</h3>
+        <p>Das Halving-Datum wird basierend auf geschätzt:</p>
+        <ul>
+            <li>Aktuelle Blockhöhe (abgerufen von mempool.space)</li>
+            <li>Verbleibende Blöcke bis zum nächsten 210.000-Block-Meilenstein</li>
+            <li>Durchschnittliche 10-minütige Blockzeit</li>
+        </ul>
+        <p>Dies ist eine Schätzung. Das tatsächliche Halving kann je nach Änderungen der Netzwerk-Hashrate variieren.</p>
+
+        <h3>12. Warum benötigt die App Internetzugang?</h3>
+        <p>Die App benötigt Internetzugang, um öffentliche Blockchain-Daten abzurufen von:</p>
+        <ul>
+            <li><strong>Mempool.space API:</strong> Blockhöhe, Gebührenraten, Halving-Fortschritt</li>
+            <li><strong>Binance API:</strong> Aktueller Bitcoin-Marktpreis</li>
+        </ul>
+        <p><strong>Alle Anfragen sind anonym und enthalten keine persönlichen Informationen.</strong></p>
+
+        <h3>13. Wie aktiviere ich Bildschirm-dauerhaft-an?</h3>
+        <p>Gehen Sie zu Einstellungen (lang drücken) → Anzeige → <strong>Bildschirm an lassen</strong>. Dies verhindert, dass Ihr iPhone in den Ruhemodus wechselt, während die App geöffnet ist. Nützlich für dedizierte Monitoring-Setups oder StandBy-Modus.</p>
+
+        <h3>14. Was ist die Zitat-Karussell-Funktion?</h3>
+        <p>Die App zeigt rotierende Zitate von Bitcoin-Größen wie Satoshi Nakamoto, Hal Finney und anderen. Sie können dies in den Einstellungen deaktivieren (lang drücken) → Anzeige → <strong>Zitate anzeigen</strong>.</p>
+
+        <h2>Tipps & Best Practices</h2>
+        <ul>
+            <li><strong>StandBy-Modus:</strong> Mit einem MagSafe-Ladegerät für das beste Always-On-Display-Erlebnis verwenden</li>
+            <li><strong>Energiesparmodus:</strong> iOS deaktiviert visuelle Effekte automatisch im Energiesparmodus</li>
+            <li><strong>Widget-Platzierung:</strong> Mehrere Widgets für verschiedene Metriken hinzufügen (Preis, Block, Moscow Time)</li>
+            <li><strong>Watch-Zifferblatt:</strong> Modular oder Infograph Zifferblätter für bestes Komplikations-Layout verwenden</li>
+            <li><strong>Leistung:</strong> Effekte auf älteren iPhone-Modellen deaktivieren für glattere Leistung</li>
+        </ul>
+
+        <h2>Privatsphäre & Daten</h2>
+        <p>SatsClock ist nach datenschutzorientierten Prinzipien entworfen:</p>
+        <ul>
+            <li>✅ Keine Konten oder Registrierung erforderlich</li>
+            <li>✅ Kein Benutzer-Tracking oder Analyse</li>
+            <li>✅ Keine Werbung</li>
+            <li>✅ Alle Daten lokal auf Ihrem Gerät gespeichert</li>
+            <li>✅ Nur anonyme API-Anfragen (öffentliche Blockchain-Daten)</li>
+        </ul>
+
+        <h2>Bekannte Einschränkungen</h2>
+        <ul>
+            <li><strong>Apple Watch:</strong> Die Watch-App erfordert, dass die iPhone-Begleit-App mindestens einmal ausgeführt wird, um Daten über App Groups zu synchronisieren</li>
+            <li><strong>Hintergrund-Updates:</strong> Widgets werden nach iOS-Zeitplan aktualisiert (typischerweise alle 15-30 Minuten), nicht augenblicklich</li>
+            <li><strong>Preisdaten:</strong> Preis wird nur in USD angezeigt (Mehrwährungs-Support ist für zukünftige Versionen geplant)</li>
+        </ul>
+
+        <h2>Problembehebung</h2>
+
+        <h3>Widgets werden nicht aktualisiert</h3>
+        <p>Widgets werden nach iOS-Zeitplan aktualisiert, nicht kontinuierlich. Um ein Widget-Update zu erzwingen:</p>
+        <ol>
+            <li>Öffnen Sie die SatsClock-Haupt-App (dies ruft neue Daten ab)</li>
+            <li>Warten Sie 15-30 Sekunden, bis iOS die Widgets aktualisiert</li>
+            <li>Sie können auch lange auf das Widget drücken und "Widget aktualisieren" tippen</li>
+        </ol>
+
+        <h3>Watch-App zeigt "Keine Daten"</h3>
+        <p>Wenn Ihre Apple Watch-App keine Daten anzeigt:</p>
+        <ol>
+            <li>Stellen Sie sicher, dass Ihr iPhone in der Nähe ist und Bluetooth aktiviert ist</li>
+            <li>Öffnen Sie SatsClock auf Ihrem iPhone, um Daten zu aktualisieren</li>
+            <li>Die Watch-App sollte innerhalb von 1-2 Minuten synchronisieren</li>
+            <li>Wenn Probleme bestehen, heben Sie die Kopplung auf und koppeln Sie die Watch-App erneut</li>
+        </ol>
+
+        <h3>App stürzt beim Start ab</h3>
+        <p>Wenn die App abstürzt:</p>
+        <ul>
+            <li>Stellen Sie sicher, dass Sie iOS 17.0 oder höher ausführen</li>
+            <li>Löschen Sie die App und installieren Sie sie neu aus dem App Store (Sie verlieren keine Daten, da wir keine Benutzerdaten speichern)</li>
+            <li>Starten Sie Ihr iPhone neu</li>
+        </ul>
+
+        <h2>Feedback & Support</h2>
+        <p>Wenn die obigen Informationen Ihr Problem nicht lösen oder wenn Sie einen Fehler gefunden haben oder Funktionsvorschläge haben, kontaktieren Sie uns bitte:</p>
+        <ul>
+            <li><strong>E-Mail:</strong> <a href="mailto:support@satsclock.app">support@satsclock.app</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/yourusername/satsclock">https://github.com/yourusername/satsclock</a></li>
+        </ul>
+        <p><strong>Wenn Sie Probleme melden, geben Sie bitte an:</strong></p>
+        <ul>
+            <li>Ihr Gerätemodell (z.B. iPhone 15 Pro Max, Apple Watch Series 9)</li>
+            <li>iOS/watchOS-Version</li>
+            <li>App-Version (zu finden in Einstellungen → Über)</li>
+            <li>Screenshot oder Bildschirmaufzeichnung (falls zutreffend)</li>
+            <li>Detaillierte Beschreibung des Problems</li>
+        </ul>
+
+        <h2>Versionshistorie</h2>
+        <p>Wir verbessern SatsClock kontinuierlich und veröffentlichen regelmäßig Updates. Wichtige Updates umfassen:</p>
+        <ul>
+            <li><strong>v1.0:</strong> Erste Version mit Kernfunktionen, 6 Themes, StandBy-Modus</li>
+            <li><strong>v1.1:</strong> Apple Watch-App und Komplikationen</li>
+            <li><strong>v1.2:</strong> 7 Ansichtsmodi, Leistungsoptimierung, Fehlerbehebungen</li>
+        </ul>
+        <p>Bitte aktivieren Sie automatische Updates im App Store → Einstellungen → App-Updates, um die neuesten Funktionen zu erhalten.</p>
+
+        <h2>Danksagungen</h2>
+        <p>SatsClock verwendet Daten von:</p>
+        <ul>
+            <li><strong>Mempool.space</strong> - Open-Source-Bitcoin-Blockchain-Explorer</li>
+            <li><strong>Binance</strong> - Kryptowährungsbörse (Preisdaten)</li>
+        </ul>
+
+        <div class="footer">
+            <p>&copy; 2025 SatsClock. Alle Rechte vorbehalten.</p>
+            <p><strong>Halten Sie durch.</strong> 🚀</p>
+            <p>Made with ❤️ für die Bitcoin-Community</p>
+        </div>
+    </div>
+</body>
+</html>

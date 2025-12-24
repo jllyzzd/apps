@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzrichtlinie - SatsClock</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "SF Pro Display", sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background-color: #f5f5f7; }
+        .container { background-color: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { border-bottom: 2px solid #F7931A; padding-bottom: 10px; color: #F7931A; }
+        h2 { margin-top: 30px; color: #333; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        .footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+        .highlight { background-color: #fff9e6; padding: 15px;  margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Datenschutzrichtlinie</h1>
+        <p><strong>Effektives Datum:</strong> 25. Dezember 2025</p>
+
+        <p>Willkommen bei <strong>SatsClock</strong> ("die App"). Wir schätzen Ihre Privatsphäre und verpflichten uns, Ihre persönlichen Daten zu schützen. Diese Datenschutzrichtlinie erklärt unsere Praktiken bezüglich Ihrer Informationen.</p>
+
+        <h2>1. Wir sammeln keine Daten</h2>
+        <p>SatsClock ist ein datenschutzorientiertes Bitcoin-Dashboard. Wir <strong>sammeln, speichern, übertragen oder teilen keine</strong> Ihrer persönlichen Informationen, Nutzungsdaten oder Geräteinformationen.</p>
+        <ul>
+            <li><strong>Keine Konten:</strong> Sie müssen sich nicht registrieren oder anmelden, um Funktionen der App zu nutzen.</li>
+            <li><strong>Keine Tracker:</strong> Wir verwenden keine Drittanalyse-SDKs oder Benutzerverhaltens-Tracking-Services.</li>
+            <li><strong>Keine Werbung:</strong> Die App enthält keine Werbung und zeigt keine Anzeigen von Drittanbieternetzwerken.</li>
+            <li><strong>Lokale Verarbeitung:</strong> Alle Datenanzeigen und Berechnungen werden lokal auf Ihrem Gerät durchgeführt.</li>
+        </ul>
+
+        <h2>2. Netzwerkanfragen</h2>
+        <p>Die App ruft öffentliche Bitcoin-Blockchain-Daten von folgenden Drittanbieter-APIs ab:</p>
+        <ul>
+            <li><strong>Mempool.space API:</strong> Echtzeit-Blockchain-Daten (Blockhöhe, Gebühren, Halving-Fortschritt)</li>
+            <li><strong>Binance API:</strong> Aktueller Bitcoin-Marktpreis</li>
+        </ul>
+        <div class="highlight">
+            <p><strong>Wichtig:</strong> Diese API-Anfragen sind anonym. Es werden keine persönlichen Identifikatoren, Geräteinformationen oder Nutzungsmuster übertragen. Die App liest nur öffentliche Blockchain-Daten.</p>
+        </div>
+
+        <h2>3. Datenspeicherung</h2>
+        <p>Die App speichert minimale Benutzereinstellungsdaten auf Ihrem Gerät, nur um Ihre Benutzererfahrung zu verbessern:</p>
+        <ul>
+            <li><strong>Themenauswahl:</strong> Ihr bevorzugtes Farbschema und Effekteinstellungen</li>
+            <li><strong>Spracheinstellung:</strong> Ausgewählte Schnittstellensprache (8 Sprachen unterstützt)</li>
+            <li><strong>Anzeigeeinstellungen:</strong> Aktualisierungsintervall, Bildschirm-an-Einstellung, Zitat-Anzeigeeinstellungen</li>
+            <li><strong>Cache-Daten:</strong> Temporär zwischengespeicherte Blockchain-Daten zur Reduzierung von Netzwerkanfragen</li>
+        </ul>
+        <p>Alle Daten werden lokal über iOS UserDefaults gespeichert und niemals an einen Server gesendet.</p>
+
+        <h2>4. App Groups und Datenfreigabe</h2>
+        <p>Die App verwendet iOS App Groups, um Widget-Funktionalität zu ermöglichen:</p>
+        <ul>
+            <li><strong>Zweck:</strong> Freigabe von Blockchain-Daten mit iOS-Widgets und Apple Watch Komplikationen</li>
+            <li><strong>Speicherung:</strong> Daten werden im gemeinsamen UserDefaults-Container auf Ihrem Gerät gespeichert</li>
+            <li><strong>Keine Cloud-Synchronisation:</strong> Daten werden niemals auf einen Cloud-Service oder Drittanbieterserver hochgeladen</li>
+        </ul>
+
+        <h2>5. Watch-App-Konnektivität</h2>
+        <p>Wenn Sie die Apple Watch-App verwenden, erfolgt die folgende Datenfreigabe über Apples WatchConnectivity-Framework:</p>
+        <ul>
+            <li><strong>iPhone → Watch:</strong> Bitcoin-Preis, Blockhöhe, Gebühren, Themeneinstellungen und lokalisierte Zeichenfolgen</li>
+            <li><strong>Speicherung:</strong> Alle Daten werden lokal auf Ihrem Watch-Gerät gespeichert</li>
+            <li><strong>Privatsphäre:</strong> Es werden keine Daten an externe Server gesendet. Alle Kommunikation verbleibt auf Ihren lokalen Geräten.</li>
+        </ul>
+
+        <h2>6. Berechtigungen</h2>
+        <p>Die App erfordert keine besonderen Systemberechtigungen (wie Kamera, Standort, Mikrofon, Kontakte, Fotos etc.) für die Funktion. Die App verwendet nur:</p>
+        <ul>
+            <li><strong>Internetzugang:</strong> Abruf öffentlicher Blockchain-Daten (anonyme Anfragen)</li>
+            <li><strong>Lokale Benachrichtigungen:</strong> Optional (nur wenn Sie Widget-Timeline-Updates aktivieren)</li>
+        </ul>
+
+        <h2>7. Kinder-Privatsphäre</h2>
+        <p>Die App ist für Benutzer aller Altersgruppen geeignet. Da wir keine persönlichen Informationen sammeln, erfolgt keine Sammlung oder Verarbeitung von Kinder-Privatsphäre-Daten.</p>
+
+        <h2>8. Datenquelle</h2>
+        <p>In der App angezeigte Bitcoin-Daten stammen von:</p>
+        <ul>
+            <li><strong>Mempool.space:</strong> Open-Source-Bitcoin-Blockchain-Explorer (https://mempool.space)</li>
+            <li><strong>Binance:</strong> Kryptowährungsbörsen-API für Preisdaten</li>
+        </ul>
+        <p>Wir billigen oder garantieren nicht die Genauigkeit von Daten aus diesen Drittanbieter-Quellen.</p>
+
+        <h2>9. Änderungen an dieser Richtlinie</h2>
+        <p>Obwohl signifikante Änderungen aufgrund unseres datenschutzorientierten Designs unwahrscheinlich sind, können wir diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Alle Änderungen werden auf dieser Seite mit einem aktualisierten effektiven Datum veröffentlicht.</p>
+
+        <h2>10. Ihre Rechte</h2>
+        <p>Da wir keine Daten sammeln, gibt es keine persönlichen Daten, die Sie anfordern können, auf die Sie zugreifen, ändern oder löschen können. Alle auf Ihrem Gerät gespeicherten Daten können durch Folgendes gelöscht werden:</p>
+        <ul>
+            <li>Deinstallieren der App (löscht alle lokalen Daten)</li>
+            <li>In der App gehen zu Einstellungen → Einstellungen zurücksetzen</li>
+        </ul>
+
+        <h2>11. Kontaktieren Sie uns</h2>
+        <p>Wenn Sie Fragen oder Vorschläge zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte:</p>
+        <p>E-Mail: <a href="mailto:support@satsclock.app">support@satsclock.app</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername/satsclock">https://github.com/yourusername/satsclock</a></p>
+
+        <div class="footer">
+            <p>&copy; 2025 SatsClock. Alle Rechte vorbehalten.</p>
+            <p><strong>Bitcoin nicht erforderlich.</strong> Einfach HODLn.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - SatsClock</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background-color: #f5f5f7; }
+        .container { background-color: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { border-bottom: 2px solid #F7931A; padding-bottom: 10px; color: #F7931A; }
+        h2 { margin-top: 30px; color: #333; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        .footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+        .highlight { background-color: #fff9e6; padding: 15px;  margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>プライバシーポリシー</h1>
+        <p><strong>発効日：</strong>2025年12月25日</p>
+
+        <p><strong>SatsClock</strong>（「本アプリ」）へようこそ。私たちはお客様のプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーは、情報に関する当社の practices について説明します。</p>
+
+        <h2>1. データは収集しません</h2>
+        <p>SatsClock はプライバシー優先のビットコインダッシュボードアプリケーションです。私たちはお客様の個人情報、使用データ、またはデバイス情報を<strong>収集、保存、送信、または共有しません</strong>。</p>
+        <ul>
+            <li><strong>アカウント不要：</strong> アプリの機能を使用するために登録またはログインする必要はありません。</li>
+            <li><strong>トラッカーなし：</strong> 第三者の分析 SDK やユーザー行動追跡サービスは使用していません。</li>
+            <li><strong>広告なし：</strong> 本アプリには広告は含まれておらず、第三者ネットワークから広告を配信することもありません。</li>
+            <li><strong>ローカル処理：</strong> すべてのデータ表示と計算はデバイス上でローカルに実行されます。</li>
+        </ul>
+
+        <h2>2. ネットワークリクエスト</h2>
+        <p>本アプリは、以下の第三者 API から公開ビットコインブロックチェーンデータを取得します：</p>
+        <ul>
+            <li><strong>Mempool.space API：</strong> リアルタイムブロックチェーンデータ（ブロック高さ、手数料、半減期進捗）</li>
+            <li><strong>Binance API：</strong> 現在のビットコイン市場価格</li>
+        </ul>
+        <div class="highlight">
+            <p><strong>重要：</strong> これらの API リクエストは匿名です。個人識別子、デバイス情報、または使用パターンは送信されません。アプリは公開ブロックチェーンデータのみを読み取ります。</p>
+        </div>
+
+        <h2>3. データ保存</h2>
+        <p>本アプリは、ユーザーエクスペリエンスを向上させるためにのみ、デバイス上に最小限のユーザー設定データを保存します：</p>
+        <ul>
+            <li><strong>テーマ選択：</strong> 選択したカラーテーマと効果設定</li>
+            <li><strong>言語設定：</strong> 選択したインターフェース言語（8言語対応）</li>
+            <li><strong>表示設定：</strong> 更新間隔、画面オン設定、引用表示設定</li>
+            <li><strong>キャッシュデータ：</strong> ネットワークリクエストを減らすための一時的なブロックチェーンデータキャッシュ</li>
+        </ul>
+        <p>すべてのデータは iOS UserDefaults を通じてローカルに保存され、サーバーに送信されることはありません。</p>
+
+        <h2>4. App Groups とデータ共有</h2>
+        <p>本アプリは iOS App Groups を使用してウィジェット機能を実現しています：</p>
+        <ul>
+            <li><strong>目的：</strong> iOS ウィジェットおよび Apple Watch コプリケーションとのブロックチェーンデータ共有</li>
+            <li><strong>保存：</strong> デバイス上の共有 UserDefaults コンテナに保存されます</li>
+            <li><strong>クラウド同期なし：</strong> データはクラウドサービスまたは第三者サーバーにアップロードされません</li>
+        </ul>
+
+        <h2>5. ウォッチアプリ接続</h2>
+        <p>Apple Watch アプリを使用する場合、Apple の WatchConnectivity フレームワークを通じて以下のデータ共有が行われます：</p>
+        <ul>
+            <li><strong>iPhone → Watch：</strong> ビットコイン価格、ブロック高さ、手数料、テーマ設定、ローカライズ文字列</li>
+            <li><strong>保存：</strong> すべてのデータはウォッチデバイス上にローカルに保存されます</li>
+            <li><strong>プライバシー：</strong> 外部サーバーへのデータ送信はありません。すべての通信はローカルデバイス内で行われます。</li>
+        </ul>
+
+        <h2>6. 権限</h2>
+        <p>本アプリは動作時に特別なシステム権限（カメラ、位置情報、マイク、連絡先、写真など）を必要としません。本アプリが使用するのは以下のみです：</p>
+        <ul>
+            <li><strong>インターネットアクセス：</strong> 公開ブロックチェーンデータの取得（匿名リクエスト）</li>
+            <li><strong>ローカル通知：</strong> オプション（ウィジェットタイムライン更新を有効にした場合のみ）</li>
+        </ul>
+
+        <h2>7. 子供のプライバシー</h2>
+        <p>本アプリはすべての年齢層のユーザーに適しています。個人情報を収集しないため、子供のプライバシーデータの収集や処理は行いません。</p>
+
+        <h2>8. データソース</h2>
+        <p>本アプリに表示されるビットコインデータは以下から取得されます：</p>
+        <ul>
+            <li><strong>Mempool.space：</strong> オープンソースビットコインブロックチェーンエクスプローラー（https://mempool.space）</li>
+            <li><strong>Binance：</strong> 価格データの暗号通貨取引所 API</li>
+        </ul>
+        <p>これらの第三者ソースからのデータの正確性を保証または支持するものではありません。</p>
+
+        <h2>9. ポリシーの変更</h2>
+        <p>プライバシー優先の設計のため、重大な変更は可能性が低いですが、本プライバシーポリシーを随時更新する場合があります。変更はこのページに更新日とともに投稿されます。</p>
+
+        <h2>10. あなたの権利</h2>
+        <p>データを収集しないため、アクセス、変更、削除を要求する個人データはありません。デバイス上の保存データは以下でクリアできます：</p>
+        <ul>
+            <li>アプリをアンインストールする（すべてのローカルデータをクリア）</li>
+            <li>アプリ内で設定 → 設定をリセット</li>
+        </ul>
+
+        <h2>11. お問い合わせ</h2>
+        <p>本プライバシーポリシーに関する質問や提案がある場合は、お問い合わせください：</p>
+        <p>メール：<a href="mailto:support@satsclock.app">support@satsclock.app</a></p>
+        <p>GitHub：<a href="https://github.com/yourusername/satsclock">https://github.com/yourusername/satsclock</a></p>
+
+        <div class="footer">
+            <p>&copy; 2025 SatsClock. All rights reserved.</p>
+            <p><strong>ビットコインは不要。</strong> ただ HODL すればいい。</p>
+        </div>
+    </div>
+</body>
+</html>

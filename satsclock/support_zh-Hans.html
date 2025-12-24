@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用支持 - SatsClock</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background-color: #f5f5f7; }
+        .container { background-color: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { border-bottom: 2px solid #F7931A; padding-bottom: 10px; color: #F7931A; }
+        h2 { margin-top: 30px; color: #007AFF; }
+        h3 { margin-top: 20px; font-weight: bold; color: #555; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        .footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+        .theme-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 15px 0; }
+        .theme-item { background-color: #f9f9f9; padding: 10px; border-radius: 6px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>应用支持</h1>
+        <p>感谢您使用 <strong>SatsClock</strong>。我们致力于提供美观、隐私优先的比特币仪表盘体验。如果您遇到任何问题或有建议，请参考以下信息。</p>
+
+        <h2>关于 SatsClock</h2>
+        <p>SatsClock 是一款实时比特币仪表盘应用，深度集成 iOS 系统。它以精美的科幻主题界面显示实时区块链数据，包括价格、区块高度、内存池手续费、减半倒计时和莫斯科时间。</p>
+
+        <h2>核心功能</h2>
+
+        <div class="feature">
+            <h3>📊 实时数据显示</h3>
+            <ul>
+                <li><strong>比特币价格：</strong> 美元实时价格及7天走势图</li>
+                <li><strong>区块高度：</strong> 当前区块链区块编号，带格式化显示</li>
+                <li><strong>内存池手续费：</strong> 最快/半小时/经济费率（聪/虚拟字节）</li>
+                <li><strong>莫斯科时间：</strong> 一美元可以买多少聪（1 USD ÷ BTC 价格）</li>
+                <li><strong>减半进度：</strong> 距下次比特币减半的剩余天数/区块数</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>🎨 六大专业主题</h3>
+            <div class="theme-list">
+                <div class="theme-item"><strong>比特币橙</strong> - 经典专业</div>
+                <div class="theme-item"><strong>黑客帝国绿</strong> - 赛博朋克黑客</div>
+                <div class="theme-item"><strong>纯白色</strong> - 极简优雅</div>
+                <div class="theme-item"><strong>像素复古</strong> - 8位怀旧</div>
+                <div class="theme-item"><strong>霓虹科技</strong> - 未来赛博朋克</div>
+                <div class="theme-item"><strong>终端等宽</strong> - 开发者风格</div>
+            </div>
+            <p>每个主题都包含自定义字体、配色方案和可独立切换的视觉特效。</p>
+        </div>
+
+        <div class="feature">
+            <h3>🔌 深度 iOS 集成</h3>
+            <ul>
+                <li><strong>StandBy 模式：</strong> 为充电 iPhone 优化的横向布局</li>
+                <li><strong>主屏幕小组件：</strong> 小、中、大三种尺寸</li>
+                <li><strong>锁屏小组件：</strong> 圆形、矩形、内联样式</li>
+                <li><strong>Apple Watch 应用：</strong> 功能完整的 watchOS 应用及复杂功能</li>
+                <li><strong>Spotlight 搜索：</strong> 快速访问比特币数据</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>🌍 多语言支持</h3>
+            <p>SatsClock 支持 8 种语言的完整本地化：</p>
+            <p><strong>English、简体中文、繁體中文、日本語、한국어、Deutsch、Español、Français</strong></p>
+        </div>
+
+        <h2>常见问题解答（FAQ）</h2>
+
+        <h3>1. 如何打开设置？</h3>
+        <p><strong>长按</strong>屏幕任意位置 0.6 秒即可打开设置。或者，您也可以通过界面选择器（底部按钮）→ 选择界面 → 点击右上角的齿轮图标访问设置。</p>
+
+        <h3>2. 什么是"莫斯科时间"？</h3>
+        <p><strong>莫斯科时间</strong>是一个比特币指标，计算公式为：<code>100,000,000 聪 ÷ BTC 美元价格</code>。它表示一美元可以购买多少聪。当价格上涨时，莫斯科时间下降——反之亦然。</p>
+        <p>示例：如果 BTC 是 100,000 美元，那么莫斯科时间 = 1,000 聪/美元。</p>
+
+        <h3>3. 如何启用 StandBy 模式？</h3>
+        <p>StandBy 模式在运行 iOS 17+ 的 iPhone 15 Pro 及更新机型上自动启用。只需将 iPhone<strong>横向</strong>放置在 MagSafe 或 Qi 无线充电器上即可。应用将自动切换到 StandBy 布局。</p>
+
+        <h3>4. 数据多久刷新一次？</h3>
+        <p>默认情况下，数据每 15 秒刷新一次。您可以在设置中（长按 → 数据 → 刷新间隔）从 10 到 60 秒进行调整。注意：更频繁的刷新可能会稍微影响电池续航。</p>
+
+        <h3>5. 为什么我的数据没有更新？</h3>
+        <p>请检查以下项目：</p>
+        <ul>
+            <li>确保您有活动的互联网连接（Wi-Fi 或蜂窝网络）</li>
+            <li>检查屏幕底部的"上次更新"时间戳</li>
+            <li>如果使用 Wi-Fi，请尝试切换到蜂窝数据</li>
+            <li>网络问题可能导致暂时延迟——应用会自动重试</li>
+        </ul>
+
+        <h3>6. 如何添加小组件到主屏幕？</h3>
+        <ol>
+            <li>长按主屏幕空白区域直到应用开始抖动</li>
+            <li>点击左上角的<strong>+</strong>按钮</li>
+            <li>搜索"SatsClock"或滚动查找</li>
+            <li>选择您想要的小组件尺寸</li>
+            <li>点击<strong>添加小组件</strong></li>
+        </ol>
+
+        <h3>7. 如何自定义我的表盘？</h3>
+        <ol>
+            <li>长按当前表盘</li>
+            <li>一直向右滑动并点击<strong>新建</strong></li>
+            <li>选择支持复杂功能的表盘（模块化、计时等）</li>
+            <li>点击复杂功能插槽并选择<strong>SatsClock</strong></li>
+        </ol>
+
+        <h3>8. 7种不同的视图模式是什么？</h3>
+        <p>点击底部界面按钮切换以下模式：</p>
+        <ul>
+            <li><strong>仪表盘：</strong> 所有比特币数据概览</li>
+            <li><strong>价格详情：</strong> 价格及7天走势图</li>
+            <li><strong>区块详情：</strong> 区块高度和周期进度</li>
+            <li><strong>减半详情：</strong> 完整减半进度可视化</li>
+            <li><strong>莫斯科时间：</strong> 专门的区块时钟视图</li>
+            <li><strong>减半倒计时：</strong> 距下次减半的天数和区块数</li>
+            <li><strong>费率详情：</strong> 网络费率对比</li>
+        </ul>
+
+        <h3>9. 如何禁用视觉效果以节省电池？</h3>
+        <p>可以。进入设置（长按）→ 显示 → <strong>性能模式</strong>。这将禁用所有文字发光效果和背景动画，同时保持您选择主题的颜色和字体。</p>
+
+        <h3>10. 应用可以离线工作吗？</h3>
+        <p>可以，但有限制。应用在离线时会显示最后缓存的数据。但是，要获取实时更新，需要互联网连接。小组件和 Watch 复杂功能也将显示缓存数据。</p>
+
+        <h3>11. 减半日期是如何计算的？</h3>
+        <p>减半日期基于以下估算：</p>
+        <ul>
+            <li>当前区块高度（从 mempool.space 获取）</li>
+            <li>距下一个 210,000 区块里程碑的剩余区块数</li>
+            <li>平均 10 分钟区块时间</li>
+        </ul>
+        <p>这是一个估算值。根据网络算力变化，实际减半时间可能会有所不同。</p>
+
+        <h3>12. 为什么应用需要互联网访问？</h3>
+        <p>应用需要互联网访问以从以下来源获取公共区块链数据：</p>
+        <ul>
+            <li><strong>Mempool.space API：</strong> 区块高度、费率、减半进度</li>
+            <li><strong>Binance API：</strong> 当前比特币市场价格</li>
+        </ul>
+        <p><strong>所有请求都是匿名的，不包含任何个人信息。</strong></p>
+
+        <h3>13. 如何启用屏幕常亮？</h3>
+        <p>进入设置（长按）→ 显示 → <strong>保持屏幕常亮</strong>。这将防止您的 iPhone 在应用打开时休眠。适用于专用监控设置或 StandBy 模式。</p>
+
+        <h3>14. 语录轮播功能是什么？</h3>
+        <p>应用轮播展示来自中本聪、哈尔·芬尼等比特币名人的语录。您可以在设置中（长按）→ 显示 → <strong>显示语录</strong>来禁用此功能。</p>
+
+        <h2>提示与最佳实践</h2>
+        <ul>
+            <li><strong>StandBy 模式：</strong> 配合 MagSafe 充电器使用，获得最佳的常亮显示体验</li>
+            <li><strong>低电量模式：</strong> iOS 在低电量模式下会自动禁用视觉效果</li>
+            <li><strong>小组件放置：</strong> 添加多个小组件以显示不同指标（价格、区块、莫斯科时间）</li>
+            <li><strong>表盘：</strong> 使用模块化或信息图表表盘以获得最佳复杂功能布局</li>
+            <li><strong>性能：</strong> 在较旧的 iPhone 机型上禁用效果以获得更流畅的性能</li>
+        </ul>
+
+        <h2>隐私与数据</h2>
+        <p>SatsClock 基于隐私优先原则设计：</p>
+        <ul>
+            <li>✅ 无需账号或注册</li>
+            <li>✅ 无用户追踪或分析</li>
+            <li>✅ 无广告</li>
+            <li>✅ 所有数据存储在您的设备本地</li>
+            <li>✅ 仅匿名 API 请求（公共区块链数据）</li>
+        </ul>
+
+        <h2>已知限制</h2>
+        <ul>
+            <li><strong>Apple Watch：</strong> Watch 应用需要 iPhone 配套应用至少运行一次以通过 App Groups 同步数据</li>
+            <li><strong>后台更新：</strong> 小组件按 iOS 计划更新（通常每 15-30 分钟），不是即时更新</li>
+            <li><strong>价格数据：</strong> 价格仅以美元显示（多币种支持计划在未来版本中推出）</li>
+        </ul>
+
+        <h2>故障排除</h2>
+
+        <h3>小组件未更新</h3>
+        <p>小组件按 iOS 计划更新，而不是持续更新。要强制更新小组件：</p>
+        <ol>
+            <li>打开 SatsClock 主应用（这会获取最新数据）</li>
+            <li>等待 15-30 秒让 iOS 更新小组件</li>
+            <li>您也可以长按小组件并点击"刷新小组件"</li>
+        </ol>
+
+        <h3>Watch 应用显示"无数据"</h3>
+        <p>如果您的 Apple Watch 应用显示无数据：</p>
+        <ol>
+            <li>确保您的 iPhone 在附近且蓝牙已启用</li>
+            <li>在 iPhone 上打开 SatsClock 以刷新数据</li>
+            <li>Watch 应用应在 1-2 分钟内同步</li>
+            <li>如果问题持续，请取消配对并重新配对 Watch 应用</li>
+        </ol>
+
+        <h3>应用启动时崩溃</h3>
+        <p>如果应用崩溃：</p>
+        <ul>
+            <li>确保您运行的是 iOS 17.0 或更高版本</li>
+            <li>从 App Store 删除并重新安装应用（您不会丢失任何数据，因为我们不存储用户数据）</li>
+            <li>重启您的 iPhone</li>
+        </ul>
+
+        <h2>反馈与支持</h2>
+        <p>如果上述信息未解决您的问题，或者您发现了错误，或有功能建议，请联系我们：</p>
+        <ul>
+            <li><strong>邮箱：</strong> <a href="mailto:support@satsclock.app">support@satsclock.app</a></li>
+            <li><strong>GitHub：</strong> <a href="https://github.com/yourusername/satsclock">https://github.com/yourusername/satsclock</a></li>
+        </ul>
+        <p><strong>报告问题时，请包含：</strong></p>
+        <ul>
+            <li>您的设备型号（如 iPhone 15 Pro Max、Apple Watch Series 9）</li>
+            <li>iOS/watchOS 版本</li>
+            <li>应用版本（在设置 → 关于中找到）</li>
+            <li>截图或屏幕录制（如适用）</li>
+            <li>问题的详细描述</li>
+        </ul>
+
+        <h2>版本历史</h2>
+        <p>我们持续改进 SatsClock 并定期发布更新。主要更新包括：</p>
+        <ul>
+            <li><strong>v1.0：</strong> 初始版本，包含核心功能、6大主题、StandBy 模式</li>
+            <li><strong>v1.1：</strong> Apple Watch 应用和复杂功能</li>
+            <li><strong>v1.2：</strong> 7种视图模式、性能优化、错误修复</li>
+        </ul>
+        <p>请在 App Store → 设置 → 应用更新中启用自动更新以获取最新功能。</p>
+
+        <h2>致谢</h2>
+        <p>SatsClock 使用以下来源的数据：</p>
+        <ul>
+            <li><strong>Mempool.space</strong> - 开源比特币区块链浏览器</li>
+            <li><strong>Binance</strong> - 加密货币交易所（价格数据）</li>
+        </ul>
+
+        <div class="footer">
+            <p>&copy; 2025 SatsClock. 保留所有权利。</p>
+            <p><strong>坚持 HODL。</strong> 🚀</p>
+            <p>为比特币社区用 ❤️ 制作</p>
+        </div>
+    </div>
+</body>
+</html>
