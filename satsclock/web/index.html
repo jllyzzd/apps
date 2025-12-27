@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SatsClock - Real-time Bitcoin dashboard for iOS with StandBy mode, widgets, and comprehensive market data">
+    <meta name="keywords" content="Bitcoin, BTC, iOS, Widget, StandBy, Dashboard, Mempool">
+    <title>SatsClock - Premium Bitcoin Dashboard for iOS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="bitcoin-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14" fill="#F7931A"/>
+                    <path d="M23.189 14.356c.32-2.144-1.312-3.296-3.544-4.064l.724-2.904-1.768-.442-.704 2.824c-.464-.116-.944-.224-1.42-.332l.708-2.836-1.768-.442-.724 2.904c-.388-.088-.772-.176-1.144-.264l.004-.016-2.436-.608-.472 1.892s1.312.3 1.284.32c.716.18.844.656.824 1.032l-.824 3.304c.05.012.112.032.184.06l-.188-.046-1.152 4.616c-.088.216-.312.544-.816.416.032.028-1.284-.32-1.284-.32l-.876 2.028 2.296.572c.428.108.848.216 1.264.32l-.732 2.936 1.768.442.724-2.908c.484.132.956.252 1.42.368l-.72 2.896 1.768.442.732-2.928c3.016.572 5.284.344 6.236-2.408.776-2.208-.04-3.48-1.636-4.312 1.164-.268 2.04-1.032 2.272-2.612zm-4.028 5.704c-.544 2.184-4.22.996-5.412.708l.964-3.868c1.192.296 5.012.884 4.448 3.16zm.548-5.736c-.5 2.004-3.552.988-4.544.752l.876-3.512c.992.248 4.196.708 3.668 2.76z" fill="white"/>
+                </svg>
+                <span class="brand-text">SatsClock</span>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-dropdown">
+                    <button class="lang-dropdown-btn" id="langDropdownBtn">
+                        <span class="current-lang">EN</span>
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                            <path d="M6 8L1 3h10L6 8z"/>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown-menu" id="langDropdownMenu">
+                        <div class="lang-item" data-lang="en" data-name="English">English</div>
+                        <div class="lang-item" data-lang="zh" data-name="中文">中文</div>
+                        <div class="lang-item" data-lang="es" data-name="Español">Español</div>
+                        <div class="lang-item" data-lang="de" data-name="Deutsch">Deutsch</div>
+                        <div class="lang-item" data-lang="fr" data-name="Français">Français</div>
+                        <div class="lang-item" data-lang="ja" data-name="日本語">日本語</div>
+                        <div class="lang-item" data-lang="ko" data-name="한국어">한국어</div>
+                    </div>
+                </div>
+                <a href="#download" class="cta-btn small" data-i18n="download">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero_title">Your Ultimate Bitcoin Dashboard</h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Real-time price, blocks, fees & quotes. Beautifully designed for iOS 17+</p>
+                <div class="hero-cta">
+                    <a href="#download" class="cta-btn primary" data-i18n="download_now">Download Now</a>
+                    <a href="#features" class="cta-btn secondary" data-i18n="learn_more">Learn More</a>
+                </div>
+                <div class="hero-badges">
+                    <div class="badge">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13h2v6h-2V5zm0 8h2v2h-2v-2z"/>
+                        </svg>
+                        <span data-i18n="badge_ios">iOS 17+</span>
+                    </div>
+                    <div class="badge">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 0L8 6H2l5 4-2 6 5-4 5 4-2-6 5-4h-6L10 0z"/>
+                        </svg>
+                        <span data-i18n="badge_standby">StandBy Mode</span>
+                    </div>
+                    <div class="badge">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 2h16v4H2V2zm0 6h16v4H2V8zm0 6h16v4H2v-4z"/>
+                        </svg>
+                        <span data-i18n="badge_widgets">Widgets</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="app-preview">
+                                <div class="bitcoin-logo">
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="16" cy="16" r="16" fill="#F7931A"/>
+                                        <path d="M23.189 14.356c.32-2.144-1.312-3.296-3.544-4.064l.724-2.904-1.768-.442-.704 2.824c-.464-.116-.944-.224-1.42-.332l.708-2.836-1.768-.442-.724 2.904c-.388-.088-.772-.176-1.144-.264l.004-.016-2.436-.608-.472 1.892s1.312.3 1.284.32c.716.18.844.656.824 1.032l-.824 3.304c.05.012.112.032.184.06l-.188-.046-1.152 4.616c-.088.216-.312.544-.816.416.032.028-1.284-.32-1.284-.32l-.876 2.028 2.296.572c.428.108.848.216 1.264.32l-.732 2.936 1.768.442.724-2.908c.484.132.956.252 1.42.368l-.72 2.896 1.768.442.732-2.928c3.016.572 5.284.344 6.236-2.408.776-2.208-.04-3.48-1.636-4.312 1.164-.268 2.04-1.032 2.272-2.612zm-4.028 5.704c-.544 2.184-4.22.996-5.412.708l.964-3.868c1.192.296 5.012.884 4.448 3.16zm.548-5.736c-.5 2.004-3.552.988-4.544.752l.876-3.512c.992.248 4.196.708 3.668 2.76z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div class="bitcoin-price">$97,453.21</div>
+                                <div class="block-height">Block: 875,123</div>
+                                <div class="fee-rates">
+                                    <span class="fee">Fast: 75</span>
+                                    <span class="fee">Medium: 50</span>
+                                    <span class="fee">Slow: 25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="features_title">Powerful Features</h2>
+                <p class="section-subtitle" data-i18n="features_subtitle">Everything you need to track Bitcoin in one beautiful app</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <circle cx="16" cy="16" r="14" fill="currentColor" opacity="0.2"/>
+                            <path d="M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12 12-5.373 12-12S22.627 4 16 4zm0 22c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10zm1-15h-2v4h-4v2h4v4h2v-4h4v-2h-4V11z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_realtime_title">Real-Time Price</h3>
+                    <p class="feature-desc" data-i18n="feature_realtime_desc">Live Bitcoin price in USD with Moscow Time calculation. Updates automatically based on your preference.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <rect x="4" y="4" width="24" height="24" rx="4" fill="currentColor" opacity="0.2"/>
+                            <path d="M10 14h4v8h-4v-8zm8-4h4v12h-4V10z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_blocks_title">Block Explorer</h3>
+                    <p class="feature-desc" data-i18n="feature_blocks_desc">Track current block height, halving countdown, and blockchain statistics in real-time.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <circle cx="16" cy="16" r="12" fill="currentColor" opacity="0.2"/>
+                            <path d="M16 8c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 14c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z" fill="currentColor"/>
+                            <path d="M16 12v4l2.5 2.5" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_fees_title">Fee Estimates</h3>
+                    <p class="feature-desc" data-i18n="feature_fees_desc">Get recommended fee rates (fastest, half hour, hour, economy, minimum) from Mempool.space.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <rect x="6" y="4" width="20" height="24" rx="2" fill="currentColor" opacity="0.2"/>
+                            <path d="M12 12h8v2h-8v-2zm0 4h8v2h-8v-2zm0 4h5v2h-5v-2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_quotes_title">Bitcoin Quotes</h3>
+                    <p class="feature-desc" data-i18n="feature_quotes_desc">Inspiring Bitcoin quotes carousel. Rotates automatically every 10 seconds with beautiful display.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon pink">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 4L4 10v12l12 6 12-6V10L16 4z" fill="currentColor" opacity="0.2"/>
+                            <path d="M16 2L2 9v14l14 7 14-7V9L16 2zm0 4.236L26 12l-10 5.764L6 12l10-5.764z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_themes_title">6 Beautiful Themes</h3>
+                    <p class="feature-desc" data-i18n="feature_themes_desc">Bitcoin Orange, Matrix Green, Pure White, Pixel Retro, Neon Tech, and Terminal Mono themes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon cyan">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <rect x="4" y="8" width="24" height="16" rx="2" fill="currentColor" opacity="0.2"/>
+                            <path d="M10 16h3v3h-3v-3zm6-4h3v7h-3v-7zm6 2h3v5h-3v-5z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_analytics_title">Multi-View Dashboard</h3>
+                    <p class="feature-desc" data-i18n="feature_analytics_desc">7 different views including Dashboard, StandBy, Price Detail, Fees, Analytics, Halving, and Settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- StandBy Section -->
+    <section class="standby-section">
+        <div class="container">
+            <div class="standby-content">
+                <div class="standby-text">
+                    <h2 class="standby-title" data-i18n="standby_title">Optimized for StandBy Mode</h2>
+                    <p class="standby-desc" data-i18n="standby_desc">Place your iPhone on its side while charging to enjoy a beautiful always-on Bitcoin dashboard. Perfect for your desk or nightstand.</p>
+                    <ul class="standby-features">
+                        <li data-i18n="standby_feature1">✓ Landscape layout optimized for horizontal viewing</li>
+                        <li data-i18n="standby_feature2">✓ Auto-dim support for reduced power consumption</li>
+                        <li data-i18n="standby_feature3">✓ Quick access to all essential Bitcoin metrics</li>
+                    </ul>
+                </div>
+                <div class="standby-preview">
+                    <div class="standby-mockup">
+                        <div class="time-display">22:45</div>
+                        <div class="standby-data">
+                            <div class="standby-price">$97,453</div>
+                            <div class="standby-block">Block 875,123</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Widgets Section -->
+    <section class="widgets-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="widgets_title">Home Screen & Lock Screen Widgets</h2>
+                <p class="section-subtitle" data-i18n="widgets_subtitle">Check Bitcoin price at a glance without opening the app</p>
+            </div>
+
+            <div class="widgets-showcase">
+                <div class="widget-preview small">
+                    <div class="widget-title">Price</div>
+                    <div class="widget-value">$97,453</div>
+                </div>
+                <div class="widget-preview medium">
+                    <div class="widget-row">
+                        <div class="widget-label">Price</div>
+                        <div class="widget-value">$97,453</div>
+                    </div>
+                    <div class="widget-row">
+                        <div class="widget-label">Block</div>
+                        <div class="widget-value">875,123</div>
+                    </div>
+                    <div class="widget-row">
+                        <div class="widget-label">Fast Fee</div>
+                        <div class="widget-value">75 sats</div>
+                    </div>
+                </div>
+                <div class="widget-preview large">
+                    <div class="widget-header">Bitcoin Dashboard</div>
+                    <div class="widget-large-price">$97,453.21</div>
+                    <div class="widget-stats">
+                        <div class="widget-stat">
+                            <div class="stat-label">Block</div>
+                            <div class="stat-value">875,123</div>
+                        </div>
+                        <div class="widget-stat">
+                            <div class="stat-label">Fast Fee</div>
+                            <div class="stat-value">75</div>
+                        </div>
+                        <div class="widget-stat">
+                            <div class="stat-label">Moscow Time</div>
+                            <div class="stat-value">1.03M</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Themes Section -->
+    <section class="themes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="themes_title">6 Stunning Themes</h2>
+                <p class="section-subtitle" data-i18n="themes_subtitle">Choose the perfect visual style for your Bitcoin dashboard</p>
+            </div>
+
+            <div class="themes-grid">
+                <div class="theme-card" data-theme="bitcoin-orange">
+                    <div class="theme-preview orange-glow">
+                        <div class="theme-text">$97,453</div>
+                    </div>
+                    <h4 class="theme-name" data-i18n="theme_bitcoin_orange">Bitcoin Orange</h4>
+                    <p class="theme-desc" data-i18n="theme_bitcoin_orange_desc">Classic Bitcoin brand color with subtle glow</p>
+                </div>
+
+                <div class="theme-card" data-theme="matrix-green">
+                    <div class="theme-preview matrix-glow">
+                        <div class="theme-text">$97,453</div>
+                    </div>
+                    <h4 class="theme-name" data-i18n="theme_matrix_green">Matrix Green</h4>
+                    <p class="theme-desc" data-i18n="theme_matrix_green_desc">Digital rain effect with terminal vibes</p>
+                </div>
+
+                <div class="theme-card" data-theme="pure-white">
+                    <div class="theme-preview white-glow">
+                        <div class="theme-text">$97,453</div>
+                    </div>
+                    <h4 class="theme-name" data-i18n="theme_pure_white">Pure White</h4>
+                    <p class="theme-desc" data-i18n="theme_pure_white_desc">Clean minimalist design with soft shadow</p>
+                </div>
+
+                <div class="theme-card" data-theme="pixel-retro">
+                    <div class="theme-preview pixel-glow">
+                        <div class="theme-text">$97,453</div>
+                    </div>
+                    <h4 class="theme-name" data-i18n="theme_pixel_retro">Pixel Retro</h4>
+                    <p class="theme-desc" data-i18n="theme_pixel_retro_desc">Retro gaming style with scanlines effect</p>
+                </div>
+
+                <div class="theme-card" data-theme="neon-tech">
+                    <div class="theme-preview neon-glow">
+                        <div class="theme-text">$97,453</div>
+                    </div>
+                    <h4 class="theme-name" data-i18n="theme_neon_tech">Neon Tech</h4>
+                    <p class="theme-desc" data-i18n="theme_neon_tech_desc">Futuristic cyberpunk with chromatic aberration</p>
+                </div>
+
+                <div class="theme-card" data-theme="terminal-mono">
+                    <div class="theme-preview terminal-glow">
+                        <div class="theme-text">$97,453</div>
+                    </div>
+                    <h4 class="theme-name" data-i18n="theme_terminal_mono">Terminal Mono</h4>
+                    <p class="theme-desc" data-i18n="theme_terminal_mono_desc">Developer-focused with blinking cursor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="languages_title">Supports 30+ Languages</h2>
+                <p class="section-subtitle" data-i18n="languages_subtitle">Available in your native language</p>
+            </div>
+
+            <div class="languages-grid">
+                <span class="lang-tag">English</span>
+                <span class="lang-tag">简体中文</span>
+                <span class="lang-tag">繁體中文</span>
+                <span class="lang-tag">Español</span>
+                <span class="lang-tag">Deutsch</span>
+                <span class="lang-tag">Français</span>
+                <span class="lang-tag">日本語</span>
+                <span class="lang-tag">한국어</span>
+                <span class="lang-tag">Português</span>
+                <span class="lang-tag">Русский</span>
+                <span class="lang-tag">Italiano</span>
+                <span class="lang-tag">Nederlands</span>
+                <span class="lang-tag">Svenska</span>
+                <span class="lang-tag">Norsk</span>
+                <span class="lang-tag">Polski</span>
+                <span class="lang-tag">Türkçe</span>
+                <span class="lang-tag">Tiếng Việt</span>
+                <span class="lang-tag">ไทย</span>
+                <span class="lang-tag">Bahasa Indonesia</span>
+                <span class="lang-tag">Bahasa Melayu</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA Section -->
+    <section class="download-cta" id="download">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-i18n="cta_title">Ready to Track Bitcoin in Style?</h2>
+                <p class="cta-subtitle" data-i18n="cta_subtitle">Download SatsClock now and transform your iOS device into a premium Bitcoin dashboard.</p>
+                <div class="cta-buttons">
+                    <a href="https://apps.apple.com/app/satsclock" class="app-store-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.07-3.11-1.05.05-2.31.74-3.03 1.57-.67.77-1.24 2.01-1.09 3.12 1.17.09 2.36-.82 3.05-1.58"/>
+                        </svg>
+                        <div class="app-store-text">
+                            <span class="store-label" data-i18n="download_on">Download on the</span>
+                            <span class="store-name">App Store</span>
+                        </div>
+                    </a>
+                </div>
+                <p class="cta-note" data-i18n="cta_note">Requires iOS 17.0 or later. Compatible with iPhone and Apple Watch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg class="bitcoin-icon small" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" fill="#F7931A"/>
+                        <path d="M23.189 14.356c.32-2.144-1.312-3.296-3.544-4.064l.724-2.904-1.768-.442-.704 2.824c-.464-.116-.944-.224-1.42-.332l.708-2.836-1.768-.442-.724 2.904c-.388-.088-.772-.176-1.144-.264l.004-.016-2.436-.608-.472 1.892s1.312.3 1.284.32c.716.18.844.656.824 1.032l-.824 3.304c.05.012.112.032.184.06l-.188-.046-1.152 4.616c-.088.216-.312.544-.816.416.032.028-1.284-.32-1.284-.32l-.876 2.028 2.296.572c.428.108.848.216 1.264.32l-.732 2.936 1.768.442.724-2.908c.484.132.956.252 1.42.368l-.72 2.896 1.768.442.732-2.928c3.016.572 5.284.344 6.236-2.408.776-2.208-.04-3.48-1.636-4.312 1.164-.268 2.04-1.032 2.272-2.612z" fill="white"/>
+                    </svg>
+                    <span class="footer-brand-text">SatsClock</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/yourusername/satsclock" target="_blank" data-i18n="footer_github">GitHub</a>
+                    <a href="https://x.com/satsclock" target="_blank" data-i18n="footer_twitter">Twitter</a>
+                    <a href="mailto:hello@satsclock.app" data-i18n="footer_contact">Contact</a>
+                </div>
+                <p class="footer-copyright" data-i18n="footer_copyright">© 2024 SatsClock. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">
+        <div class="toast-icon">⚠️</div>
+        <div class="toast-message" id="toastMessage">该语言暂未实现</div>
+    </div>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
