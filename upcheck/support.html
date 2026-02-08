@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpCheck Pro - 技术支持</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .header h1 {
+            color: #1a1a1a;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 4px solid #34C759;
+            padding-left: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            background: #fcfcfc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .faq-question {
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            display: inline-block;
+            background: #34C759;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+            padding-left: 34px;
+        }
+
+        .contact-box {
+            background: #e8f5e9;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-box h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #34C759;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .email-link:hover {
+            background: #2db350;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #34C759;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .faq-answer {
+                padding-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>技术支持中心</h1>
+            <p>UpCheck Pro: 智能条形码校验器</p>
+        </div>
+
+        <div class="section">
+            <h2>常见问题 (FAQ)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">App 支持哪些条形码格式？</div>
+                <div class="faq-answer">UpCheck Pro 支持所有主流的零售与物流格式，包括 UPC-A (12位)、EAN-13、EAN-8、ISBN-10 (书籍) 以及 GTIN-14 (运输外箱)。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">AI 智能修复是如何工作的？</div>
+                <div class="faq-answer">当您扫描破损或模糊的条码时，我们设备端的 AI 会分析剩余可见的条纹和数字。它会利用 Modulo-10 校验算法，瞬间计算并重构出缺失的信息，给出数学上正确的修复建议。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">扫描仪无法识别我的条码，为什么？</div>
+                <div class="faq-answer">请确保您处于光线充足的环境中，并避免光线直射在光面标签上产生反光。如果条码破损过于严重，您可以点击“键盘”图标切换到手动模式，输入可见的数字进行验证。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">我的数据会被上传吗？</div>
+                <div class="faq-answer">不会。UpCheck Pro 承诺隐私优先，所有扫描和修复过程均在本地设备离线完成。您的扫描历史记录仅保存在您的手机上，绝不上传至服务器。</div>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h3>仍需要帮助？</h3>
+            <p>如果您遇到技术问题或有功能建议，欢迎联系我们的支持团队。</p>
+            <a href="mailto:st67891@gmail.com" class="email-link">联系客服</a>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #666;">st67891@gmail.com</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 UpCheck Pro. 保留所有权利。</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy.html">隐私政策</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpCheck Pro - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .header h1 {
+            color: #1a1a1a;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 4px solid #34C759;
+            padding-left: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            background: #fcfcfc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .faq-question {
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            display: inline-block;
+            background: #34C759;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+            padding-left: 34px;
+        }
+
+        .contact-box {
+            background: #e8f5e9;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-box h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #34C759;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .email-link:hover {
+            background: #2db350;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #34C759;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .faq-answer {
+                padding-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Support Center</h1>
+            <p>UpCheck Pro: UPC Digit Checker</p>
+        </div>
+
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">What barcode formats are supported?</div>
+                <div class="faq-answer">UpCheck Pro supports all major retail and logistics formats, including UPC-A (12-digit), EAN-13, EAN-8, ISBN-10 (Books), and GTIN-14 (Shipping Containers).</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does AI Repair work?</div>
+                <div class="faq-answer">When you scan a damaged or torn barcode, our on-device AI analyzes the remaining visible bars and digits. It calculates the mathematically correct checksum (modulo-10 algorithm) to reconstruct the missing information instantly.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">The scanner isn't detecting my barcode. Why?</div>
+                <div class="faq-answer">Please ensure you are in a well-lit environment. Avoid glare on shiny labels. If the barcode is severely damaged, try using the "Manual Entry" mode by tapping the keyboard icon to verify the digits manually.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my data uploaded to the cloud?</div>
+                <div class="faq-answer">No. UpCheck Pro works 100% offline. Your scan history and repaired data are stored locally on your device for your privacy and security.</div>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h3>Still need help?</h3>
+            <p>Our support team is ready to assist you with any technical issues or feature requests.</p>
+            <a href="mailto:st67891@gmail.com" class="email-link">Contact Support</a>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #666;">st67891@gmail.com</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 UpCheck Pro. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy-en.html">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
