@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinCalc Pro - Technical Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #f4f7fb 0%, #dde8f7 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            padding: 38px;
+            box-shadow: 0 16px 48px rgba(15, 23, 42, 0.12);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 34px;
+            padding-bottom: 26px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .header h1 {
+            color: #0f172a;
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #4b5563;
+            font-size: 1.05em;
+        }
+
+        .section {
+            margin: 28px 0;
+        }
+
+        .section h2 {
+            color: #0f172a;
+            font-size: 1.32em;
+            margin-bottom: 16px;
+            font-weight: 650;
+            border-left: 4px solid #0f766e;
+            padding-left: 12px;
+        }
+
+        .section p, .section li {
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 18px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .faq-question {
+            font-weight: 650;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        .contact-box {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .contact-box h3 {
+            color: #065f46;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #0f766e;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 36px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+            color: #64748b;
+            font-size: 0.92em;
+        }
+
+        .footer a {
+            color: #0f766e;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .header h1 {
+                font-size: 1.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Technical Support</h1>
+            <p>FinCalc Pro (BA II Plus style financial calculator)</p>
+        </div>
+
+        <div class="section">
+            <h2>Quick Start</h2>
+            <ul>
+                <li>Open module menu to access TVM, Cash Flow, Bond, Date, Amortization, and Statistics worksheets.</li>
+                <li>Enter values in worksheet fields and trigger compute to solve the unknown variable.</li>
+                <li>Use Settings to adjust decimal places, date format, calculation order (Chn/AOS), and language.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Does the app require an internet connection?</div>
+                <div class="faq-answer">No. FinCalc Pro works fully offline for all core financial calculations.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I reset worksheet values or memory registers?</div>
+                <div class="faq-answer">Open Settings and use the Memory Panel / Clear Memory actions. Worksheet inputs can also be overwritten directly in each module field.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why is my result slightly different from another calculator?</div>
+                <div class="faq-answer">Check rounding mode, decimal places, date format, and day-count assumptions. FinCalc Pro uses high-precision Decimal arithmetic and BA-style key flow.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What data is uploaded from my calculations?</div>
+                <div class="faq-answer">None. Calculation data stays on-device. Current release follows the App Store privacy label: Data Not Collected.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Issue Report Template</h2>
+            <p>To help us diagnose quickly, include:</p>
+            <ul>
+                <li>Device model and iOS/iPadOS version.</li>
+                <li>App version and module name (for example: Bond or Cash Flow).</li>
+                <li>Exact key sequence / inputs / expected result / actual result.</li>
+            </ul>
+        </div>
+
+        <div class="contact-box">
+            <h3>Contact FinCalc Pro Support</h3>
+            <p>For bug reports, feature requests, or App Store review follow-up.</p>
+            <a href="mailto:st67891@gmail.com?subject=FinCalc%20Pro%20Support" class="email-link">Email Support</a>
+            <p style="margin-top: 12px; color: #334155;">st67891@gmail.com</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 FinCalc Pro. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
