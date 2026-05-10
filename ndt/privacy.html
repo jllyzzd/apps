@@ -5,211 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NDT Master - Privacy Policy</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg: #fdfbf7;
+            --card-bg: #ffffff;
+            --accent: #760002;
+            --accent-light: rgba(118,0,2,0.12);
+            --text: #333;
+            --text-light: #888;
+            --border: #e0e0e0;
+            --radius: 12px;
         }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-            background: linear-gradient(135deg, #f4f7fb 0%, #dde8f7 100%);
-            min-height: 100vh;
-            padding: 20px;
-            color: #1f2937;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 38px;
-            box-shadow: 0 16px 48px rgba(15, 23, 42, 0.12);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 34px;
-            padding-bottom: 26px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .header h1 {
-            font-size: 2.1em;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            color: #4b5563;
-            font-size: 1.02em;
-        }
-
-        .meta {
-            margin-bottom: 20px;
-            color: #334155;
-        }
-
-        .highlight-box {
-            background: #ecfdf5;
-            border-left: 4px solid #10b981;
-            border-radius: 12px;
-            padding: 18px;
-            margin: 20px 0 28px 0;
-            color: #065f46;
-            line-height: 1.6;
-        }
-
-        .section {
-            margin: 26px 0;
-        }
-
-        .section h2 {
-            color: #0f172a;
-            font-size: 1.28em;
-            margin-bottom: 12px;
-            font-weight: 650;
-        }
-
-        .section p,
-        .section li {
-            color: #334155;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.7;
-            font-size: 1em;
-            margin-bottom: 10px;
+            color: var(--text);
+            background: var(--bg);
+            padding: 20px 16px 40px;
         }
-
-        .section ul {
-            margin-left: 20px;
-        }
-
-        .info-box {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 16px;
-            margin-top: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 36px;
-            padding-top: 24px;
-            border-top: 1px solid #e5e7eb;
-            color: #64748b;
-            font-size: 0.92em;
-        }
-
-        .footer a {
-            color: #0f766e;
-            text-decoration: none;
+        .container { max-width: 720px; margin: 0 auto; }
+        h1 {
+            font-size: 1.6rem;
             font-weight: 600;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
         }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 24px;
-            }
-
-            .header h1 {
-                font-size: 1.8em;
-            }
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 28px;
+            margin-bottom: 14px;
+        }
+        p { margin-bottom: 14px; font-size: 0.95rem; }
+        ul { margin: 14px 0 14px 20px; font-size: 0.95rem; }
+        li { margin-bottom: 10px; }
+        .card {
+            background: var(--card-bg);
+            padding: 16px 18px;
+            border-radius: var(--radius);
+            margin-bottom: 14px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            text-align: center;
+        }
+        b { color: var(--text); }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.4rem; }
+            h2 { font-size: 1.1rem; }
+            p, li { font-size: 0.9rem; }
+            .card { padding: 14px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Privacy Policy</h1>
-            <p>NDT Master (Bundle ID: com.linxue.ndtmaster)</p>
-        </div>
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <p><b>Effective Date:</b> April 19, 2026</p>
+    <p>NDT Master (Bundle ID: com.linxue.ndtmaster)</p>
 
-        <div class="meta">
-            <p><strong>Effective Date:</strong> April 19, 2026</p>
-        </div>
-
-        <div class="highlight-box">
-            <strong>Privacy by design:</strong> NDT Master is offline-first. Core UT calculations, 3D visualization, and OCR recognition run locally on your device.
-            We do not build user profiles, do not run ad tracking, and do not upload your inspection data to our servers.
-        </div>
-
-        <div class="section">
-            <h2>1. Data We Collect</h2>
-            <p>We do <strong>not</strong> collect personal data in the current release. This includes:</p>
-            <ul>
-                <li>Personal identifiers (name, phone number, physical address).</li>
-                <li>Inspection inputs, OCR results, calculator outputs, history records, and custom materials.</li>
-                <li>Advertising identifiers, cross-app tracking identifiers, or behavior analytics for profiling.</li>
-            </ul>
-            <div class="info-box">
-                <p>The app's current privacy behavior is aligned with "Data Not Collected" in App Store privacy labeling.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>2. Local Processing and Storage</h2>
-            <p>All core functions are processed on-device.</p>
-            <div class="info-box">
-                <ul>
-                    <li>UT calculations and 3D beam simulation run locally.</li>
-                    <li>OCR text recognition is performed locally via iOS frameworks.</li>
-                    <li>Settings, calculation history, and custom material data are stored in app-local storage.</li>
-                    <li>No account registration is required.</li>
-                    <li>If you uninstall the app, local app container data is removed by iOS.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>3. Permissions</h2>
-            <p>NDT Master requests only the permissions required for user-triggered features:</p>
-            <div class="info-box">
-                <ul>
-                    <li><strong>Camera:</strong> required only when you use OCR scanning.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>4. Purchases and Apple Services</h2>
-            <p>
-                Subscription purchase, billing, and restoration are handled by Apple through the App Store.
-                We do not receive your payment card details.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>5. Third-Party SDKs and Tracking</h2>
-            <p>
-                The current release does not include third-party advertising SDKs, third-party analytics SDKs, or custom tracking SDKs.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>6. Children's Privacy</h2>
-            <p>NDT Master is a professional engineering tool and is not directed to children under 13.</p>
-        </div>
-
-        <div class="section">
-            <h2>7. Policy Updates</h2>
-            <p>If privacy behavior changes in future releases, this page will be updated with a new effective date.</p>
-        </div>
-
-        <div class="section">
-            <h2>8. Contact</h2>
-            <div class="info-box">
-                <p><strong>Email:</strong> st67891@gmail.com</p>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>© 2026 NDT Master. All rights reserved.</p>
-            <p style="margin-top: 10px;">
-                <a href="support.html">Copyright &amp; Legal Notice</a>
-            </p>
-        </div>
+    <div class="card">
+        <p><b>Privacy by design:</b> NDT Master is offline-first. Core UT calculations, 3D visualization, and OCR recognition run locally on your device. We do not build user profiles, do not run ad tracking, and do not upload your inspection data to our servers.</p>
     </div>
+
+    <h2>1. Data We Collect</h2>
+    <p>We do <b>not</b> collect personal data in the current release. This includes:</p>
+    <ul>
+        <li>Personal identifiers (name, phone number, physical address).</li>
+        <li>Inspection inputs, OCR results, calculator outputs, history records, and custom materials.</li>
+        <li>Advertising identifiers, cross-app tracking identifiers, or behavior analytics for profiling.</li>
+    </ul>
+    <div class="card">
+        <p>The app's current privacy behavior is aligned with "Data Not Collected" in App Store privacy labeling.</p>
+    </div>
+
+    <h2>2. Local Processing and Storage</h2>
+    <p>All core functions are processed on-device.</p>
+    <ul>
+        <li>UT calculations and 3D beam simulation run locally.</li>
+        <li>OCR text recognition is performed locally via iOS frameworks.</li>
+        <li>Settings, calculation history, and custom material data are stored in app-local storage.</li>
+        <li>No account registration is required.</li>
+        <li>If you uninstall the app, local app container data is removed by iOS.</li>
+    </ul>
+
+    <h2>3. Permissions</h2>
+    <p>NDT Master requests only the permissions required for user-triggered features:</p>
+    <ul>
+        <li><b>Camera:</b> required only when you use OCR scanning.</li>
+    </ul>
+
+    <h2>4. Purchases and Apple Services</h2>
+    <p>Subscription purchase, billing, and restoration are handled by Apple through the App Store. We do not receive your payment card details.</p>
+
+    <h2>5. Third-Party SDKs and Tracking</h2>
+    <p>The current release does not include third-party advertising SDKs, third-party analytics SDKs, or custom tracking SDKs.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>NDT Master is a professional engineering tool and is not directed to children under 13.</p>
+
+    <h2>7. Policy Updates</h2>
+    <p>If privacy behavior changes in future releases, this page will be updated with a new effective date.</p>
+
+    <h2>8. Contact</h2>
+    <p><b>Email:</b> st67891@gmail.com</p>
+
+    <div class="footer">
+        &copy; 2026 NDT Master. All rights reserved.
+        <br><a href="support.html">Copyright &amp; Legal Notice</a>
+    </div>
+</div>
 </body>
 </html>

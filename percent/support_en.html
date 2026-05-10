@@ -5,19 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Support - Percent Calculator</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1 { border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        h2 { margin-top: 30px; color: #007AFF; }
-        h3 { margin-top: 20px; font-weight: bold; }
-        p { margin-bottom: 15px; }
-        ul { margin-bottom: 15px; }
-        .feature { background-color: #f5f5f7; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
-        .footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+        :root {
+            --bg: #fdfbf7;
+            --card-bg: #ffffff;
+            --accent: #760002;
+            --accent-light: rgba(118,0,2,0.12);
+            --text: #333;
+            --text-light: #888;
+            --border: #e0e0e0;
+            --radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 20px 16px 40px;
+        }
+        .container { max-width: 720px; margin: 0 auto; }
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 28px;
+            margin-bottom: 14px;
+        }
+        h3 { font-size: 1rem; font-weight: 600; color: #555; margin-bottom: 8px; }
+        p { margin-bottom: 14px; font-size: 0.95rem; }
+        ul { margin: 14px 0 14px 20px; font-size: 0.95rem; }
+        li { margin-bottom: 10px; }
+        .feature {
+            background: var(--card-bg);
+            padding: 16px 18px;
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .tip {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 6px;
+            padding-left: 16px;
+            border-left: 2px solid var(--accent-light);
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            text-align: center;
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.4rem; }
+            h2 { font-size: 1.1rem; }
+            p, li { font-size: 0.9rem; }
+            .feature { padding: 14px; }
+        }
     </style>
 </head>
 <body>
+<div class="container">
     <h1>App Support</h1>
-    <p>Thank you for using <strong>Percent - Percentage Calculator</strong>. We are dedicated to providing a simple, accurate, and efficient percentage calculation experience. If you encounter any issues or have suggestions, please refer to the information below.</p>
+    <p>Thank you for using <b>Percent - Percentage Calculator</b>. We are dedicated to providing a simple, accurate, and efficient percentage calculation experience. If you encounter any issues or have suggestions, please refer to the information below.</p>
 
     <h2>About Percent</h2>
     <p>Percent is a comprehensive percentage calculation tool that supports five different types of percentage calculations, meeting your various calculation needs in daily life, study, and work.</p>
@@ -26,79 +87,93 @@
 
     <div class="feature">
         <h3>1. Basic Calculation</h3>
-        <p><strong>Function:</strong> Calculate what percentage of a number is</p>
-        <p><strong>Example:</strong> What is 15% of 1000? Answer: 150</p>
-        <p><strong>Formula:</strong> Result = Base × Percentage ÷ 100</p>
+        <p><b>Function:</b> Calculate what percentage of a number is</p>
+        <p><b>Example:</b> What is 15% of 1000? Answer: 150</p>
+        <p><b>Formula:</b> Result = Base &times; Percentage &divide; 100</p>
     </div>
 
     <div class="feature">
         <h3>2. Increase/Decrease</h3>
-        <p><strong>Function:</strong> Calculate the result after increasing or decreasing a number by a certain percentage</p>
-        <p><strong>Example:</strong> What is 200 increased by 20%? Answer: 240</p>
-        <p><strong>Example:</strong> What is 500 decreased by 10%? Answer: 450</p>
+        <p><b>Function:</b> Calculate the result after increasing or decreasing a number by a certain percentage</p>
+        <p><b>Example:</b> What is 200 increased by 20%? Answer: 240</p>
+        <p><b>Example:</b> What is 500 decreased by 10%? Answer: 450</p>
     </div>
 
     <div class="feature">
         <h3>3. Compare Calculation</h3>
-        <p><strong>Function:</strong> Calculate the change amount and change percentage from one number to another</p>
-        <p><strong>Example:</strong> From 100 to 120, the change is +20, change percentage is +20%</p>
+        <p><b>Function:</b> Calculate the change amount and change percentage from one number to another</p>
+        <p><b>Example:</b> From 100 to 120, the change is +20, change percentage is +20%</p>
     </div>
 
     <div class="feature">
         <h3>4. Ratio Calculation</h3>
-        <p><strong>Function:</strong> Calculate what percentage one number is of another</p>
-        <p><strong>Example:</strong> What percentage is 25 of 200? Answer: 12.5%</p>
-        <p><strong>Formula:</strong> Percentage = (Part ÷ Total) × 100</p>
+        <p><b>Function:</b> Calculate what percentage one number is of another</p>
+        <p><b>Example:</b> What percentage is 25 of 200? Answer: 12.5%</p>
+        <p><b>Formula:</b> Percentage = (Part &divide; Total) &times; 100</p>
     </div>
 
     <div class="feature">
         <h3>5. Reverse Calculation</h3>
-        <p><strong>Function:</strong> Calculate the original value knowing the result and percentage</p>
-        <p><strong>Example:</strong> 20% of what number is 40? Answer: 200</p>
+        <p><b>Function:</b> Calculate the original value knowing the result and percentage</p>
+        <p><b>Example:</b> 20% of what number is 40? Answer: 200</p>
     </div>
 
     <h2>Frequently Asked Questions (FAQ)</h2>
 
-    <h3>1. How do I switch between calculation types?</h3>
-    <p>There are five tabs at the bottom of the app, each corresponding to a different calculation type. Tap the respective tab to switch to the corresponding calculation interface.</p>
+    <div class="feature">
+        <h3>1. How do I switch between calculation types?</h3>
+        <p>There are five tabs at the bottom of the app, each corresponding to a different calculation type. Tap the respective tab to switch to the corresponding calculation interface.</p>
+    </div>
 
-    <h3>2. How do I change the language?</h3>
-    <p>Tap the language selector button (globe icon) in the top right corner to choose from 32 available languages. The app will remember your choice and automatically use your last selected language the next time you open it.</p>
-    <p><strong>Supported languages include:</strong> Chinese (Simplified/Traditional), English, Spanish, French, German, Japanese, Korean, Russian, Arabic, Portuguese, Italian, Dutch, Polish, Turkish, Swedish, Norwegian, Danish, Finnish, Greek, Czech, Hungarian, Romanian, Thai, Vietnamese, Indonesian, Malay, Hebrew, Hindi, Urdu, Persian, Ukrainian.</p>
+    <div class="feature">
+        <h3>2. How do I change the language?</h3>
+        <p>Tap the language selector button (globe icon) in the top right corner to choose from 32 available languages. The app will remember your choice and automatically use your last selected language the next time you open it.</p>
+        <p><b>Supported languages include:</b> Chinese (Simplified/Traditional), English, Spanish, French, German, Japanese, Korean, Russian, Arabic, Portuguese, Italian, Dutch, Polish, Turkish, Swedish, Norwegian, Danish, Finnish, Greek, Czech, Hungarian, Romanian, Thai, Vietnamese, Indonesian, Malay, Hebrew, Hindi, Urdu, Persian, Ukrainian.</p>
+    </div>
 
-    <h3>3. How do I copy calculation results?</h3>
-    <p>Tap the copy button next to the calculation result to copy it to the clipboard. A confirmation message will appear when the copy is successful.</p>
+    <div class="feature">
+        <h3>3. How do I copy calculation results?</h3>
+        <p>Tap the copy button next to the calculation result to copy it to the clipboard. A confirmation message will appear when the copy is successful.</p>
+    </div>
 
-    <h3>4. What is the calculation precision?</h3>
-    <p>The app uses Swift's Double type for calculations, ensuring high-precision results. Results are automatically formatted for display, typically showing an appropriate number of decimal places.</p>
+    <div class="feature">
+        <h3>4. What is the calculation precision?</h3>
+        <p>The app uses Swift's Double type for calculations, ensuring high-precision results. Results are automatically formatted for display, typically showing an appropriate number of decimal places.</p>
+    </div>
 
-    <h3>5. Does the app require an internet connection?</h3>
-    <p>No. Percent is a completely offline app. All calculations are performed locally on your device, and all features work without an internet connection.</p>
+    <div class="feature">
+        <h3>5. Does the app require an internet connection?</h3>
+        <p>No. Percent is a completely offline app. All calculations are performed locally on your device, and all features work without an internet connection.</p>
+    </div>
 
-    <h3>6. Does the app collect my data?</h3>
-    <p>No. We do not collect any user data. All numbers you enter and calculation results are only stored in your device's local memory and are cleared when the app is closed. The only thing saved is your language preference, which is also stored only on your local device.</p>
+    <div class="feature">
+        <h3>6. Does the app collect my data?</h3>
+        <p>No. We do not collect any user data. All numbers you enter and calculation results are only stored in your device's local memory and are cleared when the app is closed. The only thing saved is your language preference, which is also stored only on your local device.</p>
+    </div>
 
-    <h3>7. Why is my calculation result different from expected?</h3>
-    <p>Please check the following:</p>
-    <ul>
-        <li>Confirm you have selected the correct calculation type</li>
-        <li>Check that the numbers entered are correct</li>
-        <li>For the increase/decrease feature, confirm you have selected the correct operation (increase or decrease)</li>
-        <li>Pay attention to decimal point placement</li>
-    </ul>
+    <div class="feature">
+        <h3>7. Why is my calculation result different from expected?</h3>
+        <p>Please check the following:</p>
+        <ul>
+            <li>Confirm you have selected the correct calculation type</li>
+            <li>Check that the numbers entered are correct</li>
+            <li>For the increase/decrease feature, confirm you have selected the correct operation (increase or decrease)</li>
+            <li>Pay attention to decimal point placement</li>
+        </ul>
+    </div>
 
     <h2>Tips & Suggestions</h2>
     <ul>
-        <li><strong>Quick Clear:</strong> Each input field has a clear button on the right side. Tap it to quickly clear the input content</li>
-        <li><strong>Auto Calculate:</strong> Results are automatically displayed after entering numbers, no need to tap a "Calculate" button</li>
-        <li><strong>Smooth Switching:</strong> You can quickly switch between different calculation types, and entered data will not be lost</li>
+        <li><b>Quick Clear:</b> Each input field has a clear button on the right side. Tap it to quickly clear the input content</li>
+        <li><b>Auto Calculate:</b> Results are automatically displayed after entering numbers, no need to tap a "Calculate" button</li>
+        <li><b>Smooth Switching:</b> You can quickly switch between different calculation types, and entered data will not be lost</li>
     </ul>
 
     <h2>Feedback</h2>
     <p>If the above information does not resolve your issue, or if you have found a bug in the app, or if you have any feature suggestions, please feel free to contact us:</p>
     <ul>
-        <li><strong>Email:</strong> <a href="mailto:support@example.com">support@example.com</a></li>
-        <li><strong>Feedback should include:</strong> Problem description, your device model, iOS version, screenshots (if applicable)</li>
+        <li><b>Email:</b> <a href="mailto:support@example.com">support@example.com</a></li>
+        <li><b>Feedback should include:</b> Problem description, your device model, iOS version, screenshots (if applicable)</li>
     </ul>
 
     <h2>Version Updates</h2>
@@ -107,5 +182,6 @@
     <div class="footer">
         &copy; 2025 Percent Developer. All rights reserved.
     </div>
+</div>
 </body>
 </html>

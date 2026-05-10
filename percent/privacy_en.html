@@ -5,27 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Percent Calculator</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        h1 { border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        h2 { margin-top: 30px; }
-        p { margin-bottom: 15px; }
-        ul { margin-bottom: 15px; }
-        .footer { margin-top: 50px; font-size: 0.9em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+        :root {
+            --bg: #fdfbf7;
+            --card-bg: #ffffff;
+            --accent: #760002;
+            --accent-light: rgba(118,0,2,0.12);
+            --text: #333;
+            --text-light: #888;
+            --border: #e0e0e0;
+            --radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 20px 16px 40px;
+        }
+        .container { max-width: 720px; margin: 0 auto; }
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 28px;
+            margin-bottom: 14px;
+        }
+        p { margin-bottom: 14px; font-size: 0.95rem; }
+        ul { margin: 14px 0 14px 20px; font-size: 0.95rem; }
+        li { margin-bottom: 10px; }
+        .card {
+            background: var(--card-bg);
+            padding: 16px 18px;
+            border-radius: var(--radius);
+            margin-bottom: 14px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            text-align: center;
+        }
+        b { color: var(--text); }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.4rem; }
+            h2 { font-size: 1.1rem; }
+            p, li { font-size: 0.9rem; }
+            .card { padding: 14px; }
+        }
     </style>
 </head>
 <body>
+<div class="container">
     <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> November 24, 2025</p>
+    <p><b>Effective Date:</b> November 24, 2025</p>
+    <p>Welcome to <b>Percent - Percentage Calculator</b> ("the App"). We value your privacy and are committed to protecting your personal information. This Privacy Policy explains our practices regarding your information.</p>
 
-    <p>Welcome to <strong>Percent - Percentage Calculator</strong> ("the App"). We value your privacy and are committed to protecting your personal information. This Privacy Policy explains our practices regarding your information.</p>
+    <div class="card">
+        <p><b>Our Commitment:</b> The App is a standalone utility tool. We <b>do not</b> collect, store, transmit, or share any of your personal information, usage data, or device information.</p>
+    </div>
 
     <h2>1. We Collect No Data</h2>
-    <p>The App is a standalone utility tool. We <strong>do not</strong> collect, store, transmit, or share any of your personal information, usage data, or device information.</p>
+    <p>The App is a standalone utility tool. We <b>do not</b> collect, store, transmit, or share any of your personal information, usage data, or device information.</p>
     <ul>
-        <li><strong>No Accounts:</strong> You do not need to register or log in to use any features of the App.</li>
-        <li><strong>No Trackers:</strong> We do not use any third-party advertising SDKs or user behavior analytics trackers.</li>
-        <li><strong>Local Processing:</strong> All percentage calculations (including basic calculation, increase/decrease calculation, comparison calculation, ratio calculation, and reverse calculation) are performed locally on your device. No data is sent to any server.</li>
-        <li><strong>No Internet Required:</strong> The App does not require an internet connection to function. All calculations and features work completely offline.</li>
+        <li><b>No Accounts:</b> You do not need to register or log in to use any features of the App.</li>
+        <li><b>No Trackers:</b> We do not use any third-party advertising SDKs or user behavior analytics trackers.</li>
+        <li><b>Local Processing:</b> All percentage calculations (including basic calculation, increase/decrease calculation, comparison calculation, ratio calculation, and reverse calculation) are performed locally on your device. No data is sent to any server.</li>
+        <li><b>No Internet Required:</b> The App does not require an internet connection to function. All calculations and features work completely offline.</li>
     </ul>
 
     <h2>2. Data Storage</h2>
@@ -50,5 +109,6 @@
     <div class="footer">
         &copy; 2025 Percent Developer. All rights reserved.
     </div>
+</div>
 </body>
 </html>

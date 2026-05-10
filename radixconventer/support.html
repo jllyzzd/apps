@@ -5,188 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radix Converter - 技术支持</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg: #fdfbf7;
+            --card-bg: #fff;
+            --accent: #760002;
+            --text: #333;
+            --text-light: #888;
+            --border: #e0e0e0;
+            --radius: 12px;
         }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
             padding: 20px;
         }
-
         .container {
-            max-width: 800px;
+            max-width: 720px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
             padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
-
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #f0f0f0;
+        h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 24px;
         }
-
-        .header h1 {
-            color: #333;
-            font-size: 2.5em;
+        h2 {
+            font-size: 1.4em;
+            font-weight: 600;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 28px;
+            margin-bottom: 16px;
+        }
+        h3 {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 20px;
             margin-bottom: 10px;
         }
-
-        .header p {
-            color: #666;
-            font-size: 1.1em;
+        p { margin-bottom: 12px; }
+        ul { margin-left: 20px; margin-bottom: 12px; }
+        li { margin-bottom: 6px; }
+        .feature {
+            background: var(--bg);
+            border-radius: var(--radius);
+            padding: 18px;
+            margin-bottom: 16px;
+            text-align: center;
         }
-
-        .section {
-            margin: 30px 0;
+        .feature h4 {
+            font-weight: 600;
+            margin-bottom: 8px;
         }
-
-        .section h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .section h3 {
-            color: #555;
-            font-size: 1.3em;
-            margin: 20px 0 10px 0;
-        }
-
-        .section p, .section li {
-            color: #666;
-            line-height: 1.8;
-            font-size: 1.05em;
-        }
-
-        .section ul {
-            margin-left: 30px;
-            margin-top: 10px;
-        }
-
-        .contact-box {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 4px solid #667eea;
-        }
-
-        .contact-box p {
-            margin: 10px 0;
-        }
-
-        .contact-box strong {
-            color: #667eea;
-        }
-
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 16px 0;
+        }
+        .card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
             margin: 20px 0;
         }
-
-        .feature-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
+        .card.contact {
+            border-left: 4px solid var(--accent);
         }
-
-        .feature-card h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.2em;
+        .tip {
+            background: var(--bg);
+            border-left: 4px solid var(--accent);
+            border-radius: var(--radius);
+            padding: 16px 16px 16px 20px;
+            margin: 16px 0;
         }
-
         .footer {
-            text-align: center;
             margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #f0f0f0;
-            color: #999;
+            font-size: 0.85em;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            text-align: center;
         }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            .header h1 {
-                font-size: 1.8em;
-            }
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        @media (max-width: 480px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.5em; }
+            h2 { font-size: 1.2em; }
+            ul { margin-left: 16px; }
+            .features { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Radix Converter</h1>
-            <p>进制转换工具 - 技术支持</p>
-        </div>
+        <h1>Radix Converter</h1>
+        <p>进制转换工具 - 技术支持</p>
 
-        <div class="section">
-            <h2>📱 应用介绍</h2>
-            <p>Radix Converter 是一款优雅、强大的进制转换工具，支持二进制、八进制、十进制、十六进制、Base32、Base36 之间的实时互相转换。</p>
+        <h2>应用介绍</h2>
+        <p>Radix Converter 是一款优雅、强大的进制转换工具，支持二进制、八进制、十进制、十六进制、Base32、Base36 之间的实时互相转换。</p>
 
-            <div class="features">
-                <div class="feature-card">
-                    <h4>⚡ 实时转换</h4>
-                    <p>输入即转换，无需点击按钮</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🎨 精美设计</h4>
-                    <p>支持深色模式，每个进制独特配色</p>
-                </div>
-                <div class="feature-card">
-                    <h4>🌍 多语言</h4>
-                    <p>支持中文、英语、日语等6种语言</p>
-                </div>
+        <div class="features">
+            <div class="feature">
+                <h4>实时转换</h4>
+                <p>输入即转换，无需点击按钮</p>
+            </div>
+            <div class="feature">
+                <h4>精美设计</h4>
+                <p>支持深色模式，每个进制独特配色</p>
+            </div>
+            <div class="feature">
+                <h4>多语言</h4>
+                <p>支持中文、英语、日语等6种语言</p>
             </div>
         </div>
 
-        <div class="section">
-            <h2>❓ 常见问题</h2>
+        <h2>常见问题</h2>
 
-            <h3>如何使用？</h3>
-            <p>1. 在输入框中输入数字<br>
-               2. 选择当前进制（二进制、八进制、十进制等）<br>
-               3. 应用会自动显示其他所有进制的转换结果<br>
-               4. 点击任意结果即可复制到剪贴板</p>
+        <h3>如何使用？</h3>
+        <p>1. 在输入框中输入数字<br>
+           2. 选择当前进制（二进制、八进制、十进制等）<br>
+           3. 应用会自动显示其他所有进制的转换结果<br>
+           4. 点击任意结果即可复制到剪贴板</p>
 
-            <h3>支持哪些进制？</h3>
-            <ul>
-                <li><strong>二进制 (Binary)</strong> - Base 2，使用 0-1</li>
-                <li><strong>八进制 (Octal)</strong> - Base 8，使用 0-7</li>
-                <li><strong>十进制 (Decimal)</strong> - Base 10，使用 0-9</li>
-                <li><strong>十六进制 (Hexadecimal)</strong> - Base 16，使用 0-9, A-F</li>
-                <li><strong>32进制 (Base32)</strong> - Base 32，使用 0-9, A-V</li>
-                <li><strong>36进制 (Base36)</strong> - Base 36，使用 0-9, A-Z</li>
-            </ul>
+        <h3>支持哪些进制？</h3>
+        <ul>
+            <li><strong>二进制 (Binary)</strong> - Base 2，使用 0-1</li>
+            <li><strong>八进制 (Octal)</strong> - Base 8，使用 0-7</li>
+            <li><strong>十进制 (Decimal)</strong> - Base 10，使用 0-9</li>
+            <li><strong>十六进制 (Hexadecimal)</strong> - Base 16，使用 0-9, A-F</li>
+            <li><strong>32进制 (Base32)</strong> - Base 32，使用 0-9, A-V</li>
+            <li><strong>36进制 (Base36)</strong> - Base 36，使用 0-9, A-Z</li>
+        </ul>
 
-            <h3>如何复制结果？</h3>
-            <p>点击任意转换结果，数值会自动复制到剪贴板。您可以在设置中选择复制时是否包含进制前缀（如 0x、0b）。</p>
+        <h3>如何复制结果？</h3>
+        <p>点击任意转换结果，数值会自动复制到剪贴板。您可以在设置中选择复制时是否包含进制前缀（如 0x、0b）。</p>
 
-            <h3>如何切换语言？</h3>
-            <p>点击右上角设置图标，选择"语言"，即可切换到您偏好的语言。应用支持中文、英语、日语、葡萄牙语、西班牙语、俄语。</p>
+        <h3>如何切换语言？</h3>
+        <p>点击右上角设置图标，选择"语言"，即可切换到您偏好的语言。应用支持中文、英语、日语、葡萄牙语、西班牙语、俄语。</p>
 
-            <h3>如何切换深色/浅色模式？</h3>
-            <p>点击右上角设置图标，选择"主题"，可以选择自动（跟随系统）、浅色或深色模式。</p>
+        <h3>如何切换深色/浅色模式？</h3>
+        <p>点击右上角设置图标，选择"主题"，可以选择自动（跟随系统）、浅色或深色模式。</p>
 
-            <h3>应用会收集我的数据吗？</h3>
-            <p>不会。Radix Converter 完全在您的设备上本地运行，不收集任何个人信息，不需要网络连接。详见<a href="privacy.html">隐私政策</a>。</p>
-        </div>
+        <h3>应用会收集我的数据吗？</h3>
+        <p>不会。Radix Converter 完全在您的设备上本地运行，不收集任何个人信息，不需要网络连接。详见<a href="privacy.html">隐私政策</a>。</p>
 
-        <div class="section">
-            <h2>💡 使用技巧</h2>
+        <div class="tip">
+            <h2>使用技巧</h2>
             <ul>
                 <li>切换进制时，应用会自动将当前输入值转换到新进制</li>
                 <li>输入无效字符时，输入框会显示红色边框提示</li>
@@ -195,33 +171,27 @@
             </ul>
         </div>
 
-        <div class="section">
-            <h2>📧 联系我们</h2>
-            <div class="contact-box">
-                <p><strong>Email:</strong> st67891@gmail.com</p>
-                <p><strong>反馈：</strong>如有问题、建议或发现 Bug，欢迎通过以下方式联系我们：</p>
-                <ul>
-                    <li>App Store 评论区留言</li>
-                    <li>发送邮件至上述邮箱</li>
-                    <li>GitHub Issues（如果您是开发者）</li>
-                </ul>
-                <p style="margin-top: 15px;">我们会在 24 小时内回复您的邮件。</p>
-            </div>
+        <h2>联系我们</h2>
+        <div class="card contact">
+            <p><strong>Email:</strong> st67891@gmail.com</p>
+            <p><strong>反馈：</strong>如有问题、建议或发现 Bug，欢迎通过以下方式联系我们：</p>
+            <ul>
+                <li>App Store 评论区留言</li>
+                <li>发送邮件至上述邮箱</li>
+                <li>GitHub Issues（如果您是开发者）</li>
+            </ul>
+            <p>我们会在 24 小时内回复您的邮件。</p>
         </div>
 
-        <div class="section">
-            <h2>📋 版本信息</h2>
-            <p><strong>当前版本：</strong>1.0.0</p>
-            <p><strong>最后更新：</strong>2025年11月</p>
-            <p><strong>兼容性：</strong>iOS 16.0 或更高版本</p>
-            <p><strong>支持设备：</strong>iPhone, iPad</p>
-        </div>
+        <h2>版本信息</h2>
+        <p><strong>当前版本：</strong>1.0.0</p>
+        <p><strong>最后更新：</strong>2025年11月</p>
+        <p><strong>兼容性：</strong>iOS 16.0 或更高版本</p>
+        <p><strong>支持设备：</strong>iPhone, iPad</p>
 
         <div class="footer">
-            <p>© 2025 Radix Converter. All rights reserved.</p>
-            <p style="margin-top: 10px;">
-                <a href="privacy.html" style="color: #667eea; text-decoration: none;">隐私政策</a>
-            </p>
+            <p>&copy; 2025 Radix Converter. All rights reserved.</p>
+            <p><a href="privacy.html">隐私政策</a></p>
         </div>
     </div>
 </body>
