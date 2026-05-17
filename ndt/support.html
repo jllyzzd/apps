@@ -3,107 +3,761 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NDT Master - Copyright &amp; Legal Notice</title>
+    <title>NDT Master — Support, Methodology &amp; FAQ</title>
+    <meta name="description" content="Support, calculation methodology, formula reference and FAQ for NDT Master — an offline ultrasonic testing calculator for weld inspectors and NDT technicians.">
     <style>
         :root {
             --bg: #fdfbf7;
             --card-bg: #ffffff;
             --accent: #760002;
-            --accent-light: rgba(118,0,2,0.12);
-            --text: #333;
+            --accent-soft: rgba(118,0,2,0.08);
+            --accent-line: rgba(118,0,2,0.18);
+            --text: #2a2a2a;
+            --text-soft: #555;
             --text-light: #888;
-            --border: #e0e0e0;
+            --border: #e6e2db;
+            --code-bg: #f4f1ea;
             --radius: 12px;
+            --radius-sm: 8px;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.7;
             color: var(--text);
             background: var(--bg);
-            padding: 20px 16px 40px;
+            padding: 24px 16px 48px;
+            -webkit-font-smoothing: antialiased;
         }
-        .container { max-width: 720px; margin: 0 auto; }
-        h1 {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--accent);
+        .container { max-width: 760px; margin: 0 auto; }
+
+        /* Hero */
+        .hero {
             border-bottom: 2px solid var(--accent);
-            padding-bottom: 12px;
-            margin-bottom: 20px;
+            padding-bottom: 18px;
+            margin-bottom: 24px;
         }
-        h2 {
-            font-size: 1.2rem;
+        .eyebrow {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
             font-weight: 600;
+            margin-bottom: 8px;
+        }
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.01em;
+            margin-bottom: 10px;
+        }
+        .lede {
+            font-size: 1.02rem;
+            color: var(--text-soft);
+            max-width: 60ch;
+        }
+
+        /* Meta strip */
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-top: 14px;
+        }
+        .meta span { display: inline-flex; align-items: center; gap: 4px; }
+        .meta b { color: var(--text-soft); font-weight: 600; }
+
+        /* Table of contents */
+        .toc {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-line);
+            border-radius: var(--radius);
+            padding: 14px 18px;
+            margin-bottom: 28px;
+            font-size: 0.92rem;
+        }
+        .toc-title {
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .toc ol {
+            list-style: none;
+            counter-reset: toc;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 18px;
+            row-gap: 4px;
+        }
+        .toc li {
+            counter-increment: toc;
+            font-size: 0.9rem;
+        }
+        .toc li::before {
+            content: counter(toc, decimal-leading-zero);
+            color: var(--accent);
+            font-weight: 600;
+            margin-right: 8px;
+            font-variant-numeric: tabular-nums;
+        }
+        .toc a { color: var(--text); text-decoration: none; }
+        .toc a:hover { color: var(--accent); }
+
+        h2 {
+            font-size: 1.18rem;
+            font-weight: 700;
             color: var(--accent);
             border-left: 4px solid var(--accent);
             padding-left: 12px;
-            margin-top: 28px;
+            margin-top: 36px;
             margin-bottom: 14px;
+            letter-spacing: -0.005em;
         }
-        p { margin-bottom: 14px; font-size: 0.95rem; }
-        ul { margin: 14px 0 14px 20px; font-size: 0.95rem; }
-        li { margin-bottom: 10px; }
+        h3 {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+        p { margin-bottom: 14px; font-size: 0.95rem; color: var(--text-soft); }
+        p.tight { margin-bottom: 6px; }
+        ul, ol.list { margin: 10px 0 14px 22px; font-size: 0.95rem; color: var(--text-soft); }
+        ul li, ol.list li { margin-bottom: 8px; }
+        strong, b { color: var(--text); font-weight: 600; }
+
+        /* Cards */
         .card {
             background: var(--card-bg);
             padding: 16px 18px;
+            border: 1px solid var(--border);
             border-radius: var(--radius);
             margin-bottom: 14px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
         }
-        .footer {
-            margin-top: 40px;
+        .card.accent {
+            border-left: 4px solid var(--accent);
+            background: var(--accent-soft);
+        }
+
+        /* Standards table */
+        .std-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 14px 0 18px;
+        }
+        .std-row {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 14px;
+            padding: 10px 14px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+        }
+        .std-row .label {
+            font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+            font-weight: 600;
+            color: var(--accent);
             font-size: 0.85rem;
+            letter-spacing: 0.01em;
+        }
+        .std-row .desc { color: var(--text-soft); }
+
+        /* Formula blocks */
+        .formula {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px 14px;
+            margin: 10px 0 14px;
+            font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+            font-size: 0.92rem;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+        .formula .var { color: var(--accent); }
+        .formula .src {
+            display: block;
+            font-family: -apple-system, sans-serif;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-top: 8px;
+            border-top: 1px dashed var(--border);
+            padding-top: 6px;
+        }
+
+        /* FAQ */
+        details.faq {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: border-color 0.15s ease;
+        }
+        details.faq[open] { border-color: var(--accent-line); }
+        details.faq summary {
+            cursor: pointer;
+            padding: 14px 16px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text);
+            list-style: none;
+            position: relative;
+            padding-right: 38px;
+        }
+        details.faq summary::-webkit-details-marker { display: none; }
+        details.faq summary::after {
+            content: "+";
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+        }
+        details.faq[open] summary::after { content: "−"; }
+        details.faq .answer {
+            padding: 0 16px 14px;
+            font-size: 0.93rem;
+            color: var(--text-soft);
+        }
+        details.faq .answer p { margin-bottom: 10px; }
+        details.faq .answer p:last-child { margin-bottom: 0; }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 14px 0 18px;
+        }
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+        }
+        .contact-card .label {
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .contact-card .value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .contact-card .value a { color: var(--accent); text-decoration: none; }
+        .contact-card .value a:hover { text-decoration: underline; }
+        .contact-card .note { font-size: 0.85rem; color: var(--text-soft); }
+
+        /* Version history */
+        .version-row {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 14px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        .version-row:last-child { border-bottom: none; }
+        .version-row .v {
+            font-family: ui-monospace, "SF Mono", Menlo, monospace;
+            font-weight: 600;
+            color: var(--accent);
+        }
+        .version-row .notes { color: var(--text-soft); }
+        .version-row .date {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* Legal footer block */
+        .legal {
+            margin-top: 36px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+        }
+        .legal h3 {
+            margin-top: 14px;
+            font-size: 0.92rem;
+            color: var(--accent);
+        }
+        .legal h3:first-child { margin-top: 0; }
+        .legal p, .legal li { font-size: 0.88rem; line-height: 1.65; }
+
+        .footer {
+            margin-top: 36px;
+            font-size: 0.82rem;
             color: var(--text-light);
             border-top: 1px solid var(--border);
-            padding-top: 16px;
+            padding-top: 18px;
             text-align: center;
         }
-        b { color: var(--text); }
-        @media (max-width: 480px) {
-            h1 { font-size: 1.4rem; }
-            h2 { font-size: 1.1rem; }
-            p, li { font-size: 0.9rem; }
-            .card { padding: 14px; }
+        .footer a { color: var(--text-soft); text-decoration: none; margin: 0 8px; }
+        .footer a:hover { color: var(--accent); }
+
+        @media (max-width: 540px) {
+            body { padding: 20px 14px 36px; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.08rem; }
+            .toc ol { grid-template-columns: 1fr; }
+            .std-row { grid-template-columns: 1fr; gap: 4px; }
+            .version-row { grid-template-columns: 80px 1fr; }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Copyright &amp; Legal Notice</h1>
-    <p>NDT Master</p>
-    <p><b>Last Updated:</b> April 19, 2026</p>
 
-    <h2>1. Copyright Ownership</h2>
-    <p>&copy; 2026 NDT Master. All rights reserved. The NDT Master app and related materials, including but not limited to software code, UI design, text content, graphics, and documentation, are protected by applicable copyright and intellectual property laws.</p>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="eyebrow">NDT Master · Support &amp; Documentation</div>
+        <h1>Help, methodology and field reference for ultrasonic testing professionals.</h1>
+        <p class="lede">NDT Master is an offline ultrasonic testing calculator designed for weld inspectors, NDT technicians and engineering students. This page documents how the app calculates each value, which standards it references, and how to get support.</p>
+        <div class="meta">
+            <span><b>Bundle ID:</b>&nbsp;com.linxue.ndtmaster</span>
+            <span><b>Platform:</b>&nbsp;iOS 15.0+</span>
+            <span><b>Current version:</b>&nbsp;1.2</span>
+            <span><b>Last updated:</b>&nbsp;May 11, 2026</span>
+        </div>
+    </header>
 
-    <h2>2. License Scope</h2>
-    <p>Use of NDT Master is subject to the applicable Apple Media Services Terms and any end-user license terms provided in App Store listing and in-app legal sections. Unless explicitly permitted by law or written authorization, you may not:</p>
-    <ul>
-        <li>Copy, redistribute, sublicense, sell, lease, or exploit the app or its content for commercial repackaging.</li>
-        <li>Reverse engineer, decompile, disassemble, or attempt to derive source code, except where local law explicitly allows it.</li>
-        <li>Remove or alter copyright, trademark, or other proprietary notices.</li>
-    </ul>
+    <!-- ToC -->
+    <nav class="toc" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ol>
+            <li><a href="#about">About NDT Master</a></li>
+            <li><a href="#methodology">Methodology &amp; standards</a></li>
+            <li><a href="#formulas">Calculation reference</a></li>
+            <li><a href="#faq">Frequently asked questions</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#contact">Contact &amp; support SLA</a></li>
+            <li><a href="#verification">Verification &amp; limitations</a></li>
+            <li><a href="#versions">Version history</a></li>
+            <li><a href="#legal">Legal &amp; copyright</a></li>
+        </ol>
+    </nav>
 
-    <h2>3. Trademarks and Third-Party Marks</h2>
-    <p>"NDT Master" and associated branding elements are property of their respective owner(s). Apple, App Store, iOS, iPhone, and iPad are trademarks of Apple Inc. All other trademarks belong to their respective owners.</p>
+    <!-- About -->
+    <section id="about">
+        <h2>1. About NDT Master</h2>
+        <p>NDT Master is a calculation and visualization tool for ultrasonic testing (UT) used in weld inspection, raw material examination and component qualification. It runs entirely on-device. There is no account, no cloud sync, and no third-party analytics.</p>
+        <p>The app is intentionally narrow in scope. It is not an inspection record system, an instrument controller, or a substitute for qualified personnel. It is a fast, reviewable calculator that a Level&nbsp;I/II/III inspector can use on site to cross-check a near-field length, plot a refracted angle, or build a quick DAC/TCG reference.</p>
+        <div class="card accent">
+            <p style="margin:0;"><b>Design priorities, in order:</b> correctness of the underlying physics → fast input on a phone with one hand → readable output in bright outdoor light → no surprises with units or sign conventions.</p>
+        </div>
+    </section>
 
-    <h2>4. Standards and Informational Use</h2>
-    <p>The app may reference industry concepts and standards (such as AWS, ASME, EN, GB/T and related practices) for professional workflow assistance. Users remain responsible for applying the correct standards and procedures in their jurisdiction and inspection scenario.</p>
+    <!-- Methodology -->
+    <section id="methodology">
+        <h2>2. Methodology &amp; standards</h2>
+        <p>All calculations are derived from published acoustic-physics formulas and standard NDT practice. The app references the following standards as the basis for terminology, geometric conventions and acceptance-criteria workflows:</p>
 
-    <h2>5. Disclaimer</h2>
-    <div class="card">
-        <p>NDT Master is a professional assistance tool. Calculation outputs and OCR readings should be reviewed by qualified personnel before engineering decisions. To the extent permitted by law, the app is provided "as is" without warranties of uninterrupted operation or fitness for every specific industrial case.</p>
-    </div>
+        <div class="std-grid">
+            <div class="std-row">
+                <span class="label">AWS D1.1</span>
+                <span class="desc">Structural Welding Code — Steel. Used for UT acceptance and D-rating (indication rating) workflow conventions.</span>
+            </div>
+            <div class="std-row">
+                <span class="label">ASME BPVC V</span>
+                <span class="desc">Nondestructive Examination, Article 4 &amp; 5. Used for DAC/TCG reference curve construction and basic UT examination procedures.</span>
+            </div>
+            <div class="std-row">
+                <span class="label">EN 12668</span>
+                <span class="desc">Characterization and verification of ultrasonic examination equipment (probes, instruments, combinations).</span>
+            </div>
+            <div class="std-row">
+                <span class="label">EN ISO 16811</span>
+                <span class="desc">Sensitivity and range setting for pulse-echo flaw detectors.</span>
+            </div>
+            <div class="std-row">
+                <span class="label">EN ISO 17640</span>
+                <span class="desc">Ultrasonic testing of welds — techniques, testing levels and assessment.</span>
+            </div>
+            <div class="std-row">
+                <span class="label">GB/T 11345</span>
+                <span class="desc">Chinese national standard for ultrasonic testing of welded joints. Used for default acceptance flows in zh-Hans region.</span>
+            </div>
+            <div class="std-row">
+                <span class="label">GB/T 27664</span>
+                <span class="desc">Non-destructive testing — characterization and verification of ultrasonic examination equipment.</span>
+            </div>
+        </div>
 
-    <h2>Contact</h2>
-    <p>For copyright notices, legal questions, or policy follow-up:</p>
-    <p><b>Email:</b> <a href="mailto:st67891@gmail.com?subject=NDT%20Master%20Legal%20Inquiry">st67891@gmail.com</a></p>
+        <h3>Unit handling</h3>
+        <p>Internally, every calculation is performed in SI base units (m, s, Hz, kg/m³). Conversions to mm / MHz / inch / ft happen only at the display layer through <code>Foundation.MeasurementFormatter</code>, which means region-specific unit preferences cannot introduce numerical drift into intermediate results.</p>
+
+        <h3>Material properties</h3>
+        <p>Default longitudinal- and shear-wave velocities ship with values cited from the standards above and from widely-used NDT handbooks (e.g. Krautkrämer &amp; Krautkrämer, <em>Ultrasonic Testing of Materials</em>; ASNT <em>Nondestructive Testing Handbook, Vol. 7</em>). Users can edit any material or add custom alloys; custom values are stored locally only.</p>
+
+        <h3>Why everything is offline</h3>
+        <p>Inspection environments — tank farms, pipeline right-of-ways, refinery shutdowns, offshore platforms — are routinely without reliable network. The app is engineered to give the same result on a disconnected device that it would on a connected one. There is no remote calculation server, by design.</p>
+    </section>
+
+    <!-- Formulas -->
+    <section id="formulas">
+        <h2>3. Calculation reference</h2>
+        <p>The formulas below are the exact expressions used in production. Sign conventions and geometry follow common UT field practice (probe index at origin, beam centerline measured from the normal, second-leg distance accumulated through skip).</p>
+
+        <h3>Wavelength</h3>
+        <div class="formula">
+λ = <span class="var">c</span> / <span class="var">f</span>
+
+where  λ = wavelength [m]
+       c = acoustic velocity in the test material [m/s]
+       f = probe nominal frequency [Hz]
+<span class="src">Reference: EN 12668-2, §3; Krautkrämer §1.</span>
+        </div>
+
+        <h3>Near field length</h3>
+        <div class="formula">
+N = (<span class="var">D</span>² · <span class="var">f</span>) / (4 · <span class="var">c</span>)   =   <span class="var">D</span>² / (4 · λ)
+
+where  N = near field length [m]
+       D = effective transducer element diameter [m]
+       f = frequency [Hz], c = velocity [m/s], λ = wavelength [m]
+<span class="src">Standard form for a circular piston transducer in an infinite medium.
+Reference: Krautkrämer §3.1; EN ISO 16811 Annex A.</span>
+        </div>
+
+        <h3>Beam spread (half-angle, −6 dB)</h3>
+        <div class="formula">
+sin(β/2) = K · λ / <span class="var">D</span>
+
+where  β   = full beam divergence angle [rad]
+       K   = 0.51 for the −6 dB half-angle of a circular piston
+            (K = 1.22 is used when reporting the first null of the radiation pattern)
+       λ, D as defined above.
+<span class="src">Reference: ASNT NDT Handbook, Vol. 7, §3.4.</span>
+        </div>
+
+        <h3>Snell's law &amp; critical angles</h3>
+        <div class="formula">
+sin(θ₁) / <span class="var">c</span>₁  =  sin(θ₂) / <span class="var">c</span>₂
+
+First critical angle  (L-wave refracts at 90°):
+    θ_c1 = arcsin(c₁_L / c₂_L)
+
+Second critical angle (S-wave refracts at 90°):
+    θ_c2 = arcsin(c₁_L / c₂_S)
+<span class="src">θ_c1 and θ_c2 bracket the usable shear-wave angle-beam range in steel.
+Reference: ASME BPVC V Article 4 Mandatory Appendix III.</span>
+        </div>
+
+        <h3>Angle-beam flaw location</h3>
+        <div class="formula">
+For a refracted angle θ in a plate of thickness T, with sound path SP:
+
+    Beam path (SP)  = directly measured from instrument
+    Surface dist.   P  = SP · sin(θ)
+    Depth (1st leg) d  = SP · cos(θ)
+    Depth (2nd leg) d' = 2·T − SP · cos(θ)
+    Depth (3rd leg) d  = SP · cos(θ) − 2·T
+    ... (continues for nth leg)
+
+Probe-to-flaw projected distance:
+    DA = P − x_index    (x_index = probe index offset)
+<span class="src">Geometry follows EN ISO 17640 §10 and AWS D1.1 Clause 8 Part F.</span>
+        </div>
+
+        <h3>Decibel conversion</h3>
+        <div class="formula">
+ΔdB = 20 · log₁₀(<span class="var">A</span>₁ / <span class="var">A</span>₂)
+%   = 10^(ΔdB / 20) · 100
+
+Use 20·log for amplitude ratios (voltage, screen height).
+Use 10·log only for power/energy ratios — NDT screen amplitude is amplitude, not power.
+<span class="src">Common UT gain math; see EN ISO 16811 §6.</span>
+        </div>
+
+        <h3>Acoustic impedance &amp; reflection coefficient</h3>
+        <div class="formula">
+Z = ρ · c        [kg / (m² · s)]   = [rayl]
+
+Normal-incidence reflection coefficient at a planar interface:
+    R = (Z₂ − Z₁) / (Z₂ + Z₁)
+    T = 1 − R        (intensity transmitted)
+<span class="src">Reference: Krautkrämer §2.</span>
+        </div>
+
+        <h3>Resonance thickness</h3>
+        <div class="formula">
+For fundamental thickness resonance (n = 1):
+    T = c / (2 · f)
+
+Harmonic order n:
+    T_n = n · c / (2 · f)
+<span class="src">Used by the resonance-mode thickness gauging module.</span>
+        </div>
+
+        <h3>ToFD probe centre separation (PCS)</h3>
+        <div class="formula">
+PCS = 2 · d_focus · tan(θ)
+
+where  d_focus = depth at which beams cross [m]
+       θ       = probe refracted longitudinal-wave angle [rad]
+<span class="src">Reference: EN ISO 10863 / ASME V Article 4 Mandatory Appendix III.</span>
+        </div>
+
+        <h3>AWS D1.1 indication rating ("D-rating")</h3>
+        <div class="formula">
+D = <span class="var">a</span> − <span class="var">b</span> − <span class="var">c</span>
+
+where  a = indication level (gain at which the indication
+           reaches the reference horizontal line) [dB]
+       b = reference level (gain to produce reference
+           response from the standard reflector) [dB]
+       c = attenuation factor:
+           c = 2 dB · (sound path in inches − 1)   (path &gt; 1 in.)
+           c = 0   when sound path ≤ 1 in.
+
+Acceptance class is then looked up in AWS D1.1 Table 8.2
+(or Table 8.3 for tubular) by weld thickness and indication length.
+<span class="src">Reference: AWS D1.1:2020 Clause 8 Part F.
+NDT Master implements the calculation; acceptance class lookup
+is presented for the user to confirm against the applicable code edition.</span>
+        </div>
+
+        <h3>DAC / TCG reference curves</h3>
+        <p>For DAC, the app fits a smooth curve through user-provided reference reflector points (side-drilled holes or flat-bottom holes at increasing depth), and renders the −6 dB and −14 dB evaluation lines per ASME BPVC V Article 4 Mandatory Appendix VII. For TCG, the gain compensation values along the sound path are derived from the same reference data so that an equal-amplitude reflector reads at the same screen height at any depth.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <h2>4. Frequently asked questions</h2>
+
+        <details class="faq">
+            <summary>How accurate are the calculations?</summary>
+            <div class="answer">
+                <p>Numerical accuracy of the underlying expressions is limited only by 64-bit floating-point precision (about 15 significant decimal digits). The accuracy of the <em>physical result</em> in your inspection depends on inputs: material velocity, probe diameter, refracted angle and reference level all carry uncertainty in practice. The app reports calculated values to a precision that does not overstate input uncertainty (typically 2–3 decimals in mm, 0.1 dB).</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>Which AWS D1.1 edition does the D-Rating tool follow?</summary>
+            <div class="answer">
+                <p>The arithmetic (a − b − c with the path-length attenuation correction) has been stable across AWS D1.1 editions for many years. Acceptance class tables (8.2 / 8.3) are presented for reference; you remain responsible for confirming against the contract edition applicable to your project (e.g. AWS D1.1:2020 vs. earlier).</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>How is the DAC curve generated from my reference points?</summary>
+            <div class="answer">
+                <p>The DAC module uses the user-supplied reference reflector amplitudes at known depths to construct the primary curve, then offsets by −6 dB and −14 dB to render the evaluation and recording lines per ASME BPVC V Article 4 Appendix VII. The curve is generated by monotone piecewise interpolation between points; the underlying point data and the gain offsets are always shown so the curve can be cross-checked by hand.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>Why is OCR scanning only used for velocity / frequency / dB values?</summary>
+            <div class="answer">
+                <p>Instrument screen layouts vary widely, but the three numeric fields most often manually re-typed during a job are velocity (m/s or in/µs), frequency (MHz) and gain (dB). OCR is scoped to these on purpose: a narrow, well-tested capture surface is more reliable than a general "read anything on the screen" feature. You can always reject the OCR suggestion and type the value.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>Why does the app stay offline? Are my inspection inputs sent anywhere?</summary>
+            <div class="answer">
+                <p>No. All calculations and OCR run on-device. No inspection inputs, history, custom materials, OCR images or analytics events are sent to any server. The app does not contain third-party advertising or analytics SDKs in the current release. See the <a href="privacy.html">Privacy Policy</a> for the full statement.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>Can I export results for an inspection report?</summary>
+            <div class="answer">
+                <p>Calculation results, DAC reference data and history records can be exported as CSV or PDF (Pro tier). The export format is plain and intentionally human-readable so that the values can be pasted into a company report template or attached as supporting evidence.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>Can I add a custom alloy or material?</summary>
+            <div class="answer">
+                <p>Yes. The Materials section lets you create custom entries with longitudinal- and shear-wave velocities and density. Custom materials are stored only on your device. Up to 100 custom entries are supported.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>What is the difference between Basic and Professional?</summary>
+            <div class="answer">
+                <p>Basic unlocks the full set of everyday UT calculators (wavelength, near field, beam spread, Snell's law, flaw location, dB, impedance, resonance, ToFD PCS) plus material presets and local history. Professional adds AWS D-Rating, DAC/TCG curve construction, the OCR scanner, advanced 3D beam-path visualization, and report-ready CSV/PDF export. Both are one-time purchases — there is no subscription.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>Does the app work on iPad?</summary>
+            <div class="answer">
+                <p>Yes. The app is universal and supports iPad split-view. On a 12.9" iPad Pro a two-pane layout is used where applicable so the calculator and the 3D beam view can be visible at the same time.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>Why does the 3D beam view look slightly different on my older iPhone?</summary>
+            <div class="answer">
+                <p>The 3D beam simulation uses SceneKit. On A10–A11 class devices the simulation is rendered at a reduced framebuffer scale so that 60 fps is preserved during slider interaction. The numerical results are identical regardless of device class.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>I think a result is wrong. What should I do?</summary>
+            <div class="answer">
+                <p>Email <a href="mailto:st67891@gmail.com?subject=NDT%20Master%20-%20Calculation%20Question">st67891@gmail.com</a> with: the calculator name, every input value with its unit, the value the app produced, and the value you expected (with your derivation or reference). We take calculation issues seriously and aim to confirm or fix within one business day.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary>Do you offer education / training licenses?</summary>
+            <div class="answer">
+                <p>Yes — for NDT training providers, technical colleges and ASNT/ISO 9712 prep courses we can arrange volume licensing and instructor briefing materials. Please contact us with your institution name, expected number of seats and the course it will be used in.</p>
+            </div>
+        </details>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section id="troubleshooting">
+        <h2>5. Troubleshooting</h2>
+
+        <h3>OCR keeps reading the wrong number</h3>
+        <ul>
+            <li>Hold the phone roughly parallel to the instrument screen; large keystone distortion lowers confidence.</li>
+            <li>Avoid direct glare on the instrument screen — a small angle change usually fixes reflective washout.</li>
+            <li>Tap a recognized number to edit it before accepting. OCR is a typing aid, not a black box.</li>
+        </ul>
+
+        <h3>A purchase did not unlock the feature</h3>
+        <ul>
+            <li>Open <em>Settings → Restore Purchases</em>. StoreKit will re-query Apple and re-grant the entitlement.</li>
+            <li>Verify the App Store account on the device is the same one used for the original purchase.</li>
+            <li>If still not restored, email us with the purchase date and the last 4 of the Apple receipt order ID. We do not see card details.</li>
+        </ul>
+
+        <h3>The app feels slow / drops frames in 3D view</h3>
+        <ul>
+            <li>Close other camera-heavy apps in the background.</li>
+            <li>In Settings, disable "High-Contrast Outdoor Mode" if you are indoors — it forces a higher contrast render path.</li>
+            <li>If the issue persists on a modern device, please report it with device model and iOS version.</li>
+        </ul>
+
+        <h3>History records disappeared after iOS update</h3>
+        <p>This should not happen — history is stored in the app's local container and is preserved across iOS updates. If you observe it, please contact us with the iOS version (before and after) and the approximate count of records lost. We will investigate immediately.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>6. Contact &amp; support SLA</h2>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="label">General &amp; Technical Support</div>
+                <div class="value"><a href="mailto:st67891@gmail.com?subject=NDT%20Master%20Support">st67891@gmail.com</a></div>
+                <div class="note">Calculation questions, bugs, feature requests. First response within 1 business day (UTC+8, Mon–Fri).</div>
+            </div>
+            <div class="contact-card">
+                <div class="label">Calculation Methodology</div>
+                <div class="value"><a href="mailto:st67891@gmail.com?subject=NDT%20Master%20-%20Methodology%20Question">st67891@gmail.com</a></div>
+                <div class="note">Disagreements on a formula, sign convention or reference. We welcome these — please include your reference (clause, page).</div>
+            </div>
+            <div class="contact-card">
+                <div class="label">Education / Volume Licensing</div>
+                <div class="value"><a href="mailto:st67891@gmail.com?subject=NDT%20Master%20-%20Education%20Licensing">st67891@gmail.com</a></div>
+                <div class="note">For NDT training providers, technical colleges, and corporate inspection teams.</div>
+            </div>
+            <div class="contact-card">
+                <div class="label">Privacy / Legal</div>
+                <div class="value"><a href="mailto:st67891@gmail.com?subject=NDT%20Master%20-%20Privacy%20or%20Legal">st67891@gmail.com</a></div>
+                <div class="note">Privacy requests, copyright notices, legal follow-up.</div>
+            </div>
+        </div>
+
+        <p><b>When reporting an issue, please include:</b> iOS version, device model (e.g. iPhone 14 Pro), app version (Settings → About), the calculator/feature involved, every input value with its unit, the observed result, and the expected result with your reference if you have one.</p>
+    </section>
+
+    <!-- Verification -->
+    <section id="verification">
+        <h2>7. Verification &amp; limitations</h2>
+        <div class="card">
+            <p><b>NDT Master is a calculation aid, not a qualified inspector.</b> Outputs are produced by deterministic formulas and the precision of your inputs. They do not replace the judgement of qualified personnel (ASNT SNT-TC-1A / NAS 410 / ISO 9712 Level&nbsp;II or III as appropriate), a written procedure, or the acceptance criteria of the applicable code edition.</p>
+        </div>
+        <ul>
+            <li>The user is responsible for entering correct material, probe and instrument parameters.</li>
+            <li>The user is responsible for selecting the correct standard, code edition and acceptance class for the job.</li>
+            <li>OCR-captured values must be verified against the instrument before use.</li>
+            <li>The app is provided "as is" without warranty of fitness for any specific industrial use case, to the extent permitted by local law.</li>
+        </ul>
+    </section>
+
+    <!-- Versions -->
+    <section id="versions">
+        <h2>8. Version history</h2>
+
+        <div class="version-row">
+            <span class="v">1.2<span class="date">2026-05-11</span></span>
+            <span class="notes">App Store optimized screenshots for iPhone and iPad; improved ASO copy for offline-privacy and field workflow positioning.</span>
+        </div>
+        <div class="version-row">
+            <span class="v">1.1<span class="date">2026-04-30</span></span>
+            <span class="notes">Refinements to AWS D-Rating workflow, expanded material library, history-export polish.</span>
+        </div>
+        <div class="version-row">
+            <span class="v">1.0<span class="date">2026-04-22</span></span>
+            <span class="notes">Initial release: 9 UT calculators, AWS D-Rating, DAC/TCG, OCR scanner, 3D beam-path visualization, offline-first storage.</span>
+        </div>
+    </section>
+
+    <!-- Legal -->
+    <section id="legal">
+        <h2>9. Legal &amp; copyright</h2>
+        <div class="legal">
+            <h3>Copyright ownership</h3>
+            <p>&copy; 2026 NDT Master. All rights reserved. The NDT Master app and related materials — including software code, UI design, text content, graphics and documentation — are protected by applicable copyright and intellectual property laws.</p>
+
+            <h3>License scope</h3>
+            <p>Use of NDT Master is governed by the applicable Apple Media Services Terms and any end-user license terms provided in the App Store listing and in-app legal sections. Unless explicitly permitted by law or written authorization, you may not:</p>
+            <ul>
+                <li>Copy, redistribute, sublicense, sell, lease, or commercially repackage the app or its content.</li>
+                <li>Reverse engineer, decompile or disassemble the app, except where local law explicitly allows it.</li>
+                <li>Remove or alter copyright, trademark or other proprietary notices.</li>
+            </ul>
+
+            <h3>Trademarks</h3>
+            <p>"NDT Master" and associated branding elements are the property of their respective owner(s). Apple, App Store, iOS, iPhone and iPad are trademarks of Apple Inc. AWS, ASME, EN, ISO and GB/T are referenced for informational interoperability only and remain the property of their respective standards-development organizations. All other trademarks belong to their respective owners.</p>
+
+            <h3>Standards usage notice</h3>
+            <p>The app references industry standards (AWS, ASME, EN, ISO, GB/T) for terminology, geometric conventions and workflow assistance. NDT Master does not reproduce protected standard text. Users remain responsible for obtaining and complying with the applicable standard in their jurisdiction and inspection scenario.</p>
+
+            <h3>Disclaimer</h3>
+            <p>To the extent permitted by law, the app is provided "as is" without warranties of uninterrupted operation, fitness for a particular purpose, or suitability for any specific industrial case. Engineering decisions based on the app's output must be reviewed by qualified personnel.</p>
+        </div>
+    </section>
 
     <div class="footer">
-        &copy; 2026 NDT Master. All rights reserved.
-        <br><a href="privacy.html">Privacy Policy</a>
+        &copy; 2026 NDT Master · All rights reserved.<br>
+        <a href="privacy.html">Privacy Policy</a> ·
+        <a href="#legal">Legal &amp; Copyright</a> ·
+        <a href="mailto:st67891@gmail.com">Contact</a>
     </div>
+
 </div>
 </body>
 </html>
