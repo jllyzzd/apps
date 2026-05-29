@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idscan - Support</title>
+    <meta name="description" content="Support and FAQ for idscan, an on-device ID barcode age screening assistant.">
+    <style>
+        :root {
+            --bg: #f6f8f7;
+            --card-bg: #ffffff;
+            --accent: #0b6e69;
+            --accent-soft: rgba(11, 110, 105, 0.08);
+            --accent-line: rgba(11, 110, 105, 0.2);
+            --warning: #9f3412;
+            --warning-soft: rgba(159, 52, 18, 0.08);
+            --text: #202427;
+            --text-soft: #53606b;
+            --text-light: #7a858f;
+            --border: #dfe6e3;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 24px 16px 48px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 760px; margin: 0 auto; }
+
+        .hero {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 18px;
+            margin-bottom: 24px;
+        }
+
+        .eyebrow {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .lede {
+            font-size: 1rem;
+            color: var(--text-soft);
+            max-width: 64ch;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.84rem;
+            color: var(--text-light);
+            margin-top: 14px;
+        }
+
+        .meta b { color: var(--text-soft); font-weight: 600; }
+
+        h2 {
+            font-size: 1.16rem;
+            font-weight: 700;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 34px;
+            margin-bottom: 14px;
+        }
+
+        p { margin-bottom: 14px; font-size: 0.95rem; color: var(--text-soft); }
+        ul { margin: 10px 0 16px 22px; font-size: 0.95rem; color: var(--text-soft); }
+        li { margin-bottom: 8px; }
+        strong, b { color: var(--text); font-weight: 600; }
+        a { color: var(--accent); }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+
+        .card.accent {
+            background: var(--accent-soft);
+            border-color: var(--accent-line);
+            border-left: 4px solid var(--accent);
+        }
+
+        .card.warning {
+            background: var(--warning-soft);
+            border-left: 4px solid var(--warning);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 14px 0 18px;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+        }
+
+        .contact-card .label {
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .contact-card .value {
+            font-size: 0.98rem;
+            color: var(--text);
+            word-break: break-word;
+        }
+
+        details.faq {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        details.faq[open] { border-color: var(--accent-line); }
+
+        details.faq summary {
+            cursor: pointer;
+            list-style: none;
+            padding: 14px 42px 14px 16px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text);
+            position: relative;
+        }
+
+        details.faq summary::-webkit-details-marker { display: none; }
+
+        details.faq summary::after {
+            content: "+";
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        details.faq[open] summary::after { content: "-"; }
+
+        details.faq .answer {
+            padding: 0 16px 14px;
+            font-size: 0.93rem;
+            color: var(--text-soft);
+        }
+
+        details.faq .answer p { margin-bottom: 10px; }
+        details.faq .answer p:last-child { margin-bottom: 0; }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.86rem;
+            text-align: center;
+        }
+
+        @media (max-width: 560px) {
+            body { padding: 20px 12px 42px; }
+            h1 { font-size: 1.48rem; }
+            h2 { font-size: 1.08rem; }
+            .card, .contact-card { padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="hero">
+        <div class="eyebrow">Support</div>
+        <h1>idscan Support</h1>
+        <p class="lede">Help for camera access, supported PDF417/AAMVA barcode scanning, age rule setup, PASS/DENY/REVIEW results, local history, and privacy questions.</p>
+        <div class="meta">
+            <span><b>Updated:</b> May 30, 2026</span>
+            <span><b>Bundle ID:</b> com.linxue.idscan</span>
+        </div>
+    </header>
+
+    <div class="contact-grid">
+        <div class="contact-card">
+            <div class="label">Email Support</div>
+            <div class="value"><a href="mailto:st67891@gmail.com?subject=idscan%20Support">st67891@gmail.com</a></div>
+        </div>
+    </div>
+
+    <div class="card accent">
+        <p>idscan is an on-device ID barcode age screening assistant for supported PDF417/AAMVA barcodes. It is designed for local processing and minimal local history.</p>
+    </div>
+
+    <div class="card warning">
+        <p><b>Important:</b> idscan does not guarantee fake ID detection and does not replace manual ID inspection or local legal requirements.</p>
+    </div>
+
+    <h2>What We Can Help With</h2>
+    <ul>
+        <li>Camera permission setup and recovery after permission is denied.</li>
+        <li>Scanning supported PDF417 barcodes on the back of IDs.</li>
+        <li>Understanding PASS, DENY, and REVIEW results.</li>
+        <li>Changing the age rule, including default 21+, comparison rules, and range rules.</li>
+        <li>Reviewing expiration details, local history, and local statistics.</li>
+        <li>Deleting local records or clearing local history.</li>
+        <li>Privacy questions about local processing and stored fields.</li>
+    </ul>
+
+    <h2>Before You Contact Support</h2>
+    <p>Please include the app version, iOS version, device model, the screen where the issue occurred, and the steps to reproduce the issue.</p>
+    <p>Please do not send real ID photos, raw barcode content, full names, addresses, license numbers, or other sensitive identity information.</p>
+
+    <h2>FAQ</h2>
+
+    <details class="faq">
+        <summary>Why does idscan need camera access?</summary>
+        <div class="answer">
+            <p>The camera is used only to scan the PDF417 barcode on the back of an ID. idscan does not need Photos, Location, Microphone, NFC, Contacts, or an account.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Does idscan identify fake IDs?</summary>
+        <div class="answer">
+            <p>No. idscan assists age screening by reading supported barcode data, checking the configured age rule, checking expiration, and flagging missing or unusual fields for manual review.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Is my data uploaded to a server?</summary>
+        <div class="answer">
+            <p>No in the current release. Scanning, parsing, decisions, local history, and statistics are processed on this device.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>What data is saved in history?</summary>
+        <div class="answer">
+            <p>idscan saves minimal local summaries such as result, scan time, age or age rule summary, expiration status, issuing jurisdiction, and review reasons. Raw barcode data, full name, address, and license number are not saved.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>How do I delete local records?</summary>
+        <div class="answer">
+            <p>Use the history or settings data controls to delete individual records or clear local history.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Can I change the age rule?</summary>
+        <div class="answer">
+            <p>Yes. The default rule is 21+. You can configure comparison rules such as less than, greater than, less than or equal to, greater than or equal to, and range-based rules.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Why did a scan show REVIEW?</summary>
+        <div class="answer">
+            <p>REVIEW means idscan could not make a clear automatic decision, for example because fields were missing, a date was invalid, or the barcode format was not fully supported.</p>
+        </div>
+    </details>
+
+    <footer>
+        idscan · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:st67891@gmail.com?subject=idscan%20Support">Contact</a>
+    </footer>
+</div>
+</body>
+</html>

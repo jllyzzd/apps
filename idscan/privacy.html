@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idscan - Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for idscan, an on-device ID barcode age screening assistant.">
+    <style>
+        :root {
+            --bg: #f6f8f7;
+            --card-bg: #ffffff;
+            --accent: #0b6e69;
+            --accent-soft: rgba(11, 110, 105, 0.08);
+            --accent-line: rgba(11, 110, 105, 0.2);
+            --text: #202427;
+            --text-soft: #53606b;
+            --text-light: #7a858f;
+            --border: #dfe6e3;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 24px 16px 48px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 760px; margin: 0 auto; }
+
+        .hero {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 18px;
+            margin-bottom: 24px;
+        }
+
+        .eyebrow {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .lede {
+            font-size: 1rem;
+            color: var(--text-soft);
+            max-width: 64ch;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.84rem;
+            color: var(--text-light);
+            margin-top: 14px;
+        }
+
+        .meta b { color: var(--text-soft); font-weight: 600; }
+
+        h2 {
+            font-size: 1.16rem;
+            font-weight: 700;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 34px;
+            margin-bottom: 14px;
+        }
+
+        p { margin-bottom: 14px; font-size: 0.95rem; color: var(--text-soft); }
+        ul { margin: 10px 0 16px 22px; font-size: 0.95rem; color: var(--text-soft); }
+        li { margin-bottom: 8px; }
+        strong, b { color: var(--text); font-weight: 600; }
+        a { color: var(--accent); }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+
+        .card.accent {
+            background: var(--accent-soft);
+            border-color: var(--accent-line);
+            border-left: 4px solid var(--accent);
+        }
+
+        .fact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 14px 0 18px;
+        }
+
+        .fact-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 14px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            font-size: 0.9rem;
+        }
+
+        .fact-row .label {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.84rem;
+        }
+
+        .fact-row .value { color: var(--text-soft); }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.86rem;
+            text-align: center;
+        }
+
+        @media (max-width: 560px) {
+            body { padding: 20px 12px 42px; }
+            h1 { font-size: 1.48rem; }
+            h2 { font-size: 1.08rem; }
+            .card { padding: 14px; }
+            .fact-row { grid-template-columns: 1fr; gap: 4px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="hero">
+        <div class="eyebrow">Privacy Policy</div>
+        <h1>idscan Privacy Policy</h1>
+        <p class="lede">idscan is an on-device ID barcode age screening assistant for supported PDF417/AAMVA barcodes. The current release is designed to process scans locally and avoid uploading identity data to developer-operated servers.</p>
+        <div class="meta">
+            <span><b>Effective Date:</b> May 30, 2026</span>
+            <span><b>Bundle ID:</b> com.linxue.idscan</span>
+        </div>
+    </header>
+
+    <div class="card accent">
+        <p><b>Privacy-first design:</b> idscan does not upload raw barcode payloads, scan history, identity details, or app usage profiles to a developer-operated server in the current release.</p>
+    </div>
+
+    <h2>1. Data We Collect</h2>
+    <p>We do <b>not</b> collect personal data through a developer-operated server in the current release.</p>
+    <p>The app may store the following limited information locally on your device:</p>
+    <ul>
+        <li>Scan time.</li>
+        <li>PASS, DENY, or REVIEW result.</li>
+        <li>Age result or age rule summary used for the decision.</li>
+        <li>Expiration status and expiration date when available.</li>
+        <li>Issuing jurisdiction, issuing country, document class, restriction code, endorsement code, and review reasons when available.</li>
+        <li>User preferences, including age rule, language, and theme.</li>
+    </ul>
+
+    <h2>2. Data We Do Not Store or Upload</h2>
+    <ul>
+        <li>Raw PDF417 barcode payload.</li>
+        <li>ID card photos.</li>
+        <li>Full name, address, or license number.</li>
+        <li>Original full date of birth text.</li>
+        <li>Location, contacts, photo library, microphone, NFC, or biometric information.</li>
+        <li>Advertising identifiers or cross-app tracking identifiers.</li>
+    </ul>
+
+    <h2>3. Local Processing and Storage</h2>
+    <p>Scanning, parsing, age decisions, history, and statistics are processed on this device. Local history is stored inside the app sandbox. You can delete individual records or clear local history in the app. When you uninstall the app, iOS normally removes the app's local container data.</p>
+
+    <div class="fact-grid">
+        <div class="fact-row">
+            <div class="label">Processing</div>
+            <div class="value">On-device barcode parsing and decision logic.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">Account</div>
+            <div class="value">No account registration is required.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">History</div>
+            <div class="value">Local summaries only; raw barcode content is not saved.</div>
+        </div>
+    </div>
+
+    <h2>4. Permissions</h2>
+    <p>idscan requests camera access only to scan the PDF417 barcode on the back of an ID. The app does not request Photos, Location, Microphone, NFC, Contacts, or account access.</p>
+
+    <h2>5. Third-Party SDKs and Tracking</h2>
+    <p>The current release does not include third-party advertising SDKs, third-party analytics SDKs, custom tracking SDKs, login SDKs, payment SDKs, or remote cloud services.</p>
+
+    <h2>6. Your Choices</h2>
+    <ul>
+        <li>You can deny camera access. Scanning requires camera permission, but local history and settings remain available.</li>
+        <li>You can delete a single local record or clear all local history.</li>
+        <li>You can uninstall the app to remove the app's local container data from your device.</li>
+    </ul>
+
+    <h2>7. Important Limitations</h2>
+    <p>idscan assists age screening by reading supported barcode data. It does not guarantee fake ID detection and does not replace manual ID inspection or local legal requirements.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>idscan is not directed to children under 13.</p>
+
+    <h2>9. Policy Updates</h2>
+    <p>If privacy behavior changes in a future release, this page will be updated with a new effective date.</p>
+
+    <h2>10. Contact</h2>
+    <p>For privacy questions, contact <a href="mailto:st67891@gmail.com?subject=idscan%20Privacy">st67891@gmail.com</a>.</p>
+
+    <footer>
+        idscan · <a href="support.html">Support</a>
+    </footer>
+</div>
+</body>
+</html>
