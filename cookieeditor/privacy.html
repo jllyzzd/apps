@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Lens - Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Cookie Lens, a Safari extension for viewing, editing, importing, and exporting current-site cookies on device.">
+    <style>
+        :root {
+            --bg: #f7f8fb;
+            --card-bg: #ffffff;
+            --accent: #176f8f;
+            --accent-soft: rgba(23, 111, 143, 0.08);
+            --accent-line: rgba(23, 111, 143, 0.22);
+            --warning: #9f3412;
+            --warning-soft: rgba(159, 52, 18, 0.08);
+            --text: #20242a;
+            --text-soft: #52606d;
+            --text-light: #7a8490;
+            --border: #dde5ea;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 24px 16px 48px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 780px; margin: 0 auto; }
+
+        .hero {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 18px;
+            margin-bottom: 24px;
+        }
+
+        .eyebrow {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .lede {
+            font-size: 1rem;
+            color: var(--text-soft);
+            max-width: 66ch;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.84rem;
+            color: var(--text-light);
+            margin-top: 14px;
+        }
+
+        .meta b { color: var(--text-soft); font-weight: 600; }
+
+        h2 {
+            font-size: 1.16rem;
+            font-weight: 700;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 34px;
+            margin-bottom: 14px;
+        }
+
+        p { margin-bottom: 14px; font-size: 0.95rem; color: var(--text-soft); }
+        ul { margin: 10px 0 16px 22px; font-size: 0.95rem; color: var(--text-soft); }
+        li { margin-bottom: 8px; }
+        strong, b { color: var(--text); font-weight: 600; }
+        a { color: var(--accent); }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+
+        .card.accent {
+            background: var(--accent-soft);
+            border-color: var(--accent-line);
+            border-left: 4px solid var(--accent);
+        }
+
+        .card.warning {
+            background: var(--warning-soft);
+            border-left: 4px solid var(--warning);
+        }
+
+        .fact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 14px 0 18px;
+        }
+
+        .fact-row {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 14px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            font-size: 0.9rem;
+        }
+
+        .fact-row .label {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.84rem;
+        }
+
+        .fact-row .value { color: var(--text-soft); }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.86rem;
+            text-align: center;
+        }
+
+        @media (max-width: 560px) {
+            body { padding: 20px 12px 42px; }
+            h1 { font-size: 1.48rem; }
+            h2 { font-size: 1.08rem; }
+            .card { padding: 14px; }
+            .fact-row { grid-template-columns: 1fr; gap: 4px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="hero">
+        <div class="eyebrow">Privacy Policy</div>
+        <h1>Cookie Lens Privacy Policy</h1>
+        <p class="lede">Cookie Lens is a Safari extension for viewing, editing, deleting, importing, and exporting cookies that are accessible for the current Safari site. The current release is designed for local processing and does not upload cookie data to developer-operated servers.</p>
+        <div class="meta">
+            <span><b>Effective Date:</b> July 2, 2026</span>
+            <span><b>Bundle ID:</b> com.zzd.safaricookieeditor</span>
+        </div>
+    </header>
+
+    <div class="card accent">
+        <p><b>Local by design:</b> Cookie names, values, domains, paths, expiration dates, Secure flags, and SameSite values are handled on device inside the Safari extension context. The app does not create an account, does not sync to cloud services, and does not operate a server for collecting your cookie data.</p>
+    </div>
+
+    <h2>1. Data We Collect</h2>
+    <p>We do <b>not</b> collect developer-accessible personal data through Cookie Lens in the current release.</p>
+    <p>When you use the Safari extension, the app may temporarily process the following data on your device:</p>
+    <ul>
+        <li>Current-site cookie fields, including name, value, domain, path, expiration, Secure, and SameSite.</li>
+        <li>Cookie JSON files that you choose to import.</li>
+        <li>Cookie Header strings that you choose to copy.</li>
+        <li>Non-sensitive preferences, such as language, display preferences, and whether you have seen certain notices.</li>
+    </ul>
+
+    <h2>2. Data We Do Not Collect, Store, or Upload</h2>
+    <ul>
+        <li>Cookie data is not uploaded to a developer-operated server.</li>
+        <li>Cookie values are not used for analytics, advertising, profiling, or tracking.</li>
+        <li>Cookie names, values, domains, paths, or imported file contents are not stored by default after the active extension session.</li>
+        <li>No account registration, cloud sync, advertising identifier, or cross-app tracking identifier is used.</li>
+        <li>The app does not use Camera, Photos, Location, Microphone, Contacts, Notifications, Bluetooth, HealthKit, HomeKit, or App Tracking Transparency.</li>
+    </ul>
+
+    <h2>3. Local Processing and Storage</h2>
+    <p>Cookie Lens processes cookies in the Safari Web Extension popup for the current site where you opened the extension. Native app screens provide setup guidance, privacy information, language settings, theme settings, and help content; they do not directly read Safari cookies.</p>
+    <p>Cookie JSON files that you import are parsed and validated locally, then written to the current site when Safari allows it. The imported file contents are not saved separately by Cookie Lens after processing.</p>
+    <p>When you export JSON or copy a Cookie Header string, the resulting file or clipboard content is managed by you and by iOS. Exported files and clipboard content may contain login sessions or other sensitive information. Please store and share them carefully.</p>
+
+    <div class="fact-grid">
+        <div class="fact-row">
+            <div class="label">Processing</div>
+            <div class="value">On-device Safari extension processing for the current site.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">Account</div>
+            <div class="value">No account registration is required.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">Cloud Sync</div>
+            <div class="value">No developer-operated cloud sync is used.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">Preferences</div>
+            <div class="value">Non-sensitive preferences may be stored in UserDefaults on device.</div>
+        </div>
+    </div>
+
+    <h2>4. Safari Extension Permissions</h2>
+    <p>Cookie Lens uses Safari Web Extension permissions such as cookies, active tab, tabs, and HTTP/HTTPS site access so that you can manage cookies for the site where you open the extension. Site access is controlled by Safari and by your site permission choices.</p>
+    <p>Some cookies may be unavailable or not editable because of Safari, WebKit, HttpOnly, security, or site-specific restrictions. Cookie Lens does not attempt to bypass those restrictions.</p>
+
+    <h2>5. Third-Party SDKs and Tracking</h2>
+    <p>The current release does not include third-party advertising SDKs, third-party analytics SDKs, crash reporting SDKs, login SDKs, payment SDKs, or remote cloud services. The app does not track you across apps or websites.</p>
+
+    <h2>6. Your Choices</h2>
+    <ul>
+        <li>You can choose whether to enable the Safari extension and which sites may use it.</li>
+        <li>You can delete cookies for the current site through the extension when Safari allows that operation.</li>
+        <li>You can delete exported JSON files that you created.</li>
+        <li>You can clear or replace clipboard content after copying a Cookie Header string.</li>
+        <li>You can reset non-sensitive app preferences from the app, or uninstall the app to remove its local container data.</li>
+    </ul>
+
+    <h2>7. Children's Privacy</h2>
+    <p>Cookie Lens is a developer utility and is not directed to children under 13.</p>
+
+    <h2>8. Policy Updates</h2>
+    <p>If privacy behavior changes in a future release, this page will be updated with a new effective date. Material changes such as adding a server, account system, analytics, advertising, cloud sync, or third-party SDKs would require a new privacy review.</p>
+
+    <h2>9. Contact</h2>
+    <p>For privacy questions, contact <a href="mailto:st67891@gmail.com?subject=Cookie%20Lens%20Privacy">st67891@gmail.com</a>.</p>
+
+    <div class="card warning">
+        <p><b>Security note:</b> Cookie exports and Header strings can contain session credentials. Do not send real cookie values, login sessions, or full Header strings when requesting support.</p>
+    </div>
+
+    <footer>
+        Cookie Lens · <a href="support.html">Support</a>
+    </footer>
+</div>
+</body>
+</html>

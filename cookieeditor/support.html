@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Lens - Support</title>
+    <meta name="description" content="Support and FAQ for Cookie Lens, a Safari extension for current-site cookie viewing, editing, importing, and exporting.">
+    <style>
+        :root {
+            --bg: #f7f8fb;
+            --card-bg: #ffffff;
+            --accent: #176f8f;
+            --accent-soft: rgba(23, 111, 143, 0.08);
+            --accent-line: rgba(23, 111, 143, 0.22);
+            --warning: #9f3412;
+            --warning-soft: rgba(159, 52, 18, 0.08);
+            --text: #20242a;
+            --text-soft: #52606d;
+            --text-light: #7a8490;
+            --border: #dde5ea;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 24px 16px 48px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 780px; margin: 0 auto; }
+
+        .hero {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 18px;
+            margin-bottom: 24px;
+        }
+
+        .eyebrow {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .lede {
+            font-size: 1rem;
+            color: var(--text-soft);
+            max-width: 66ch;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.84rem;
+            color: var(--text-light);
+            margin-top: 14px;
+        }
+
+        .meta b { color: var(--text-soft); font-weight: 600; }
+
+        h2 {
+            font-size: 1.16rem;
+            font-weight: 700;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 34px;
+            margin-bottom: 14px;
+        }
+
+        p { margin-bottom: 14px; font-size: 0.95rem; color: var(--text-soft); }
+        ul { margin: 10px 0 16px 22px; font-size: 0.95rem; color: var(--text-soft); }
+        li { margin-bottom: 8px; }
+        strong, b { color: var(--text); font-weight: 600; }
+        a { color: var(--accent); }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+
+        .card.accent {
+            background: var(--accent-soft);
+            border-color: var(--accent-line);
+            border-left: 4px solid var(--accent);
+        }
+
+        .card.warning {
+            background: var(--warning-soft);
+            border-left: 4px solid var(--warning);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 14px 0 18px;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+        }
+
+        .contact-card .label {
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .contact-card .value {
+            font-size: 0.98rem;
+            color: var(--text);
+            word-break: break-word;
+        }
+
+        details.faq {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        details.faq[open] { border-color: var(--accent-line); }
+
+        details.faq summary {
+            cursor: pointer;
+            list-style: none;
+            padding: 14px 42px 14px 16px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text);
+            position: relative;
+        }
+
+        details.faq summary::-webkit-details-marker { display: none; }
+
+        details.faq summary::after {
+            content: "+";
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        details.faq[open] summary::after { content: "-"; }
+
+        details.faq .answer {
+            padding: 0 16px 14px;
+            font-size: 0.93rem;
+            color: var(--text-soft);
+        }
+
+        details.faq .answer p { margin-bottom: 10px; }
+        details.faq .answer p:last-child { margin-bottom: 0; }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.86rem;
+            text-align: center;
+        }
+
+        @media (max-width: 560px) {
+            body { padding: 20px 12px 42px; }
+            h1 { font-size: 1.48rem; }
+            h2 { font-size: 1.08rem; }
+            .card, .contact-card { padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="hero">
+        <div class="eyebrow">Support</div>
+        <h1>Cookie Lens Support</h1>
+        <p class="lede">Help for enabling the Safari extension, managing current-site cookies, importing and exporting JSON, copying Cookie Header strings, and understanding Safari or HttpOnly limitations.</p>
+        <div class="meta">
+            <span><b>Updated:</b> July 2, 2026</span>
+            <span><b>Bundle ID:</b> com.zzd.safaricookieeditor</span>
+        </div>
+    </header>
+
+    <div class="contact-grid">
+        <div class="contact-card">
+            <div class="label">Email Support</div>
+            <div class="value"><a href="mailto:st67891@gmail.com?subject=Cookie%20Lens%20Support">st67891@gmail.com</a></div>
+        </div>
+    </div>
+
+    <div class="card accent">
+        <p>Cookie Lens is a Safari extension utility for viewing, searching, creating, editing, deleting, importing, and exporting cookies that are accessible for the current Safari site.</p>
+    </div>
+
+    <div class="card warning">
+        <p><b>Important:</b> Cookie values and Header strings can contain login sessions or other sensitive information. Please do not send real cookie values, full Header strings, exported JSON files, or active login data when contacting support.</p>
+    </div>
+
+    <h2>What We Can Help With</h2>
+    <ul>
+        <li>Enabling Cookie Lens in Safari and granting site access.</li>
+        <li>Understanding why a site shows no cookies or fewer cookies than expected.</li>
+        <li>Viewing, searching, creating, editing, deleting, and clearing current-site cookies.</li>
+        <li>Importing Cookie JSON and reviewing partial import failures.</li>
+        <li>Exporting Cookie JSON or copying a Cookie Header string.</li>
+        <li>Understanding Safari, WebKit, HttpOnly, Secure, SameSite, and site permission limitations.</li>
+        <li>Language, theme, iPhone, and iPad layout questions.</li>
+        <li>Privacy questions about local processing and exported files.</li>
+    </ul>
+
+    <h2>Before You Contact Support</h2>
+    <p>Please include the app version, iOS or iPadOS version, device model, Safari page type, what you expected to happen, what actually happened, and the steps needed to reproduce the issue.</p>
+    <p>Please remove or mask cookie values, domains, account identifiers, tokens, and Header strings before sending screenshots or examples.</p>
+
+    <h2>FAQ</h2>
+
+    <details class="faq">
+        <summary>How do I enable Cookie Lens in Safari?</summary>
+        <div class="answer">
+            <p>Open the app and follow the Safari extension setup guide. In Safari, enable the extension and allow it for the site where you want to inspect cookies. Safari controls the final site permission prompt and settings.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Why does Cookie Lens need site access?</summary>
+        <div class="answer">
+            <p>Site access lets the Safari extension read and manage cookies for the current site where you open the extension. Cookie Lens uses this access for current-site cookie management, not for advertising, analytics, or cross-site tracking.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Why do I not see all cookies?</summary>
+        <div class="answer">
+            <p>Safari, WebKit, HttpOnly, security, and site-specific restrictions can prevent some cookies from being visible or editable. Cookie Lens shows cookies that are accessible to the Safari extension for the current site and does not bypass browser security restrictions.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Does Cookie Lens upload my cookies?</summary>
+        <div class="answer">
+            <p>No in the current release. Cookie viewing, editing, import, export, and Header generation are processed on device. Cookie Lens does not operate a developer server for collecting cookie data.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Where are exported JSON files saved?</summary>
+        <div class="answer">
+            <p>Exported files are created only when you choose to export. After that, the file location and sharing destination are controlled by you and by iOS. Please protect exported files because they can contain sensitive session data.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>What happens when I copy a Cookie Header string?</summary>
+        <div class="answer">
+            <p>The Header string is copied to the system clipboard after your action. Clipboard content may be visible to other apps or system features depending on iOS behavior, so clear or replace it when you no longer need it.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Why did a JSON import partially fail?</summary>
+        <div class="answer">
+            <p>Some records may be skipped or fail validation because of invalid fields, unsupported formats, site permission limits, domain/path mismatch, Safari restrictions, or cookie attributes that cannot be written in the current context.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Can Cookie Lens edit HttpOnly cookies?</summary>
+        <div class="answer">
+            <p>HttpOnly and other restricted cookies may be hidden or protected by Safari and WebKit. Cookie Lens explains those limits but does not bypass them.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>What should I send when reporting a bug?</summary>
+        <div class="answer">
+            <p>Send the app version, device, iOS or iPadOS version, Safari site type, sanitized steps, and screenshots with sensitive values removed. Do not send real cookies, active login sessions, full Header strings, or exported JSON containing private data.</p>
+        </div>
+    </details>
+
+    <footer>
+        Cookie Lens · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:st67891@gmail.com?subject=Cookie%20Lens%20Support">Contact</a>
+    </footer>
+</div>
+</body>
+</html>
