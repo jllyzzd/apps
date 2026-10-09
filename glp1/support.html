@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS1Barcode — Support &amp; FAQ</title>
+    <meta name="description" content="Support, FAQ, feature guide, and legal notes for GS1Barcode, a local-first GS1 and UDI barcode parsing and field verification app.">
+    <style>
+        :root {
+            --bg: #f6f7f4;
+            --card-bg: #ffffff;
+            --accent: #0f5f56;
+            --accent-soft: rgba(15, 95, 86, 0.09);
+            --accent-line: rgba(15, 95, 86, 0.22);
+            --text: #25302d;
+            --text-soft: #53605c;
+            --text-light: #7a8582;
+            --border: #dfe5e1;
+            --code-bg: #edf2ef;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 24px 16px 48px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 780px; margin: 0 auto; }
+        .hero {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 18px;
+            margin-bottom: 24px;
+        }
+        .eyebrow {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        h1 {
+            font-size: 1.78rem;
+            font-weight: 750;
+            color: var(--text);
+            letter-spacing: -0.01em;
+            margin-bottom: 10px;
+        }
+        .lede {
+            font-size: 1.02rem;
+            color: var(--text-soft);
+            max-width: 62ch;
+        }
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-top: 14px;
+        }
+        .meta b { color: var(--text-soft); font-weight: 650; }
+        .toc {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-line);
+            border-radius: var(--radius);
+            padding: 14px 18px;
+            margin-bottom: 28px;
+            font-size: 0.92rem;
+        }
+        .toc-title {
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .toc ol {
+            list-style: none;
+            counter-reset: toc;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 18px;
+            row-gap: 4px;
+        }
+        .toc li { counter-increment: toc; font-size: 0.9rem; }
+        .toc li::before {
+            content: counter(toc, decimal-leading-zero);
+            color: var(--accent);
+            font-weight: 700;
+            margin-right: 8px;
+            font-variant-numeric: tabular-nums;
+        }
+        .toc a { color: var(--text); text-decoration: none; }
+        .toc a:hover { color: var(--accent); }
+        h2 {
+            font-size: 1.18rem;
+            font-weight: 750;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 36px;
+            margin-bottom: 14px;
+        }
+        h3 {
+            font-size: 0.98rem;
+            font-weight: 750;
+            color: var(--text);
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+        p { margin-bottom: 14px; font-size: 0.95rem; color: var(--text-soft); }
+        ul, ol.list { margin: 10px 0 14px 22px; font-size: 0.95rem; color: var(--text-soft); }
+        li { margin-bottom: 8px; }
+        strong, b { color: var(--text); font-weight: 650; }
+        a { color: var(--accent); }
+        .card {
+            background: var(--card-bg);
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 14px;
+        }
+        .card.accent {
+            border-left: 4px solid var(--accent);
+            background: var(--accent-soft);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 14px 0 18px;
+        }
+        .info-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 13px 14px;
+        }
+        .info-box .label {
+            font-size: 0.75rem;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .info-box .value { color: var(--text); font-weight: 650; }
+        details.faq {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        details.faq[open] { border-color: var(--accent-line); }
+        details.faq summary {
+            cursor: pointer;
+            padding: 14px 16px;
+            font-weight: 650;
+            font-size: 0.95rem;
+            color: var(--text);
+            list-style: none;
+            position: relative;
+            padding-right: 38px;
+        }
+        details.faq summary::-webkit-details-marker { display: none; }
+        details.faq summary::after {
+            content: "+";
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent);
+            font-weight: 750;
+            font-size: 1.1rem;
+        }
+        details.faq[open] summary::after { content: "-"; }
+        details.faq .answer {
+            padding: 0 16px 14px;
+            font-size: 0.93rem;
+            color: var(--text-soft);
+        }
+        .code {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px 12px;
+            font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            color: var(--text);
+        }
+        .footer {
+            margin-top: 42px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            text-align: center;
+        }
+        @media (max-width: 620px) {
+            .toc ol, .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.45rem; }
+            p, li { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <section class="hero">
+        <div class="eyebrow">GS1Barcode Support</div>
+        <h1>Support, FAQ &amp; Legal Notes</h1>
+        <p class="lede">GS1Barcode is a local-first professional tool for GS1 / UDI barcode scanning, GS1 Application Identifier parsing, FNC1 and Hex inspection, batch review, history, and CSV/JSON export.</p>
+        <div class="meta">
+            <span><b>Bundle ID:</b> com.linxue.gs1barcode</span>
+            <span><b>Version:</b> 1.0</span>
+            <span><b>Last updated:</b> June 5, 2026</span>
+        </div>
+    </section>
+
+    <nav class="toc" aria-label="Table of contents">
+        <div class="toc-title">Contents</div>
+        <ol>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#features">What the app does</a></li>
+            <li><a href="#workflow">Typical workflow</a></li>
+            <li><a href="#permissions">Permissions</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#legal">Legal notes</a></li>
+        </ol>
+    </nav>
+
+    <section id="contact">
+        <h2>1. Contact</h2>
+        <div class="grid">
+            <div class="info-box">
+                <div class="label">Support email</div>
+                <div class="value"><a href="mailto:st67891@gmail.com">st67891@gmail.com</a></div>
+            </div>
+            <div class="info-box">
+                <div class="label">Privacy policy</div>
+                <div class="value"><a href="privacy.html">privacy.html</a></div>
+            </div>
+        </div>
+        <p>When contacting support, please include the app version, iOS version, device model, barcode type if known, and a short description of the issue. Do not send sensitive barcode data unless you have permission to share it.</p>
+    </section>
+
+    <section id="features">
+        <h2>2. What the App Does</h2>
+        <div class="card accent">
+            <p><b>Core purpose:</b> GS1Barcode helps professional users scan, parse, inspect, and verify GS1 / UDI barcode data locally on the device.</p>
+        </div>
+        <ul>
+            <li>Parse GS1 Application Identifiers and show fields such as GTIN, lot, expiry date, and serial number.</li>
+            <li>Review common UDI data elements for medical device workflows.</li>
+            <li>Inspect FNC1, GS separator, Hex, ASCII, and raw payload details.</li>
+            <li>Scan and review batches continuously.</li>
+            <li>Keep local scan history and export text, CSV, or JSON files.</li>
+            <li>Use target matching and manual repair tools for field verification and troubleshooting.</li>
+        </ul>
+    </section>
+
+    <section id="workflow">
+        <h2>3. Typical Workflow</h2>
+        <ol class="list">
+            <li>Scan a GS1 / UDI barcode with the camera, or import a user-selected barcode image.</li>
+            <li>Review parsed GS1 fields and check whether key data elements are present.</li>
+            <li>Use the debug view to inspect FNC1, GS, Hex, ASCII, and raw payload details.</li>
+            <li>Continue scanning in batch mode when working through warehouse, inventory, quality, or field verification tasks.</li>
+            <li>Export scan records as text, CSV, or JSON when you need to share or archive results.</li>
+        </ol>
+    </section>
+
+    <section id="permissions">
+        <h2>4. Permissions</h2>
+        <div class="card">
+            <p><b>Camera:</b> used for local real-time barcode scanning. The app does not upload camera frames or scan data.</p>
+            <p><b>Photos:</b> barcode image import uses Apple PHPicker and only processes the image you choose. The app does not request full photo library access.</p>
+            <p><b>Clipboard and sharing:</b> used only when you choose to copy, export, or share barcode data through iOS system features.</p>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>5. FAQ</h2>
+        <details class="faq">
+            <summary>Is GS1Barcode an official GS1 app?</summary>
+            <div class="answer"><p>No. GS1Barcode is an independent local scanning, parsing, and field verification tool. It is not an official GS1 app and does not provide GS1 certification.</p></div>
+        </details>
+        <details class="faq">
+            <summary>Does the app certify UDI compliance?</summary>
+            <div class="answer"><p>No. The app can help review common UDI data elements and inspect barcode payloads, but it does not provide legal, regulatory, or medical compliance certification.</p></div>
+        </details>
+        <details class="faq">
+            <summary>Does the app upload barcode data?</summary>
+            <div class="answer"><p>No. In the current release, scanning, parsing, history, and export are local-first. Data leaves the app only when you explicitly copy, export, save, or share it.</p></div>
+        </details>
+        <details class="faq">
+            <summary>Why does the app need camera access?</summary>
+            <div class="answer"><p>Camera access is used to scan barcodes in real time. If you do not grant camera access, camera scanning will not work, but other local functions may still be available.</p></div>
+        </details>
+        <details class="faq">
+            <summary>What barcode data can the app parse?</summary>
+            <div class="answer"><p>The app focuses on GS1 / UDI barcode payloads and GS1 Application Identifier field parsing. Support depends on the barcode content, symbol quality, and whether the payload follows expected GS1 semantics.</p></div>
+        </details>
+        <details class="faq">
+            <summary>How should I report a parsing issue?</summary>
+            <div class="answer"><p>Email support with the app version, iOS version, barcode type, a description of the expected field result, and a sanitized sample if you are allowed to share it.</p></div>
+        </details>
+    </section>
+
+    <section id="legal">
+        <h2>6. Legal Notes</h2>
+        <p>GS1Barcode is designed for local scanning, parsing, debugging, and field verification. It does not replace professional quality procedures, regulatory review, or official GS1 / UDI certification programs.</p>
+        <div class="code">GS1Barcode is not an official GS1 app and does not provide legal compliance certification.</div>
+    </section>
+
+    <div class="footer">
+        &copy; 2026 GS1Barcode. All rights reserved.
+        <br><a href="privacy.html">Privacy Policy</a>
+    </div>
+</div>
+</body>
+</html>
