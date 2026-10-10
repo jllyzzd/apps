@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GS1Barcode - Privacy Policy</title>
-    <meta name="description" content="Privacy Policy for GS1Barcode, a local-first GS1 and UDI barcode scanning, parsing, debugging, and field verification app.">
+    <title>Peptide Tracker - Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Peptide Tracker: Shots & Pills, a local-first injection log and dose reminder app. No account, no analytics, no advertising.">
     <style>
         :root {
             --bg: #f6f7f4;
@@ -78,63 +78,82 @@
 <body>
 <div class="container">
     <h1>Privacy Policy</h1>
-    <p><b>Effective Date:</b> June 5, 2026</p>
-    <p><b>App:</b> GS1Barcode</p>
-    <p><b>Bundle ID:</b> com.linxue.gs1barcode</p>
+    <p><b>Effective Date:</b> October 10, 2026</p>
+    <p><b>App:</b> Peptide Tracker: Shots &amp; Pills</p>
+    <p><b>Bundle ID:</b> com.linxue.glp1</p>
 
     <div class="card callout">
-        <p><b>Local-first by design:</b> GS1Barcode is a professional GS1 / UDI barcode scanning, parsing, debugging, and field verification tool. The current release does not require an account, does not use advertising or tracking SDKs, and does not upload scan data to developer servers.</p>
+        <p><b>Short version:</b> Peptide Tracker has no account, no ads and no trackers. Your medication records stay on your device and, if you enable iCloud, in your own private iCloud. They are never uploaded to our servers — we do not operate any server that could receive them. The app's App Store privacy label is <b>Data Not Collected</b>.</p>
     </div>
 
     <h2>1. Data We Collect</h2>
-    <p>In the current release, GS1Barcode does <b>not</b> collect personal data or scan data from your device. This includes:</p>
+    <p>In the current release, Peptide Tracker does <b>not</b> collect any personal data from your device. Specifically:</p>
     <ul>
-        <li>No account profile, name, phone number, or physical address collection.</li>
-        <li>No upload of barcode payloads, parsed GS1 fields, UDI data, batch records, notes, or history.</li>
-        <li>No advertising identifiers, IDFA, ATT tracking, or cross-app tracking.</li>
-        <li>No third-party analytics, third-party crash reporting, or advertising SDKs.</li>
+        <li>No account, name, email address, phone number or physical address — there is no sign-up or sign-in screen.</li>
+        <li>No upload of medication plans, dose records, injection sites, body reactions, weight, hydration or mood entries to developer servers.</li>
+        <li>No advertising identifiers (IDFA), no App Tracking Transparency prompt, no cross-app tracking.</li>
+        <li>No third-party analytics, crash-reporting or advertising SDKs.</li>
     </ul>
     <div class="card">
-        <p>The app's current privacy behavior is intended to align with <b>Data Not Collected</b> in App Store privacy labeling.</p>
+        <p>This behavior is intended to align with <b>Data Not Collected</b> in the App Store privacy labeling.</p>
     </div>
 
-    <h2>2. Local Processing and Storage</h2>
-    <p>Core barcode scanning and parsing are processed on device. The app may store the following information locally inside the app container:</p>
+    <h2>2. What the App Stores on Your Device</h2>
+    <p>Everything you enter is stored locally in the app container on your device:</p>
     <ul>
-        <li>Scan history, including raw barcode content, parsed fields, status, favorites, batch review state, and user notes.</li>
-        <li>App settings, including language, theme, scanning preferences, privacy mode, export preferences, and local signature settings.</li>
-        <li>Files that you choose to export, such as text, CSV, or JSON output.</li>
+        <li>Medication plans and dose schedules (including injectable and oral routes).</li>
+        <li>Dose records, dates and times, and injection-site history from the body map.</li>
+        <li>Body reactions, weight, hydration and mood entries.</li>
+        <li>App settings such as language, appearance, units and reminder preferences.</li>
+        <li>Small summary snapshots (for the Home Screen widgets and the Apple Watch app), stored in a shared app-group container on your device.</li>
     </ul>
-    <p>You can clear local history inside the app. Uninstalling the app removes app-container data from the device. Files that you have exported or shared outside the app must be deleted from those destinations separately.</p>
+    <p>You can delete any record inside the app at any time. Uninstalling the app removes this data from the device. Files you have exported (see Section 5) must be deleted from their destination separately.</p>
 
-    <h2>3. Permissions</h2>
-    <p>GS1Barcode requests only permissions needed for user-triggered features:</p>
+    <h2>3. iCloud Sync</h2>
+    <p>If iCloud sync is enabled, your records are stored in <b>your own private iCloud database</b> (Apple CloudKit) and synced between your iPhone, iPad and Apple Watch.</p>
     <ul>
-        <li><b>Camera:</b> used for local real-time GS1 / UDI barcode scanning and parsing.</li>
-        <li><b>User-selected photos:</b> barcode image import uses Apple's PHPicker. The app processes only the image you choose and does not request full photo library access.</li>
-        <li><b>Clipboard write:</b> used only when you choose to copy barcode content, parsed fields, or debugging text.</li>
-        <li><b>File export and sharing:</b> used only when you choose to export or share text, CSV, or JSON files.</li>
+        <li>Sync goes device-to-Apple's-iCloud only. The developer has no access to your iCloud data and operates no server in this flow.</li>
+        <li>Apple's handling of iCloud data is governed by Apple's own privacy policy.</li>
+        <li>You can turn sync off in iOS Settings, or delete the app's iCloud data from <b>Settings &gt; [your name] &gt; iCloud &gt; Manage Account Storage</b>.</li>
     </ul>
 
-    <h2>4. Data Sharing</h2>
-    <p>GS1Barcode does not automatically send barcode data, camera frames, selected photos, history records, or settings to developer servers or third-party services.</p>
-    <p>Data may leave the app only when you explicitly choose to share, copy, export, or save it using iOS system features such as Share Sheet, Files, or clipboard. After you share data with another app or service, that destination's own privacy policy applies.</p>
+    <h2>4. Permissions</h2>
+    <p>Peptide Tracker requests only the permissions needed for features you choose to use:</p>
+    <ul>
+        <li><b>Notifications (optional):</b> used for local dose reminders that are scheduled on your device. Declining notifications does not affect logging or any other feature.</li>
+        <li><b>iCloud (optional):</b> used only if you enable sync, as described in Section 3.</li>
+        <li>The app does not request camera, microphone, location, contacts, or full photo library access.</li>
+    </ul>
 
-    <h2>5. Tracking, Analytics, and Advertising</h2>
-    <p>The current release does not use IDFA, ATT, advertising SDKs, third-party analytics SDKs, or third-party crash reporting SDKs. Local diagnostic logging is not uploaded to a cloud service.</p>
+    <h2>5. Data Sharing and Export</h2>
+    <p>The app never automatically sends your records anywhere. Data leaves the app only when you explicitly choose to:</p>
+    <ul>
+        <li>Export a PDF report, CSV file or full archive, or share records via the iOS Share Sheet, AirDrop, Files or email.</li>
+    </ul>
+    <p>Once you share data with another person, app or service, that destination's own privacy policy applies.</p>
 
-    <h2>6. Children's Privacy</h2>
-    <p>GS1Barcode is a professional tool for supply chain, warehouse, medical device UDI workflows, quality checks, and barcode engineering. It is not directed to children under 13.</p>
+    <h2>6. Purchases</h2>
+    <p>The unlock purchase is processed entirely by Apple through the App Store. The developer never receives your payment details, and does not receive your Apple ID or any identifier from the transaction. Family Sharing and purchase restoration are handled by Apple's App Store infrastructure.</p>
 
-    <h2>7. Policy Updates</h2>
-    <p>If the app's privacy behavior changes in future releases, this page will be updated with a new effective date. If future features add accounts, cloud sync, analytics, crash reporting, advertising, or server upload, the App Store privacy label and this policy will be updated accordingly.</p>
+    <h2>7. Tracking, Analytics, and Advertising</h2>
+    <p>The current release contains no advertising, no analytics SDKs, no third-party crash-reporting SDKs and no tracking of any kind. The app does not access your precise or approximate location.</p>
 
-    <h2>8. Contact</h2>
+    <h2>8. Health Information</h2>
+    <p>Medication records, body reactions and weight are sensitive by nature. This is exactly why they are kept on your device and in your personal iCloud, and never transmitted to the developer. The app is not a medical device, does not connect to Apple Health, and does not share health data with third parties.</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>Peptide Tracker is a personal medication-tracking tool intended for adults managing their own prescribed or self-administered treatment. It is not directed to children under 13, and we do not knowingly collect data from children.</p>
+
+    <h2>10. Policy Updates</h2>
+    <p>If the app's privacy behavior changes in a future release — for example, if an account system or analytics were ever introduced — this page will be updated with a new effective date, and the App Store privacy label will be updated to match before that release ships.</p>
+
+    <h2>11. Contact</h2>
+    <p>If you have questions about this policy or the app's privacy behavior:</p>
     <p><b>Email:</b> st67891@gmail.com</p>
 
     <div class="footer">
-        &copy; 2026 GS1Barcode. All rights reserved.
-        <br><a href="support.html">Support &amp; FAQ</a>
+        &copy; 2026 Peptide Tracker. All rights reserved.
+        <br><a href="support.html">Support</a>
     </div>
 </div>
 </body>
