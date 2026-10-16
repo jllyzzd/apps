@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddhist Widget - Support</title>
+    <meta name="description" content="Support and FAQ for Buddhist Widget, an iOS home and lock screen widget for Buddhist scripture quotes in multiple languages.">
+    <style>
+        :root {
+            --bg: #f7f8fb;
+            --card-bg: #ffffff;
+            --accent: #a85d2a;
+            --accent-soft: rgba(168, 93, 42, 0.08);
+            --accent-line: rgba(168, 93, 42, 0.22);
+            --warning: #9f3412;
+            --warning-soft: rgba(159, 52, 18, 0.08);
+            --text: #20242a;
+            --text-soft: #52606d;
+            --text-light: #7a8490;
+            --border: #dde5ea;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 24px 16px 48px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 780px; margin: 0 auto; }
+
+        .hero {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 18px;
+            margin-bottom: 24px;
+        }
+
+        .eyebrow {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .lede {
+            font-size: 1rem;
+            color: var(--text-soft);
+            max-width: 66ch;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.84rem;
+            color: var(--text-light);
+            margin-top: 14px;
+        }
+
+        .meta b { color: var(--text-soft); font-weight: 600; }
+
+        h2 {
+            font-size: 1.16rem;
+            font-weight: 700;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 34px;
+            margin-bottom: 14px;
+        }
+
+        p { margin-bottom: 14px; font-size: 0.95rem; color: var(--text-soft); }
+        ul { margin: 10px 0 16px 22px; font-size: 0.95rem; color: var(--text-soft); }
+        li { margin-bottom: 8px; }
+        strong, b { color: var(--text); font-weight: 600; }
+        a { color: var(--accent); }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+
+        .card.accent {
+            background: var(--accent-soft);
+            border-color: var(--accent-line);
+            border-left: 4px solid var(--accent);
+        }
+
+        .card.warning {
+            background: var(--warning-soft);
+            border-left: 4px solid var(--warning);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 14px 0 18px;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+        }
+
+        .contact-card .label {
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .contact-card .value {
+            font-size: 0.98rem;
+            color: var(--text);
+            word-break: break-word;
+        }
+
+        details.faq {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        details.faq[open] { border-color: var(--accent-line); }
+
+        details.faq summary {
+            cursor: pointer;
+            list-style: none;
+            padding: 14px 42px 14px 16px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text);
+            position: relative;
+        }
+
+        details.faq summary::-webkit-details-marker { display: none; }
+
+        details.faq summary::after {
+            content: "+";
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        details.faq[open] summary::after { content: "-"; }
+
+        details.faq .answer {
+            padding: 0 16px 14px;
+            font-size: 0.93rem;
+            color: var(--text-soft);
+        }
+
+        details.faq .answer p { margin-bottom: 10px; }
+        details.faq .answer p:last-child { margin-bottom: 0; }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.86rem;
+            text-align: center;
+        }
+
+        @media (max-width: 560px) {
+            body { padding: 20px 12px 42px; }
+            h1 { font-size: 1.48rem; }
+            h2 { font-size: 1.08rem; }
+            .card, .contact-card { padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="hero">
+        <div class="eyebrow">Support</div>
+        <h1>Buddhist Widget Support</h1>
+        <p class="lede">Help for adding the widget, changing the quote language and theme, managing favorites, restoring the Pro purchase, and understanding the 7-day trial, the free favorites limit, and WidgetKit refresh behaviour.</p>
+        <div class="meta">
+            <span><b>Updated:</b> October 16, 2026</span>
+            <span><b>Bundle ID:</b> com.linxue.fowidget</span>
+            <span><b>Product ID:</b> com.linxue.fowidget.unlock.pro</span>
+        </div>
+    </header>
+
+    <div class="contact-grid">
+        <div class="contact-card">
+            <div class="label">Email Support</div>
+            <div class="value"><a href="mailto:st67891@gmail.com?subject=Buddhist%20Widget%20Support">st67891@gmail.com</a></div>
+        </div>
+    </div>
+
+    <div class="card accent">
+        <p>Buddhist Widget is an iOS app and home / lock screen widget for daily Buddhist scripture quotes in your preferred language. The app offers a 7-day trial and a one-time Pro unlock (com.linxue.fowidget.unlock.pro) that enables additional themes and raises the favorites limit.</p>
+    </div>
+
+    <div class="card warning">
+        <p><b>Important:</b> When contacting support, please do not send screenshots of your purchase receipt, Apple ID, Keychain contents, App Group container, or device identifiers. Only describe the issue and the app version.</p>
+    </div>
+
+    <h2>What We Can Help With</h2>
+    <ul>
+        <li>Adding Buddhist Widget to the Home Screen, Lock Screen, or StandBy.</li>
+        <li>Changing the interface language or the quote content language.</li>
+        <li>Switching themes and understanding which themes are part of Pro.</li>
+        <li>Adding, removing, and organizing favorites, including the free 20-quote favorites limit.</li>
+        <li>Understanding the 7-day trial, trial reset behaviour, and how to restore the Pro purchase.</li>
+        <li>Quote library, source languages, and content accuracy for SuttaCentral, CBETA, and Aozora / Wikisource content.</li>
+        <li>Widget refresh, timeline behaviour, and what to do when the quote does not change.</li>
+        <li>Privacy, on-device storage, and App Group container questions.</li>
+    </ul>
+
+    <h2>Before You Contact Support</h2>
+    <p>Please include the app version (from Settings inside the app), iOS or iPadOS version, device model, what you expected to happen, what actually happened, and the steps needed to reproduce the issue.</p>
+    <p>Please remove or mask Apple ID, purchase receipts, Keychain data, App Group container paths, and any device identifiers before sending screenshots.</p>
+
+    <h2>FAQ</h2>
+
+    <details class="faq">
+        <summary>How do I add Buddhist Widget to the Home Screen or Lock Screen?</summary>
+        <div class="answer">
+            <p>Open the in-app Widget Hub, choose a size, and follow the system instructions to add a WidgetKit widget. On iPhone, long-press the Home Screen or Lock Screen, tap <b>Edit → Add Widget</b>, and search for <b>Buddhist Widget</b>. iOS controls the final placement, size, and refresh behaviour.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Why does the widget show the same quote every day?</summary>
+        <div class="answer">
+            <p>WidgetKit controls when widgets refresh. The app writes a timeline with the next quotes, and iOS decides when to render a new entry based on system load, battery, and your viewing habits. To force a refresh, open the companion app once so it can update the App Group data, then reopen the widget.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>How do I change the quote language?</summary>
+        <div class="answer">
+            <p>Open the app's <b>Settings → Content language</b> and pick a content language (English, Simplified Chinese, Traditional Chinese, Japanese, or follow the interface language). The widget will pick up the change the next time it refreshes. Interface language follows iOS Settings unless you override it in <b>Settings → Interface language</b>.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Why does the content language fall back to English?</summary>
+        <div class="answer">
+            <p>The current release ships with English, Simplified Chinese, Traditional Chinese, and Japanese public-domain quote content. Interface languages such as German, French, or Spanish fall back to the English content language because no public-domain translation is bundled for those languages.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>How do I switch themes?</summary>
+        <div class="answer">
+            <p>Open the app's <b>Settings → Theme</b> and pick from the available themes. Some themes are part of the Pro unlock. Themes affect both the companion app and the widget, subject to WidgetKit refresh.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>What does the Pro unlock include?</summary>
+        <div class="answer">
+            <p>The one-time Pro unlock (com.linxue.fowidget.unlock.pro) enables the Pro theme set and raises the favorites limit from 20 to 999. It does not unlock additional content languages, additional quote libraries, or cloud sync. Content language availability depends on the bundled public-domain translations.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>How long is the trial and how does it work?</summary>
+        <div class="answer">
+            <p>The trial starts the first time you open the app and lasts 7 days. During the trial, Pro themes and the higher favorites limit are unlocked without purchase. The trial start date is kept in the iOS Keychain (service <b>com.linxue.fowidget.entitlements</b>), which means uninstalling and reinstalling the app does not reset the trial window.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>How do I restore the Pro purchase?</summary>
+        <div class="answer">
+            <p>Open the app's <b>Settings → Restore purchase</b>. The app reads the local StoreKit AppTransaction to verify the Pro entitlement for the signed-in Apple ID. Restore requires the same Apple ID that originally completed the purchase. Refunds, billing issues, and family sharing questions are handled by Apple through your purchase history.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Why did my favorites stop saving?</summary>
+        <div class="answer">
+            <p>The free version keeps up to 20 favorites. When the favorites limit is reached, adding a new favorite is blocked so the list stays predictable. Pro raises the limit to 999. Removing items from the favorites list frees room for new ones.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Where does the quote content come from?</summary>
+        <div class="answer">
+            <p>Quote content is bundled in <b>quotes.json</b> from public-domain sources: SuttaCentral English translations (Dhammapada), CBETA Simplified and Traditional Chinese (Dhammapada and other well-known scriptures), and Aozora / Wikisource Japanese (荻原雲來訳『法句經』 and selected Japanese Buddhist texts). No additional quote content is downloaded at runtime.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>Is my data uploaded anywhere?</summary>
+        <div class="answer">
+            <p>No in the current build. Quote text, language preferences, theme preferences, favorites, recent quotes, trial state, and purchase state are all stored on device inside the app and the App Group container. The app does not operate a server for collecting usage data, and the PrivacyInfo.xcprivacy manifest declares no tracking and no collected data types.</p>
+        </div>
+    </details>
+
+    <details class="faq">
+        <summary>What should I send when reporting a bug?</summary>
+        <div class="answer">
+            <p>Send the app version, device, iOS or iPadOS version, the language and widget setup, the steps to reproduce, and sanitized screenshots. Do not send Apple ID screenshots, purchase receipts, Keychain data, App Group container paths, or device identifiers.</p>
+        </div>
+    </details>
+
+    <footer>
+        Buddhist Widget · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:st67891@gmail.com?subject=Buddhist%20Widget%20Support">Contact</a>
+    </footer>
+</div>
+</body>
+</html>

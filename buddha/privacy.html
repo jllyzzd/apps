@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddhist Widget - Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Buddhist Widget, an iOS home and lock screen widget for Buddhist scripture quotes in multiple languages.">
+    <style>
+        :root {
+            --bg: #f7f8fb;
+            --card-bg: #ffffff;
+            --accent: #a85d2a;
+            --accent-soft: rgba(168, 93, 42, 0.08);
+            --accent-line: rgba(168, 93, 42, 0.22);
+            --warning: #9f3412;
+            --warning-soft: rgba(159, 52, 18, 0.08);
+            --text: #20242a;
+            --text-soft: #52606d;
+            --text-light: #7a8490;
+            --border: #dde5ea;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 24px 16px 48px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 780px; margin: 0 auto; }
+
+        .hero {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 18px;
+            margin-bottom: 24px;
+        }
+
+        .eyebrow {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .lede {
+            font-size: 1rem;
+            color: var(--text-soft);
+            max-width: 66ch;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.84rem;
+            color: var(--text-light);
+            margin-top: 14px;
+        }
+
+        .meta b { color: var(--text-soft); font-weight: 600; }
+
+        h2 {
+            font-size: 1.16rem;
+            font-weight: 700;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 34px;
+            margin-bottom: 14px;
+        }
+
+        p { margin-bottom: 14px; font-size: 0.95rem; color: var(--text-soft); }
+        ul { margin: 10px 0 16px 22px; font-size: 0.95rem; color: var(--text-soft); }
+        li { margin-bottom: 8px; }
+        strong, b { color: var(--text); font-weight: 600; }
+        a { color: var(--accent); }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+
+        .card.accent {
+            background: var(--accent-soft);
+            border-color: var(--accent-line);
+            border-left: 4px solid var(--accent);
+        }
+
+        .card.warning {
+            background: var(--warning-soft);
+            border-left: 4px solid var(--warning);
+        }
+
+        .fact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin: 14px 0 18px;
+        }
+
+        .fact-row {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 14px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            font-size: 0.9rem;
+        }
+
+        .fact-row .label {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.84rem;
+        }
+
+        .fact-row .value { color: var(--text-soft); }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.86rem;
+            text-align: center;
+        }
+
+        @media (max-width: 560px) {
+            body { padding: 20px 12px 42px; }
+            h1 { font-size: 1.48rem; }
+            h2 { font-size: 1.08rem; }
+            .card { padding: 14px; }
+            .fact-row { grid-template-columns: 1fr; gap: 4px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="hero">
+        <div class="eyebrow">Privacy Policy</div>
+        <h1>Buddhist Widget Privacy Policy</h1>
+        <p class="lede">Buddhist Widget is an iOS app and home / lock screen widget that displays daily Buddhist scripture quotes in your preferred language. The current release is designed for on-device use and does not upload personal reading, browsing, or usage data to developer-operated servers.</p>
+        <div class="meta">
+            <span><b>Effective Date:</b> October 16, 2026</span>
+            <span><b>Bundle ID:</b> com.linxue.fowidget</span>
+            <span><b>App Group:</b> group.com.linxue.fowidget</span>
+        </div>
+    </header>
+
+    <div class="card accent">
+        <p><b>Local by design:</b> Quote text, language choices, theme choices, favorites, onboarding state, trial state, and purchase state are handled on device inside the app and the WidgetKit extension. The app does not require an account, does not sync quote or usage data to cloud services, and does not operate a server for collecting your personal data.</p>
+    </div>
+
+    <h2>1. Data We Collect</h2>
+    <p>We do <b>not</b> collect developer-accessible personal data through Buddhist Widget in the current release.</p>
+    <p>When you use the app or its widget, the app may store and process the following data on your device:</p>
+    <ul>
+        <li>Interface and content language choices (system, app, or content language), theme choice, and widget display preferences.</li>
+        <li>Quote favorites, recent quotes, and the current "quote of the day" index used by the widget timeline.</li>
+        <li>Onboarding progress and first-launch acknowledgements.</li>
+        <li>Trial state (start date and remaining days) and Pro purchase state (entitlement receipt stored locally).</li>
+        <li>Non-sensitive, aggregated, locally stored counters used only by the in-app review prompt gate.</li>
+    </ul>
+
+    <h2>2. Data We Do Not Collect, Store, or Upload</h2>
+    <ul>
+        <li>Quote text, language preferences, theme preferences, favorites, recent quotes, and trial or purchase state are not uploaded to a developer-operated server.</li>
+        <li>Reading activity, widget interaction counts, and screen views are not used for analytics, advertising, profiling, or tracking.</li>
+        <li>No account registration, social login, cloud sync, advertising identifier, or cross-app tracking identifier is used.</li>
+        <li>The app does not request Camera, Photos, Microphone, Contacts, Location, HealthKit, HomeKit, Bluetooth, Motion, Face ID / passcode, Notifications, or App Tracking Transparency.</li>
+    </ul>
+
+    <h2>3. Local Processing and Storage</h2>
+    <p>Buddhist Widget keeps its quote library, user preferences, favorites, and widget timeline payload on device. The app reads the bundled <b>quotes.json</b> content file (English, Simplified Chinese, Traditional Chinese, and Japanese public-domain translations) from the app bundle and does not download additional quote content at runtime.</p>
+    <p>The companion iOS app provides onboarding, the quote library, favorites, theme and language settings, the Pro purchase flow, and help content. The home / lock screen widget renders the current quote locally from data shared with the app through the <b>group.com.linxue.fowidget</b> App Group container.</p>
+    <p>Trial state is stored in the iOS Keychain with the service identifier <b>com.linxue.fowidget.entitlements</b> so that re-installing the app does not reset the trial window. Purchase receipts are validated locally by StoreKit (AppTransaction) and are not transmitted to a developer server.</p>
+
+    <div class="fact-grid">
+        <div class="fact-row">
+            <div class="label">Quote Content</div>
+            <div class="value">Static JSON in the app bundle (public-domain translations); no remote download.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">Account</div>
+            <div class="value">No account registration is required.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">Cloud Sync</div>
+            <div class="value">No developer-operated cloud sync is used.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">App Group</div>
+            <div class="value">group.com.linxue.fowidget — local container shared between app and widget.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">Keychain</div>
+            <div class="value">com.linxue.fowidget.entitlements — local storage of trial start date.</div>
+        </div>
+        <div class="fact-row">
+            <div class="label">Preferences</div>
+            <div class="value">Non-sensitive preferences may be stored in UserDefaults on device.</div>
+        </div>
+    </div>
+
+    <h2>4. WidgetKit Extension</h2>
+    <p>The widget runs as a WidgetKit extension in your iOS Widget Gallery, on the Home Screen, and on the Lock Screen. It uses shared App Group storage to read the current quote, language choice, theme choice, and favorites state written by the app. The widget does not perform network requests, does not call third-party SDKs, and does not log personal data.</p>
+    <p>WidgetKit timeline refresh is handled by iOS. The widget timeline contains only public-domain quote text and your local display preferences; it does not contain identifiers, account data, or location data.</p>
+
+    <h2>5. In-App Purchase (StoreKit)</h2>
+    <p>Buddhist Widget offers a one-time in-app purchase that unlocks the Pro theme set and raises the favorites limit. The product ID is <b>com.linxue.fowidget.unlock.pro</b>. Purchases are processed by Apple through StoreKit and AppStore on your device.</p>
+    <p>Purchase confirmation, transaction signing, and entitlement verification are performed by iOS and Apple. The app does not transmit purchase receipts to a developer server. The app reads the local AppTransaction to determine whether the Pro entitlement is active.</p>
+    <p>The trial period (7 days from first launch) is tracked locally and is not tied to an Apple ID or developer account. Refunds, billing issues, subscription or purchase cancellations, and family sharing questions are handled by Apple.</p>
+
+    <h2>6. Third-Party SDKs and Tracking</h2>
+    <p>The current release does not include third-party advertising SDKs, third-party analytics SDKs, crash reporting SDKs, social login SDKs, attribution SDKs, or remote cloud services. The app does not track you across apps or websites.</p>
+    <p>The app's <b>PrivacyInfo.xcprivacy</b> manifest declares <b>NSPrivacyTracking = false</b> and lists no collected data types. The only API category declared is UserDefaults (reason code <b>CA92.1</b>), which is used to read and write non-sensitive preferences on device.</p>
+
+    <h2>7. Your Choices</h2>
+    <ul>
+        <li>You can change the interface language, content language, theme, and widget appearance at any time from the app's settings.</li>
+        <li>You can add or remove favorites from the library; favorites stay on your device.</li>
+        <li>You can remove and re-add the widget from your Home Screen or Lock Screen at any time; the widget timeline only carries public-domain quote text and your local preferences.</li>
+        <li>You can request a refund of the one-time purchase from Apple through your purchase history.</li>
+        <li>You can uninstall the app to remove its local container, App Group data, and preferences.</li>
+    </ul>
+
+    <h2>8. Children's Privacy</h2>
+    <p>Buddhist Widget is a quote and reading companion app and is not directed to children under 13. It does not collect personal data from any user, including children.</p>
+
+    <h2>9. Policy Updates</h2>
+    <p>If privacy behavior changes in a future release, this page will be updated with a new effective date. Material changes such as adding a server, account system, analytics, advertising, cloud sync, or third-party SDKs would require a new privacy review and an updated PrivacyInfo.xcprivacy manifest.</p>
+
+    <h2>10. Contact</h2>
+    <p>For privacy questions, contact <a href="mailto:st67891@gmail.com?subject=Buddhist%20Widget%20Privacy">st67891@gmail.com</a>.</p>
+
+    <div class="card warning">
+        <p><b>Security note:</b> When contacting support, please do not send screenshots of your purchase receipt, Apple ID, Keychain contents, App Group container, or device identifiers. Only describe the issue and the app version.</p>
+    </div>
+
+    <footer>
+        Buddhist Widget · <a href="support.html">Support</a>
+    </footer>
+</div>
+</body>
+</html>
