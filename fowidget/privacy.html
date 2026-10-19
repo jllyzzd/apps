@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddhist Widget - Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Buddhist Widget, a local-first daily Buddhist quotes app with Home Screen widgets. No account, no analytics, no advertising, no data collection.">
+    <style>
+        :root {
+            --bg: #f3efe5;
+            --card-bg: #ffffff;
+            --accent: #5c5142;
+            --accent-light: rgba(92, 81, 66, 0.10);
+            --text: #332e26;
+            --text-light: #7a7264;
+            --border: #e2dccd;
+            --radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 20px 16px 40px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            margin-top: 28px;
+            margin-bottom: 14px;
+        }
+        p { margin-bottom: 14px; font-size: 0.95rem; }
+        ul { margin: 14px 0 14px 20px; font-size: 0.95rem; }
+        li { margin-bottom: 10px; }
+        a { color: var(--accent); }
+        .card {
+            background: var(--card-bg);
+            padding: 16px 18px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .callout {
+            background: var(--accent-light);
+            border-left: 4px solid var(--accent);
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            text-align: center;
+        }
+        b { color: var(--text); }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.45rem; }
+            h2 { font-size: 1.08rem; }
+            p, li { font-size: 0.9rem; }
+            .card { padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <p><b>Effective Date:</b> October 19, 2026</p>
+    <p><b>App:</b> Buddhist Widget</p>
+    <p><b>Bundle ID:</b> com.linxue.fowidget</p>
+
+    <div class="card callout">
+        <p><b>Short version:</b> Buddhist Widget has no account, no ads and no trackers. It works entirely offline and does not connect to the internet. The quotes you read, the favorites you save and the settings you choose stay on your device and are never uploaded anywhere — we do not operate any server that could receive them. The app's App Store privacy label is <b>Data Not Collected</b>.</p>
+    </div>
+
+    <h2>1. Data We Collect</h2>
+    <p>In the current release, Buddhist Widget does <b>not</b> collect any personal data from your device. Specifically:</p>
+    <ul>
+        <li>No account, name, email address, phone number or physical address — there is no sign-up or sign-in screen.</li>
+        <li>No network connection at all: the app makes no HTTP requests, sends no telemetry and contacts no server. All quote content ships inside the app bundle.</li>
+        <li>No advertising identifiers (IDFA), no App Tracking Transparency prompt, no cross-app tracking.</li>
+        <li>No third-party analytics, crash-reporting or advertising SDKs.</li>
+    </ul>
+    <div class="card">
+        <p>This behavior is intended to align with <b>Data Not Collected</b> in the App Store privacy labeling, and with the app's privacy manifest (<code>NSPrivacyCollectedDataTypes</code> is empty, <code>NSPrivacyTracking</code> is <code>false</code>).</p>
+    </div>
+
+    <h2>2. What the App Stores on Your Device</h2>
+    <p>Everything the app needs is stored locally on your device:</p>
+    <ul>
+        <li><b>Favorites:</b> quotes you save are kept in a local app-group container on your device (free up to 10; up to 999 with the Pro unlock).</li>
+        <li><b>Reading progress and preferences:</b> selected content track (English, Simplified Chinese, Traditional Chinese or Japanese), app display language, chosen visual theme, and reading position.</li>
+        <li><b>Widget data:</b> small local snapshots for the Home Screen widgets, stored in the same on-device app-group container.</li>
+        <li><b>Trial and purchase state:</b> the free-trial start marker is stored in the device Keychain, and the Pro unlock status is stored locally. Neither is transmitted to the developer.</li>
+    </ul>
+    <p>You can remove favorites inside the app at any time. Uninstalling the app removes all of this data from the device.</p>
+
+    <h2>3. Data Sharing and Transmission</h2>
+    <p>The app never sends your data anywhere. There is no cloud sync, no export that leaves your device automatically, and no server component operated by the developer. Data leaves your device only if you manually share content yourself (for example, copying a quote into another app via the iOS share or copy features). Once you do that, that destination's own privacy policy applies.</p>
+
+    <h2>4. Permissions</h2>
+    <p>Buddhist Widget does <b>not</b> request any system permissions. It does not ask for camera, microphone, location, contacts, photos, notifications, or App Tracking Transparency. All features work without any permission prompts.</p>
+
+    <h2>5. Purchases</h2>
+    <p>The optional Pro unlock (a one-time purchase) is processed entirely by Apple through the App Store. The developer never receives your payment details, your Apple ID, or any identifier from the transaction. Purchase restoration and Family Sharing are handled by Apple's App Store infrastructure.</p>
+
+    <h2>6. Tracking, Analytics, and Advertising</h2>
+    <p>The current release contains no advertising, no analytics SDKs, no third-party crash-reporting SDKs and no tracking of any kind. The app has no network capability and therefore cannot track you.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>Buddhist Widget is a general-audience quote-reading and widget app. It is not directed to children under 13, and because it collects no data at all, it does not knowingly collect data from children.</p>
+
+    <h2>8. Policy Updates</h2>
+    <p>If the app's privacy behavior changes in a future release — for example, if any analytics, network feature or third-party SDK were ever introduced — this page will be updated with a new effective date, and the App Store privacy label will be updated to match before that release ships.</p>
+
+    <h2>9. Contact</h2>
+    <p>If you have questions about this policy or the app's privacy behavior:</p>
+    <p><b>Email:</b> st67891@gmail.com</p>
+
+    <div class="footer">
+        &copy; 2026 Buddhist Widget. All rights reserved.
+        <br><a href="support.html">Support</a>
+    </div>
+</div>
+</body>
+</html>
